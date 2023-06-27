@@ -65,7 +65,7 @@ Your screen will likely resemble something like this:
 ---
 ## Try It Out! Exploring Your First Map...
 
-### 1. Add a Basemap Layer
+### I. Add a Basemap Layer
 
 <img src="QGISbasemap.png" alt="Adding A Basemap" width = 1200> 
 
@@ -73,18 +73,39 @@ Your screen will likely resemble something like this:
 2. Double click on Open Street Map to load in a basic open source map. You will notice that we just added a layer to the layer window below.
 3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand is the pan map function which allows you to move the map around when you are zoomed in. Maybe try finding your home or a favorite place in the world? To reset to the default view you can use the zoom full function (magnifying glass with the arrows in all directions).
 
-### 2. Add in an Interesting Layer Via Shapefiles
+### II. Add in an Interesting Layer Via Shapefiles
 
 Shapefiles are a common geospatial file type that stores locations, points, lines, and shapes.
 
-1. Download these three shapefiles from this website to your local computer. Make sure you save them together and somewhere you can remember.
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Time_Zones.shp]" target="_blank"> US Timezones</a>
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Regional_Subbasins_and_Watersheds.shp]" target="_blank"> Watersheds of Orange County</a>
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/OC_Parks_Trails.shp]" target="_blank"> Hiking Trails of Orange County</a>
+1. Download this zipped folder from our website to your local computer. Make sure you save it somewhere you can remember.
+   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Time_Zones.zip" target="_blank"> US Timezones</a>
 
-After you have the files, locate the folder you saved them to in the browser window. 
+<img src="TimeZones.png" alt="Adding Time Zones" width = 1200>
 
+2. After you have the file, use the browser window to locate *Time_Zones.zip* in the folder you saved it to. Use the little arrow to expand the zip file and double click on the *Time_Zones.shp* shapefile. Just as before we have now added a new layer to our map.
 
+<img src="TimeZoneSymbol.png" alt="Changing Time Zone Visuals" width = 1200>
+
+3. This looks a little clunky, so let's make it more readable and useful. Right click on Windows/Linux or control click on Mac to open up the properties window. Navigate to the symbology window and select green outline. Click *Apply* and *OK*.  Then zoom and pan the map to center on North America, given that these are only US Timezones.
+
+<img src="TimeZoneLabels.png" alt="Adding Time Zone Labels" width = 1200>
+
+4. Next let's add labels. Open the Time Zone properties back up and navigate to the *Labels* window. From the drop down menu at the top select *Single Labels*. Play around with the options to get the colors how you like them or maybe use one of the included styles, like *water bodies*. Click *Apply* and *OK*. 
+
+<img src="Export.png" alt="Adding Time Zone Labels" width = 1200>
+
+5. Lastly, we want to save your map so you can marvel at your work anytime you'd like and share it with friends at parties. From the *Project* menu navigate to *Import/Export* and select *Export Map To Image*. By default it will use the extent that you have in the viewer. I recommend upping the resolution to 200 dpi. High-five! You have made a map. 
+
+---
+
+### Bonus
+
+If you are so inclined you can check out these other interesting shapefiles from the Orange County GIS Database:
+
+   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Regional_Subbasins_and_Watersheds.zip" target="_blank"> Watersheds of Orange County</a>
+   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/OC_Parks_Trails.zip" target="_blank"> Hiking Trails of Orange County</a>
+
+<img src="OCWatershedAndTrails.png" alt="Watersheds and Trails in OC" width = 1200>
 
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 
