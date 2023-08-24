@@ -8,10 +8,13 @@
 ## Objectives : 
 
 1. Learn the AρρEEARS Interface
-2. Download & Visualize Temperature Data From ECOSTRESS in QGIS
+2. Get Acquainted With QGIS's Toolsbars, Buttons, & Layout
+3. Download & Visualize Temperature Data From ECOSTRESS in QGIS
 ---
 
-<img src="AppearsLogo.png" alt="NASA AppEEARS Logo" width = 200>
+<p align="center">
+	<img src="AppearsLogo.png" alt="NASA AppEEARS Logo" width = 300>
+</p>
 
 ## Welcome Back! 
 
@@ -19,7 +22,9 @@ Today we are introducing AρρEEARS, The Application for Extracting and Explorin
 
 To begin head over to <a href="https://appeears.earthdatacloud.nasa.gov/" target="_blank"> https://appeears.earthdatacloud.nasa.gov/</a>. Click the *Sign In* button to register for an Earthdata account or login if you already have one.
 
-<img src="AppEEARShome.png" alt="AppEEARS Homepage" width = 1200>
+<p align="center">
+	<img src="AppEEARShome.png" alt="AppEEARS Homepage" width = 1000>
+</p>
 
 1. To access satellite data use the *Extract* dropdown menu to select *Area*. 
 2. Next select *Start a New Request*.
@@ -27,7 +32,9 @@ To begin head over to <a href="https://appeears.earthdatacloud.nasa.gov/" target
 ---
 ## Motivation For Today's Tutorial : Death Valley
 
-<img src="DeathValleySignECOSTRESS.png" alt="Death Valley National Park with ECOSTRESS Satellite" width = 1200>
+<p align="center">
+	<img src="DeathValleySignECOSTRESS.png" alt="Death Valley National Park with ECOSTRESS Satellite" width = 1000>
+</p>
 
 ECOSTRESS primarily measures surface temperatures, so let's see what it reads at one of the hottest places in the world, Death Valley California. While the highest recorded ground temperature was verified at 201 degrees F on July 15, 1972, it recently had one of the hottest months on record where air temperatures reached upwards of 128 degrees F in July of 2023. Let's use ECOSTRESS to observe the ground temperatures for those days to see how close it was to breaking the ground surface temperature record.
 
@@ -50,35 +57,73 @@ Today we are going to use a shapefile describing a polygon of the park boundarie
 
 5. Download the <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/DeathValleyNationalPark.zip" target="_blank"> DeathValleyNationalPark.zip</a> shapefile and save it somewhere you can remember. A folder containing all the files of today's tutorial sounds effective and orderly. 
 
-<img src="ExtractDeathValley.png" alt="Extract Area Sample Settings" width = 1200>
+<p align="center">
+	<img src="ExtractDeathValley.png" alt="Extract Area Sample Settings" width = 1000>
+</p>
 
 6. Drag and drop (or use the *click here to select the file* link) to upload the shapefile DeathValleyNationalPark.zip. The map should update with a polygon encompassing Death Valley National Park.
 7. Update the Start and End Date Fields for our month of interest, July 2023.
 
 AρρEEARS is an interface that provides access to a wealth of different data products, we are primarily focusing on the ECOSTRESS satellite.
 
-<img src="LayerSettings.png" alt="Layer Settings" width = 1200>
+<p align="center">
+	<img src="LayerSettings.png" alt="Layer Settings" width = 1000>
+</p>
 
-8. Under *Select the layers to include in the sample* type the word "ECOSTRESS" and scroll until you can click on *ECOSTRESS Land Surface Temperature & Emissivity (LST&E)*. From there scroll until you see the Land Surface Temperature (*SDS_LST*) option. Click on the "+" sign to add the layer into your cart. Next search for "Cloud" and add *Cloud_final* from the *ECOSTRESS Cloud Mask Instantaneous* category to your selected layers cart.
+8. Under *Select the layers to include in the sample* type the word "ECOSTRESS" and scroll until you can click on *ECOSTRESS Land Surface Temperature & Emissivity (LST&E)*. From there scroll until you see the Land Surface Temperature (*SDS_LST*) option. Click on the "+" sign to add the layer into your cart. Next clear the current category selection using the small "x" to the right of the *ECOSTRESS Land Surface Temperature & Emissivity (LST&E)* blue box. Then search for "Cloud" and add *Cloud_final* from the *ECOSTRESS Cloud Mask Instantaneous* category to your selected layers cart.
 
 If you are curious to learn more about the ECOSTRESS Mission's data, you can find all sorts of interesting facts here: <a href="https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/ecostress-overview/" target="_blank"> https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/ecostress-overview/</a>.
 
 9. Under *Output Options* we want to use GeoTIFF (Geographic Tagged Image File Format; essentially an image file where the corresponding geographic information is embedded in the file) and *Native Projection* for projection.
 10. Click *Submit* to complete the data request. At the top you should see a green banner:
 
-### Data Check
+<p align="center">
+	<img src="RequestSuccess.png" alt="Green Success Banner" width = 1000>
+</p>
 
-<img src="RequestSuccess.png" alt="Green Success Banner" width = 1200>
+---
+---
+---
+---
+---
+---
 
-11. After AρρEEARS crunches the numbers and retrieves your data from the depths of its database you will receive an email with the subject AρρEEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at https://appeears.earthdatacloud.nasa.gov/explore. Follow the *Explore* link in your completed request email (or via the explore menu tab on the AρρEEARS homepage) to access your data.
+<p align="center">
+	<img src="QgisLogo.png" alt="QGIS Logo" width="300">
+</p>
 
-<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 1200>
+Since we need to wait for AρρEEARS to process your request, it is a good time to get you acquainted with the software we will use to run our analyses and visual our data.
 
-12. Before we download the files we should take a look at what we have using the built in AρρEEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under *Layer Stats* you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). Hover over the boxplots to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Tutorial_GettingToKnowQGIS.html" target="_blank"> Follow this link to complete the next step of the tutorial, "Getting to Know QGIS".</a>.
+
+After you finish it there will be a link back here to continue to work with our data request.
+
+
+---
+---
+---
+---
+---
+---
+
+
+## Data Check
+
+11. Now it is time to check back on the status of your request. When your data is ready you will receive an email with the subject AρρEEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at https://appeears.earthdatacloud.nasa.gov/explore. Follow the *Explore* link in your completed request email (or via the explore menu tab on the AρρEEARS homepage) to access your data.
+
+<p align="center">
+	<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 1000>
+</p>
+
+12. Before we download the files we should take a look at what we have using the built in AρρEEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under *Layer Stats* you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). See image below for what you can learn from a boxplot. Next, hover over the boxplots in the timeseries to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.
+
+<p align="center">
+  <img src="HowToBoxplot.png" width = 500 />
+</p>
 
 **Note: ECOSTRESS makes temperature observations in Kelvin, not degrees Fahrenheit or Celsius.** 
 
-You are likely noticing that the distribution of temperatures for a given pass from the satellite is quite variable. Some instances, like on Tuesday 7/11/2023, the range is tightly confined around the mean, while others like Monday 7/31/2023 show considerable variance. If this was a different locale, it could mean that there is a lot of variation in surface temperatures across the geographic range we selected with the shapefile. However, in this case we know death valley is consistently hot desert, so it is more likely there is another culprit, clouds.
+You are likely noticing that the distribution of temperatures for a given pass from the satellite is quite variable. Some instances, like on Tuesday 7/11/2023, the range is tightly confined around the median, while others like Monday 7/31/2023 show considerable variance. If this was a different locale, it could mean that there is a lot of variation in surface temperatures across the geographic range we selected with the shapefile. However, in this case we know death valley is consistently hot desert, so it is more likely there is another culprit, clouds.
 
 <p align="center">
   <img src="Clouds.png" width = 300 />
@@ -86,7 +131,9 @@ You are likely noticing that the distribution of temperatures for a given pass f
 
 Satellite observations have many advantages over other types of measurements. They have continuity through space and time, but they can not accurately measure through clouds. To handle this, NASA has built cloud detection algorithms and included that data in AρρEEARS.
 
-<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 1200>
+<p align="center">
+	<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 1000>
+</p>
 
 13. Change the layer in the built in stats visualizer to Cloud_final. Now we have a different visualization, the output of the cloud detecting algorithm. The bar chart breaks down the percentage of pixels that are clear (represented in blue) and pixels that have clouds (orange). Satellite passes that are cloud free or have few clouds tend to have better data with less outliers given that there is little interference. For our temperature map let's pick the hottest cloud free day, 7/28/2023. 
 
@@ -110,12 +157,19 @@ Example output file name (.tif):
     <AppEEARSFeatureID> ......... aid0001 
     <FileFormat> ................ tif
 
+For class we are mostly concerned with the layer name, which corresponds to what variable we are looking at (e.g. Land surface temperature = *SDS_LST*), and the time of the satellite pass (i.e. Year = 2023, Julian Date = 209).
 
-<img src="Julian_Calendar.png" alt="Julian Calendar Information" width = 1200>
+<p align="center">
+	<img src="Julian209.png" alt="Julian Calendar Information" width = 600>
+</p>
 
-14. Access the download page by scrolling to the top of the page, selecting the *Explore* menu and selecting the middle button next to your request, *Download the contents of the request* <img src="DownloadButton.png" alt="Download Button" width = 25>. Use the Julien Calendar and file naming convention listed above to determine what filename we need to download the land surface temperature data for 7/28/2023. There can be multiple files that match the date and layer you requested, in this case there are two. Download both files to a folder on your computer that you can access, the same folder that you saved the DeathValleyNationalPark.zip shapefile would be ideal.
+14. Access the download page by scrolling to the top of the page, selecting the *Explore* menu and selecting the middle button next to your request, *Download the contents of the request* <img src="DownloadButton.png" alt="Download Button" width = 25>. Use the Julian Calendar and file naming convention listed above to determine what filename we need to download the land surface temperature data for 7/28/2023. There can be multiple files that match the date and layer you requested, in this case there are two. Download both files to a folder on your computer that you can access, the same folder that you saved the DeathValleyNationalPark.zip shapefile would be ideal.
 
-<img src="DownloadInstructions.png" alt="Download Instructions" width = 1200>
+**NOTE:** <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/Julian_Calendar.png" target="_blank"> You can access the Julian Calendar table anytime be clicking this link. Watch out for leap years!</a>. 
+
+<p align="center">
+	<img src="DownloadInstructions.png" alt="Download Instructions" width = 1000>
+</p>
 
 ---
 ## Visualizing the Death Valley Surface Temperature Data in QGIS
@@ -124,23 +178,32 @@ Example output file name (.tif):
 
 In the last tutorial we added in a simple basemap through a service included in the base QGIS installation. Today we are going to expand QGIS's functionality by using an available plugin, HCMGIS. Plugins are external pieces of software that add useful features to QGIS. 
 
-<img src="QGIS_Plugins.png" alt="QGIS Plugin Instructions" width = 1200>
+<p align="center">
+	<img src="QGIS_Plugins.png" alt="QGIS Plugin Instructions" width = 1000>
+</p>
 
 15. Open QGIS and start a new project by selecting the *Project* menu &rarr; then *New*. To install the HCMGIS plugin, click on the *Plugins* drop down menu and select *Manage and Install Plugins*.
 16. In the next window, make sure *All* is selected in the first window pane and search for HCMGIS. HCMGIS is plugin that allows for easy imports of a wide selection of basemaps.
 17. Click *Install Plugin* and wait for the installation to complete.
 
-<img src="GoogleBasemap.png" alt="Google Satellite Basemap" width = 1200>
+
+<p align="center">
+	<img src="GoogleBasemap.png" alt="Google Satellite Basemap" width = 1000>
+</p>
 
 18. Now to quickly and easily add a basemap, all you need to do is find the *HCMGIS* menu bar, select *Basemap*, then pick your preference. For today's map let's use *Google Satellite*, though you could play around with other options. Some of my other favorites are "ESRI Imagery", "ESRI Delorme", "Stamen Terrain", and "NASA Black Marble", though their usefulness is highly dependent on the goal of your map. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
 
 ### Importing Our ECOSTRESS Death Valley Layer
 
-<img src="ImportLST.png" alt="Import Land Surface Data Into QGIS" width = 1200>
+<p align="center">
+	<img src="ImportLST.png" alt="Import Land Surface Data Into QGIS" width = 1000>
+</p>
 
 19. Use the *browser* window to find the folder that you saved the two land surface temperature tif files in. Double click each file to add them to your map. Again notice they now are listed in the *Layers* window as well.
 
-<img src="SymbologyLST.png" alt="Import Land Surface Data Into QGIS" width = 1200>
+<p align="center">
+	<img src="SymbologyLST.png" alt="Change Symbology" width = 1000>
+</p>
 
 20. Congrats! You now have ECOSTRESS data on a map. But wait... let's make it look just a little better before you celebrate your win. QGIS doesn't know what kind of data this is and has defaulted to displaying the information in grayscale, which isn't that useful to our eyes. For each land surface temperature layer, right click on the layer name in the *Layers* window and select *Layer Properties*. On the menu bar to the left select *Symbology* and change the *Render type* to Singleband pseudocolor. Since this is heat, I am going with the red color ramp. QGIS has automatically determined the minimum and maximum values from the datafiles, however we have two files so we need to make them match. Use 306.82 as the minimum and 347 as the maximum for both layers. Click apply.
 
@@ -148,18 +211,24 @@ In the last tutorial we added in a simple basemap through a service included in 
 
 22. Now we can celebrate... Your map should resemble the one below:
 
-<img src="TempMap1.png" alt="Map" width = 1200>
+<p align="center">
+	<img src="TempMap1.png" alt="Map" width = 1000>
+</p>
 
 **NOTE: There was not full data coverage for the entire park available, that is why the Northern most part of the park does not have any color overlayed. This happens sometimes due to the orbit the satellite takes.**
 
 23. Save you QGIS Project somewhere convenient, perhaps in the folder with all of the other files in this tutorial, by going to the *Project* menu bar at the top and selecting *Save As...*. Keep the file format as .QGZ.
+
+24. Export your map. From the *Project* menu navigate to *Import/Export* and select *Export Map To Image*. Just as before I recommend upping the resolution to 200 dpi. You will submit this map too, so save it somewhere you can remember. 
+
+Congratulations! You have learned how to download ECOSTRESS satellite data from AρρEEARS and make a basic map in QGIS.
 
 ---
 
 ## Map of The Week Assignments
 
 1. Watch the Youtube Video: "Why All Maps Are Wrong" at https://youtu.be/kIID5FDi2JQ
-2. Give the article <a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank"> Lying With Maps</a> from the University of Minnesota a read. 
-3. Find two maps that you think are interesting, cool, or exceptionally well made and submit them for next class along with a brief description of why you picked those two.
+2. Give the Article <a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank"> Lying With Maps</a> from the University of Minnesota a read. 
+3. Submit Your Timezone Map and Land Surface Temperature Map
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 

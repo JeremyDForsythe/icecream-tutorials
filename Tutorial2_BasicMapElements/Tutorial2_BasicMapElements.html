@@ -10,11 +10,15 @@
 </ol>
 <hr />
 <h2>Motivation For Today’s Tutorial : NASA Press Releases</h2>
-<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 1200>
+<p align="center">
+	<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 1000>
+</p>
 <p>The idea of this course is to change the way we approach climate disaster analyses and immerse you in the process of science communication. Today we are going to create a publish worthy map of the Death Valley National Park surface temperature experiment we ran in last class. Today’s tutorial will provide you with the basic working knowledge to create beautiful and informative maps. Later in the course you will use these skills to analyze current climate disasters and publish your maps through NASA’s Jet Propulsion Lab.</p>
 <hr />
 <h2>Create A Base Map</h2>
-<img src="BaseMap.png" alt="Add Basemap" width = 1200>
+<p align="center">
+	<img src="BaseMap.png" alt="Add Basemap" width = 1000>
+</p>
 <ol>
 <li>Create a new project (<em>Project</em> → <em>New</em>)</li>
 <li>Add the ESRI National Geographic Basemap by either:
@@ -27,7 +31,9 @@
 <li>Start a new print layout by going to the <em>Project</em> menu, then select <em>New Print Layout</em>. Enter whatever name you would like. I went with <em>Death Valley Inset</em>.</li>
 <li>Now select the menu <em>Add Item</em>, then <em>Add Map</em>. Start at one corner of the white rectangle window and drag to the opposite diagonal corner to set the map space. You will see that the rectangle window will be rendered with the map from the main QGIS canvas.</li>
 </ol>
-<img src="InsetItem.png" alt="Item Properties" width = 1200>
+<p align="center">
+	<img src="InsetItem.png" alt="Item Properties" width = 1000>
+</p>
 <ol start="6">
 <li>Click on the <em>Item Properties</em> tab.</li>
 <li>Adjust the <em>Scale</em>, which is the zoom level, to 7000000 and hit enter.</li>
@@ -44,28 +50,38 @@
 <li>Use the <em>browser</em> window to find the folder that you saved the two land surface temperature tif files in from the last tutorial. Double click each file to add them to your map.</li>
 <li>Adjust the symbology for each of the land surface temperature layer by right clicking on the layer name in the <em>Layers</em> window and select <em>Layer Properties</em>. On the menu bar to the left select <em>Symbology</em> and change the <em>Render type</em> to Singleband pseudocolor. Use the red color ramp and remember to match the minimum and maximum values from the surface temperature, 306.82 as the minimum and 347 as the maximum for both layers. Click apply.</li>
 </ol>
-<img src="DVlines.png" alt="Border Lines" width = 600>
+<p align="center">
+	<img src="DVlines.png" alt="Border Lines" width = 400>
+</p>
 <ol start="13">
 <li>Add in the border from the DeathValleyNationalPark.zip shapefile. In the <em>Browser</em> window expand the zip file using the small arrow next to the filename. Double click on <em>Death Valley National Park.shp</em> to add the layer. Right click on the layer in the <em>Layers</em> window and change it’s symbology to <em>outline blue</em>. The lines are a little thin, let’s make them thicker. First, click on the <em>Simple Line</em> selection in the dialog box.</li>
 <li>Change the <em>Stroke width</em> to 3 mm. Click the <em>Apply</em> button at the bottom of the window.</li>
 <li>Zoom in so that the outline of Death Valley National Park fits nicely in the window, it should look like this:</li>
 </ol>
-<img src="DV_LST.png" alt="Death Valley LST Redo" width = 1200>
+<p align="center">
+	<img src="DV_LST.png" alt="Death Valley LST Redo" width = 1000>
+</p>
 <h3>Adding in our Land Surface Temperature Map as an Inset</h3>
 <ol start="16">
 <li>Now that we have the map how we like it the main window, switch back to the Print Layout window. Select the menu <em>Add Item</em>, then <em>Add Map</em>. Click and create an inset of the land surface temperature to the East of California.</li>
 </ol>
-<img src="AddInset.png" alt="Add Inset" width = 1200>
+<p align="center">
+	<img src="AddInset.png" alt="Add Inset" width = 1000>
+</p>
 <ol start="17">
 <li>Under the <em>Item Properties</em> for the inset map (typically numbered <em>Map 2</em> in the <em>Items</em> window), change the scale to 1300000.</li>
 </ol>
-<img src="RegionShade.png" alt="Add Inset" width = 1200>
+<p align="center">
+	<img src="RegionShade.png" alt="Add Inset" width = 1000>
+</p>
 <ol start="18">
 <li>QGIS has an excellent tool for automatically highlighting the area on the main map that is represented in an inset. First, select <em>Map 1</em> (or whatever your main map number is) in the <em>Items</em> window.</li>
 <li>Next under <em>Item Properties</em> scroll down to find the <em>Overviews</em> menu. Click the green plus sign to an overview.</li>
 <li>Under map frame select <em>Map 2</em> (or whatever you have named your inset map). The area from the inset should now be highlighted on the main map. Adjust the highlight color to match your mood.</li>
 </ol>
-<img src="TempLegend1.png" alt="Add Temperature Legend" width = 1200>
+<p align="center">
+	<img src="TempLegend1.png" alt="Add Temperature Legend" width = 1000>
+</p>
 <hr />
 <h2>Basic Map Elements</h2>
 <h3>Adding a Legend</h3>
@@ -81,20 +97,28 @@
 <p>The SI unit of temperature set for the International System of Units is Kelvin (K), which is how the land surface temperature observations made by ECOSTRESS are reported. You can use the formulas below to convert K into degrees Celsius or Fahrenheit, which are often more intuitive to your target audiences.
 * C = K - 273.15
 * F = (K − 273.15) × 9/5 + 32</p>
-<img src="TempScale1.png" alt="Legend Scale" width = 1200>
+<p align="center">
+	<img src="TempScale1.png" alt="Legend Scale" width = 1000>
+</p>
 <ol start="27">
 <li>To change the scale of the legend bar, double click on the scale in the <em>Legend Items</em> property window.</li>
 </ol>
-<img src="TempScale2.png" alt="Adjust Temperature Scale" width = 500>
+<p align="center">
+	<img src="TempScale2.png" alt="Adjust Temperature Scale" width = 500>
+</p>
 <ol start="28">
 <li>Converting our temperature scale to degrees Fahrenheit yields a range of 92.6 to 164.9, enter that in the place of the default minimum and maximum values. Let’s also adjust the width to 12 mm and the height to 60 mm. Use the back arrow to go back to <em>Item Properties</em>.</li>
 </ol>
-<img src="TempLegend2.png" alt="Adjust Temperature Legend Background" width = 1200>
+<p align="center">
+	<img src="TempLegend2.png" alt="Adjust Temperature Legend Background" width = 1000>
+</p>
 <ol start="29">
 <li>Let’s make the legend look a little more professional by adjusting the background color. Scroll down and look for the <em>Background</em> section of the <em>Item Properties</em>. Use the arrow to expand your options. Here you can change the color, but for now let’s leave it white but change the <em>Opacity</em> to 44%. This makes the legend back more transparent, giving it a cleaner look. It should resemble the screenshot above. Return back to the list of item properties.</li>
 </ol>
 <h3>Adding Gridlines</h3>
-<img src="AddGrid.png" alt="Add Gridlines" width = 1200>
+<p align="center">
+	<img src="AddGrid.png" alt="Add Gridlines" width = 1000>
+</p>
 <ol start="30">
 <li>Let’s add gridlines to our inset map so readers can tell where the GPS coordinates of our analyses are at a quick glance. Select the inset map in the <em>Items</em> browser, it is likely named “Map 2”.</li>
 <li>Select the <em>Item Properties</em> tab and scroll down until you reach the <em>Grids</em> subsection. Click the plus sign to add a set of gridlines.</li>
@@ -103,7 +127,9 @@
 <ol start="32">
 <li>We can select a different CRS for the grid and customize the aesthetics by clicking the <em>Modify Grid</em> button.</li>
 </ol>
-<img src="GridProps1.png" alt="Gridlines Style" width = 500> 
+<p align="center">
+	<img src="GridProps1.png" alt="Gridlines Style" width = 500> 
+</p>
 <ol start="33">
 <li>Make the following modifications (see above and below screenshots for reference):</li>
 </ol>
@@ -116,14 +142,20 @@
 <li>Disable the <em>Right</em> Coordinates.</li>
 <li>Change <em>Coordinate precision</em> to 1.</li>
 </ul>
-<img src="GridProps2.png" alt="GPS Coordinates" width = 400>
+<p align="center">
+	<img src="GridProps2.png" alt="GPS Coordinates" width = 400>
+</p>
 <p>Your map should now resemble:</p>
-<img src="DVwGrids.png" alt="GPS Coordinates" width = 1200>
+<p align="center">
+	<img src="DVwGrids.png" alt="GPS Coordinates" width = 1000>
+</p>
 <p><strong>NOTE: This same procedure could have been done for the main map instead of the inlet map, if that suits your vision.</strong></p>
 <p>Let’s add a couple more small details to bring this map to the next level.</p>
 <h3>Adding a Scalebar</h3>
 <p>Will we now have coordinates for the inset map, it can be critical for the reader to know the scale of the maps they are looking at. This is achieved with a scalebar, which QGIS can automatically render for you.</p>
-<img src="Scalebar.png" alt="Add Scalebar" width = 1200>
+<p align="center">
+	<img src="Scalebar.png" alt="Add Scalebar" width = 1000>
+</p>
 <ol start="34">
 <li>With the main map (likely “Map 1”) highlighted in the <em>Items</em> browser,  click the <em>Add Item</em> menu at the top of the screen and select <em>Add Scalebar</em>.</li>
 <li>Draw the scalebar on the main map in a logical place. I like the bottom left corner, which thus far has remained underutilized.</li>
@@ -131,18 +163,24 @@
 </ol>
 <h3>Adding a North Arrow</h3>
 <p>It is customary to indicate which direction is North on a map with a symbol of an arrow pointed North. This is a simple add in QGIS.</p>
-<img src="NorthArrow1.png" alt="Adding North Arrow" width = 1200>
+<p align="center">
+	<img src="NorthArrow1.png" alt="Adding North Arrow" width = 1000>
+</p>
 <ol start="37">
 <li>Click the <em>Add Item</em> menu at the top of the screen and select <em>Add North Arrow</em>.</li>
 <li>Select your preferred North arrow symbol, I am going with a traditional looking compass style with the cardinal directions labeled. Draw the North arrow in an appropriate place, I selected a centered location above the scalebar.</li>
 </ol>
 <p><strong>NOTE: <em>SVG Images</em> tend to look cleaner and sharper compared to the <em>Raster Image</em> options.</strong></p>
-<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 1200>
+<p align="center">
+	<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 1000>
+</p>
 <ol start="39">
 <li>To adjust the properties of the North arrow, scroll down on the <em>Item Properties</em> window to find such useful features as changing color or size.</li>
 </ol>
 <h3>Adding a Title</h3>
-<img src="TextBox.png" alt="Adding a Title" width = 1200>
+<p align="center">
+	<img src="TextBox.png" alt="Adding a Title" width = 1000>
+</p>
 <p>One last addition, let’s add a title to the map.</p>
 <ol start="40">
 <li>Click the <em>Add Item</em> menu at the top of the screen and select <em>Add Label</em>.</li>
@@ -154,7 +192,9 @@
 <li>Check the box next to <em>Frame</em> and adjust the parameters to draw a frame around your title.</li>
 </ol>
 <h3>Exporting Your Map</h3>
-<img src="Export.png" alt="Exporting Your Map" width = 1200>
+<p align="center">
+	<img src="Export.png" alt="Exporting Your Map" width = 1000>
+</p>
 <p>Now that our map looks exactly how we want it to look, we want to be able to share it with friends, family, our Instagram followers, and ultimately… NASA.</p>
 <ol start="47">
 <li>To do so, select the <em>Layout</em> dropdown menu, then <em>Export as Image</em>.</li>
@@ -162,14 +202,18 @@
 <li>Click <em>Save</em> and bask in the glory of your first ECOSTRESS map, which (hopefully) resembles the one below. Congratulations… You did a thing!</li>
 </ol>
 <p><strong>NOTE: There may be times when you want to export as PDF, particularly when the map needs to be scalable to different sizes.</strong></p>
-<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 1200>
+<p align="center">
+	<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 1000>
+</p>
 <hr />
 <h2>Answering Our Original Question</h2>
-<img src="DeathValleySign.jpg" alt="Final Death Valley LST Map" width = 1200>
+<p align="center">
+	<img src="DeathValleySign.jpg" alt="Final Death Valley LST Map" width = 1000>
+</p>
 <p>If you recall our motivation for this exercise was to see if an analysis with ECOSTRESS supported that land surface temperatures in Death Valley National Park came close to breaking the surface temperature record.</p>
 <p>Given that the highest recorded ground temperature of 201 degrees F was verified on July 15, 1972, it appears that our analysis does not support that surface temperatures exceeded that record in July of 2023, despite that it was one of the hottest months in recorded history for air temperatures.</p>
 <p><strong>NOTE: It is important to remember that the process of science “supports” or “does not support” hypotheses. It does not entirely “prove” or “disprove” ideas. There are many factors that prevent our analyses from being entirely conclusive. These include the measurement error of our instrument, the times of day the satellite passed over the study site, cloudiness, etc…</strong></p>
-<p>The real power of the ECOSTRESS satellite comes in it’s geographic and temporal continuity. For instance, it is easy to see from our map which parts of Death Valley have the highest surface temperature. We could also track this seasonally, to see the effect of vegetation. The possibilities are endless.</p>
+<p>The real power of the ECOSTRESS satellite comes in its geographic and temporal continuity. For instance, it is easy to see from our map which parts of Death Valley have the highest surface temperature. We could also track this seasonally, to see the effect of vegetation. The possibilities are endless.</p>
 <hr />
 <h2>Map of the Week Assignments</h2>
 <ol>

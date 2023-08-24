@@ -8,29 +8,45 @@
 ## Objectives : 
 
 1. Install QGIS Software
-2. Get Acquainted With QGIS's Toolsbars, Buttons, & Layout
+2. Begin Thinking About How To Use Maps To Communicate
 
 ---
-
-<img src="QgisLogo.png" alt="QGIS Logo" width="300">
+<p align="center">
+	<img src="QgisLogo.png" alt="QGIS Logo" width="300">
+</p>
 
 ## What is QGIS and Why Do I Need It?
 
-QGIS is a geographic information system (GIS) application that supports viewing, editing, printing, and analysis of geospatial data. It is a free and open source alternative to ArcGIS that we will use to analyze NASA satellite data and create maps visualizing the impact of climate change and natural disasters.
+QGIS is an application that supports viewing, editing, printing, and analysis of geospatial data. Geospatial data is information connected to locations on the Earth's surface. You can map objects, events, and other real-world phenomena to a specific geographical area identified by latitude and longitude coordinates. We use data like this everyday when we navigate to museums, restaurants, or a friend's house using Google or Apple maps. In this course, we are going to analyze geospatial data from NASA satellites and create maps visualizing the impact of climate change and natural disasters.
 
-Each week you will use this software to work through a new tutorial and complete a "map-of-the-week" assignment that will add tools to your skill set, culminating in an in-depth final project exploring an environmental event using ECOSTRESS and other data sources.
+If you have ever worked with geographic information system (GIS) software before, you might have used ArcGIS, which is a popular but paid program. QGIS is a free and open source alternative to ArcGIS, that is widely used in industry, research, and by departments of government, including the National Security Agency (NSA). 
+
+Each week you will use QGIS to complete a new tutorial and submit "Map-of-the-Week" assignments that will add tools to your skill set, culminating in an in-depth final project exploring an environmental event using ECOSTRESS and other data sources.
 
 ## Installing QGIS
 
-Head over to <a href="https://www.qgis.org/]" target="_blank">https://www.qgis.org/</a> and download the latest version for your operating system.
+Head over to <a href="https://qgis.org/en/site/forusers/download.html]" target="_blank">https://qgis.org/en/site/forusers/download.html</a> and download the stable version for your operating system. 
+
+**NOTE: QGIS offers a latest release which is cutting edge and unstable. I suggest downloading the Long Term Release (LTR), which is stable and easier to use. See images below for each operating system:**
+
 
 ### <img src="WindowsLogo.png" alt="Windows Logo" width="20"> &nbsp; Windows 
+
+<p align="center">
+	<img src="WINltr.png" alt="Windows Long Term Release" width = 1000>
+</p>
+
+
 
 Check for the QGIS executable file (.msi) in whichever folder you downloaded it to and open it. Follow the prompts to install the software.
 
 Open QGIS Desktop from the start menu or desktop icon.
 
 ### <img src="AppleLogo.png" alt="Apple Logo" width="20"> &nbsp; Mac
+
+<p align="center">
+	<img src="MACltr.png" alt="MAC Long Term Release" width = 1000>
+
 
 Check for the QGIS executable file (.dmg) in whichever folder you downloaded it to and open it. Follow the prompts to accept the terms and conditions. To install the software, hold and drag the file into your Applications.
 
@@ -40,72 +56,14 @@ Open QGIS by selecting it in Launchpad or use Go &rarr; Applications and double 
 
 Use your package manager to install the stable version from your distribution's repository or follow these instructions to install a more up to date version : <a href="https://www.qgis.org/en/site/forusers/alldownloads.html#linux]" target="_blank">https://www.qgis.org/en/site/forusers/alldownloads.html#linux</a>.
 
----
 
-## Getting To Know QGIS
-
-Congratulations! You have now successfully installed QGIS. Let's have a quick look at the layout and get you going on your first map. 
-
-Your screen will likely resemble something like this:
-
-<img src="QGISscreen.png" alt="QGIS Screen Layout" width = 1200>
-
-1. **Browser Panel & Layers List**
-   * The browser panel lets you easily navigate files and databases. We will use it to import map layers and satellite data.
-   * In the layers list, you will see all the map layers we have imported for the given project we are working on. Layer examples include a base map (like google maps), satellite raster data (pixels each with a given value... like temperature), and vector data (points, lines, shapes... like roads).
-2. **Toolbars**
-   * Our most often used sets of tools can be found in the toolbars. For example, the *Project* toolbar allows you to save, load, print, and start a new project.
-3. **Main Work Area / Map canvas**
-   * This is where the map itself is displayed. In the map canvas you can interact with the visible layers: zoom in/out, move the map, select features and many other operations that we will dive into in the next weeks.
-4. **Status bar**
-   * Shows you information about the current map. Also allows you to adjust the map scale, the map rotation and see the mouse cursor’s coordinates on the map.
-5. **Locator bar**
-   * Within this bar you can quickly access to almost all the objects and functions of QGIS: layers, layer features, algorithms, spatial bookmarks, etc, by typing in what you are looking for.
-
----
-## Try It Out! Exploring Your First Map...
-
-### I. Add a Basemap Layer
-
-<img src="QGISbasemap.png" alt="Adding A Basemap" width = 1200> 
-
-1. In the browser window expand your options by clicking on the small arrow next to *XYZ Tiles*.
-2. Double click on Open Street Map to load in a basic open source map. You will notice that we just added a layer to the layer window below.
-3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand is the pan map function which allows you to move the map around when you are zoomed in. Maybe try finding your home or a favorite place in the world? To reset to the default view you can use the zoom full function (magnifying glass with the arrows in all directions).
-
-### II. Add in an Interesting Layer Via Shapefiles
-
-Shapefiles are a common geospatial file type that stores locations, points, lines, and shapes.
-
-1. Download this zipped folder from our website to your local computer. Make sure you save it somewhere you can remember.
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Time_Zones.zip" target="_blank"> US Timezones</a>
-
-<img src="TimeZones.png" alt="Adding Time Zones" width = 1200>
-
-2. After you have the file, use the browser window to locate *Time_Zones.zip* in the folder you saved it to. Use the little arrow to expand the zip file and double click on the *Time_Zones.shp* shapefile. Just as before we have now added a new layer to our map.
-
-<img src="TimeZoneSymbol.png" alt="Changing Time Zone Visuals" width = 1200>
-
-3. This looks a little clunky, so let's make it more readable and useful. Right click on Windows/Linux or control click on Mac to open up the properties window. Navigate to the symbology window and select green outline. Click *Apply* and *OK*.  Then zoom and pan the map to center on North America, given that these are only US Timezones.
-
-<img src="TimeZoneLabels.png" alt="Adding Time Zone Labels" width = 1200>
-
-4. Next let's add labels. Open the Time Zone properties back up and navigate to the *Labels* window. From the drop down menu at the top select *Single Labels*. Play around with the options to get the colors how you like them or maybe use one of the included styles, like *water bodies*. Click *Apply* and *OK*. 
-
-<img src="Export.png" alt="Adding Time Zone Labels" width = 1200>
-
-5. Lastly, we want to save your map so you can marvel at your work anytime you'd like and share it with friends at parties. From the *Project* menu navigate to *Import/Export* and select *Export Map To Image*. By default it will use the extent that you have in the viewer. I recommend upping the resolution to 200 dpi. High-five! You have made a map. 
+Congratulations! You have now successfully installed QGIS. In our next class we will get you up and running to make your first map.
 
 ---
 
-### Bonus
+## Map of The Week Assignments
 
-If you are so inclined you can check out these other interesting shapefiles from the Orange County GIS Database:
-
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/Regional_Subbasins_and_Watersheds.zip" target="_blank"> Watersheds of Orange County</a>
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial0_InstallingQGIS/OC_Parks_Trails.zip" target="_blank"> Hiking Trails of Orange County</a>
-
-<img src="OCWatershedAndTrails.png" alt="Watersheds and Trails in OC" width = 1200>
+1. Find two maps that you think are interesting, cool, or exceptionally well made and submit them before next class along with a brief description of why you picked those two.
 
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 
