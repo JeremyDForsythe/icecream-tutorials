@@ -241,7 +241,7 @@ Now that our map looks exactly how we want it to look, we want to be able to sha
 ## Answering Our Original Question
 
 <p align="center">
-	<img src="DeathValleySign.jpg" alt="Final Death Valley LST Map" width = 1000>
+	<img src="DeathValleySign.jpg" alt="Final Death Valley LST Map" width = 600>
 </p>
 
 If you recall our motivation for this exercise was to see if an analysis with ECOSTRESS supported that land surface temperatures in Death Valley National Park came close to breaking the surface temperature record. 

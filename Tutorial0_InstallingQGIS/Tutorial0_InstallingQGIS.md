@@ -33,7 +33,7 @@ Head over to <a href="https://qgis.org/en/site/forusers/download.html]" target="
 ### <img src="WindowsLogo.png" alt="Windows Logo" width="20"> &nbsp; Windows 
 
 <p align="center">
-	<img src="WINltr.png" alt="Windows Long Term Release" width = 1000>
+	<img src="WINltr.png" alt="Windows Long Term Release" width = 600>
 </p>
 
 
@@ -45,7 +45,7 @@ Open QGIS Desktop from the start menu or desktop icon.
 ### <img src="AppleLogo.png" alt="Apple Logo" width="20"> &nbsp; Mac
 
 <p align="center">
-	<img src="MACltr.png" alt="MAC Long Term Release" width = 1000>
+	<img src="MACltr.png" alt="MAC Long Term Release" width = 600>
 </p>
 
 Check for the QGIS executable file (.dmg) in whichever folder you downloaded it to and open it. Follow the prompts to accept the terms and conditions. To install the software, hold and drag the file into your Applications.

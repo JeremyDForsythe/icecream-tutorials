@@ -33,7 +33,7 @@ To begin head over to <a href="https://appeears.earthdatacloud.nasa.gov/" target
 ## Motivation For Today's Tutorial : Death Valley
 
 <p align="center">
-	<img src="DeathValleySignECOSTRESS.png" alt="Death Valley National Park with ECOSTRESS Satellite" width = 1000>
+	<img src="DeathValleySignECOSTRESS.png" alt="Death Valley National Park with ECOSTRESS Satellite" width = 600>
 </p>
 
 ECOSTRESS primarily measures surface temperatures, so let's see what it reads at one of the hottest places in the world, Death Valley California. While the highest recorded ground temperature was verified at 201 degrees F on July 15, 1972, it recently had one of the hottest months on record where air temperatures reached upwards of 128 degrees F in July of 2023. Let's use ECOSTRESS to observe the ground temperatures for those days to see how close it was to breaking the ground surface temperature record.
@@ -58,7 +58,7 @@ Today we are going to use a shapefile describing a polygon of the park boundarie
 5. Download the <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/DeathValleyNationalPark.zip" target="_blank"> DeathValleyNationalPark.zip</a> shapefile and save it somewhere you can remember. A folder containing all the files of today's tutorial sounds effective and orderly. 
 
 <p align="center">
-	<img src="ExtractDeathValley.png" alt="Extract Area Sample Settings" width = 1000>
+	<img src="ExtractDeathValley.png" alt="Extract Area Sample Settings" width = 800>
 </p>
 
 6. Drag and drop (or use the *click here to select the file* link) to upload the shapefile DeathValleyNationalPark.zip. The map should update with a polygon encompassing Death Valley National Park.
@@ -67,7 +67,7 @@ Today we are going to use a shapefile describing a polygon of the park boundarie
 AρρEEARS is an interface that provides access to a wealth of different data products, we are primarily focusing on the ECOSTRESS satellite.
 
 <p align="center">
-	<img src="LayerSettings.png" alt="Layer Settings" width = 1000>
+	<img src="LayerSettings.png" alt="Layer Settings" width = 600>
 </p>
 
 8. Under *Select the layers to include in the sample* type the word "ECOSTRESS" and scroll until you can click on *ECOSTRESS Land Surface Temperature & Emissivity (LST&E)*. From there scroll until you see the Land Surface Temperature (*SDS_LST*) option. Click on the "+" sign to add the layer into your cart. Next clear the current category selection using the small "x" to the right of the *ECOSTRESS Land Surface Temperature & Emissivity (LST&E)* blue box. Then search for "Cloud" and add *Cloud_final* from the *ECOSTRESS Cloud Mask Instantaneous* category to your selected layers cart.
@@ -112,7 +112,7 @@ After you finish it there will be a link back here to continue to work with our 
 11. Now it is time to check back on the status of your request. When your data is ready you will receive an email with the subject AρρEEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at https://appeears.earthdatacloud.nasa.gov/explore. Follow the *Explore* link in your completed request email (or via the explore menu tab on the AρρEEARS homepage) to access your data.
 
 <p align="center">
-	<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 1000>
+	<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 800>
 </p>
 
 12. Before we download the files we should take a look at what we have using the built in AρρEEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under *Layer Stats* you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). See image below for what you can learn from a boxplot. Next, hover over the boxplots in the timeseries to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.
@@ -126,13 +126,13 @@ After you finish it there will be a link back here to continue to work with our 
 You are likely noticing that the distribution of temperatures for a given pass from the satellite is quite variable. Some instances, like on Tuesday 7/11/2023, the range is tightly confined around the median, while others like Monday 7/31/2023 show considerable variance. If this was a different locale, it could mean that there is a lot of variation in surface temperatures across the geographic range we selected with the shapefile. However, in this case we know death valley is consistently hot desert, so it is more likely there is another culprit, clouds.
 
 <p align="center">
-  <img src="Clouds.png" width = 300 />
+  <img src="Clouds.png" width = 250 />
 </p>
 
 Satellite observations have many advantages over other types of measurements. They have continuity through space and time, but they can not accurately measure through clouds. To handle this, NASA has built cloud detection algorithms and included that data in AρρEEARS.
 
 <p align="center">
-	<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 1000>
+	<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 800>
 </p>
 
 13. Change the layer in the built in stats visualizer to Cloud_final. Now we have a different visualization, the output of the cloud detecting algorithm. The bar chart breaks down the percentage of pixels that are clear (represented in blue) and pixels that have clouds (orange). Satellite passes that are cloud free or have few clouds tend to have better data with less outliers given that there is little interference. For our temperature map let's pick the hottest cloud free day, 7/28/2023. 
@@ -168,7 +168,7 @@ For class we are mostly concerned with the layer name, which corresponds to what
 **NOTE:** <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/Julian_Calendar.png" target="_blank"> You can access the Julian Calendar table anytime be clicking this link. Watch out for leap years!</a>. 
 
 <p align="center">
-	<img src="DownloadInstructions.png" alt="Download Instructions" width = 1000>
+	<img src="DownloadInstructions.png" alt="Download Instructions" width = 800>
 </p>
 
 ---
