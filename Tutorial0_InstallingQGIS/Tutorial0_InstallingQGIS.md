@@ -1,8 +1,10 @@
 ---
 # Tutorial #0: Installing QGIS
 
-Observing Earth from Above (Env 329 - Fall 2023* 
+Observing Earth from Above (Env 329) - Fall 2023
+
 Schmid College of Science and Technology
+
 Chapman University
 
 ---
