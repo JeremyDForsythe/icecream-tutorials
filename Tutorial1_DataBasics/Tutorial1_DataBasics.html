@@ -89,16 +89,19 @@
 <ol start="11">
 <li>Now it is time to check back on the status of your request. When your data is ready you will receive an email with the subject AρρEEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at <a href="https://appeears.earthdatacloud.nasa.gov/explore">https://appeears.earthdatacloud.nasa.gov/explore</a>. Follow the <em>Explore</em> link in your completed request email (or via the explore menu tab on the AρρEEARS homepage) to access your data.</li>
 </ol>
+<p><strong>NOTE: While using the AρρEEARS interface you will occasionally encounter an error or the system being down for maintenance or updating. If it is the latter, there will be a banner at the top of the AρρEEARS with information about the timeline to restore service. If you encounter an error without a banner present, you can submit a support ticket at :</strong> <a href="https://lpdaac.usgs.gov/lpdaac-contact-us/" target="_blank"> <a href="https://lpdaac.usgs.gov/lpdaac-contact-us/">https://lpdaac.usgs.gov/lpdaac-contact-us/</a></a>.</p>
+<p><strong>NOTE: For these tutorials, if the AρρEEARS interface is not functioning, I have provided links at the end of each page to any files you would need to complete the lesson.</strong></p>
 <p align="center">
 	<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 800>
 </p>
 <ol start="12">
 <li>Before we download the files we should take a look at what we have using the built in AρρEEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under <em>Layer Stats</em> you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). See image below for what you can learn from a boxplot. Next, hover over the boxplots in the timeseries to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.</li>
 </ol>
+<p><strong>Note: ECOSTRESS makes temperature observations in Kelvin, not degrees Fahrenheit or Celsius.</strong></p>
+<p> </p>
 <p align="center">
   <img src="HowToBoxplot.png" width = 500 />
 </p>
-<p><strong>Note: ECOSTRESS makes temperature observations in Kelvin, not degrees Fahrenheit or Celsius.</strong></p>
 <p>You are likely noticing that the distribution of temperatures for a given pass from the satellite is quite variable. Some instances, like on Tuesday 7/11/2023, the range is tightly confined around the median, while others like Monday 7/31/2023 show considerable variance. If this was a different locale, it could mean that there is a lot of variation in surface temperatures across the geographic range we selected with the shapefile. However, in this case we know death valley is consistently hot desert, so it is more likely there is another culprit, clouds.</p>
 <p align="center">
   <img src="Clouds.png" width = 250 />
@@ -194,6 +197,13 @@
 <li>Give the Article <a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank"> Lying With Maps</a> from the University of Minnesota a read.</li>
 <li>Submit Your Timezone Map and Land Surface Temperature Map</li>
 </ol>
+<hr />
+<h2>Data</h2>
+<p>In case you encountered any issues with the AρρEEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:</p>
+<ul>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a>
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a></li>
+</ul>
 <hr />
 <p>Citation: Forsythe, Goldsmith, Fisher 2023.</p>
 </body></html>

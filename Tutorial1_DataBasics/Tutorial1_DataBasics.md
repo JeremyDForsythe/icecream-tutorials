@@ -7,7 +7,7 @@
 
 ## Objectives : 
 
-1. Learn the AρρEEARS Interface
+1. Learn the A&#961;&#961;EEARS Interface
 2. Get Acquainted With QGIS's Toolsbars, Buttons, & Layout
 3. Download & Visualize Temperature Data From ECOSTRESS in QGIS
 ---
@@ -18,7 +18,7 @@
 
 ## Welcome Back! 
 
-Today we are introducing AρρEEARS, The Application for Extracting and Exploring Analysis Ready Samples, which is a system designed to efficiently connect users with federal databases. We are going to use it to access ECOSTRESS satellite data in near real-time. 
+Today we are introducing A&#961;&#961;EEARS, The Application for Extracting and Exploring Analysis Ready Samples, which is a system designed to efficiently connect users with federal databases. We are going to use it to access ECOSTRESS satellite data in near real-time. 
 
 To begin head over to <a href="https://appeears.earthdatacloud.nasa.gov/" target="_blank"> https://appeears.earthdatacloud.nasa.gov/</a>. Click the *Sign In* button to register for an Earthdata account or login if you already have one.
 
@@ -42,14 +42,14 @@ ECOSTRESS primarily measures surface temperatures, so let's see what it reads at
 
 ---
 
-## Accessing ECOSTRESS Data Through AρρEEARS
+## Accessing ECOSTRESS Data Through A&#961;&#961;EEARS
 
 ### Create A Request
 
 3. Select the *Start a new request* to request data for a new area and new time period.
 4. Enter a useful name for the request you are going to submit, maybe something like "Death Valley Temperature Experiment".
 
-Now we need to tell AρρEEARS what your geographic area of interest (AOI) is, in this case Death Valley National Park in California. This can be accomplished a few different ways:
+Now we need to tell A&#961;&#961;EEARS what your geographic area of interest (AOI) is, in this case Death Valley National Park in California. This can be accomplished a few different ways:
 * Using the map interface to draw a rectangle or polygon that encompasses your AOI.
 * Uploading a shapefile the describes your AOI.	
 
@@ -64,7 +64,7 @@ Today we are going to use a shapefile describing a polygon of the park boundarie
 6. Drag and drop (or use the *click here to select the file* link) to upload the shapefile DeathValleyNationalPark.zip. The map should update with a polygon encompassing Death Valley National Park.
 7. Update the Start and End Date Fields for our month of interest, July 2023.
 
-AρρEEARS is an interface that provides access to a wealth of different data products, we are primarily focusing on the ECOSTRESS satellite.
+A&#961;&#961;EEARS is an interface that provides access to a wealth of different data products, we are primarily focusing on the ECOSTRESS satellite.
 
 <p align="center">
 	<img src="LayerSettings.png" alt="Layer Settings" width = 600>
@@ -92,7 +92,7 @@ If you are curious to learn more about the ECOSTRESS Mission's data, you can fin
 	<img src="QgisLogo.png" alt="QGIS Logo" width="300">
 </p>
 
-Since we need to wait for AρρEEARS to process your request, it is a good time to get you acquainted with the software we will use to run our analyses and visual our data.
+Since we need to wait for A&#961;&#961;EEARS to process your request, it is a good time to get you acquainted with the software we will use to run our analyses and visual our data.
 
 <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Tutorial_GettingToKnowQGIS.html" target="_blank"> Follow this link to complete the next step of the tutorial, "Getting to Know QGIS".</a>.
 
@@ -109,19 +109,25 @@ After you finish it there will be a link back here to continue to work with our 
 
 ## Data Check
 
-11. Now it is time to check back on the status of your request. When your data is ready you will receive an email with the subject AρρEEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at https://appeears.earthdatacloud.nasa.gov/explore. Follow the *Explore* link in your completed request email (or via the explore menu tab on the AρρEEARS homepage) to access your data.
+11. Now it is time to check back on the status of your request. When your data is ready you will receive an email with the subject A&#961;&#961;EEARS Request Complete at whichever email address you used to sign up. Most small requests will take 15 minutes or less, larger ones can take upwards of an hour. You also track the progress of your request and access the data at https://appeears.earthdatacloud.nasa.gov/explore. Follow the *Explore* link in your completed request email (or via the explore menu tab on the A&#961;&#961;EEARS homepage) to access your data.
+
+**NOTE: While using the A&#961;&#961;EEARS interface you will occasionally encounter an error or the system being down for maintenance or updating. If it is the latter, there will be a banner at the top of the A&#961;&#961;EEARS with information about the timeline to restore service. If you encounter an error without a banner present, you can submit a support ticket at :** <a href="https://lpdaac.usgs.gov/lpdaac-contact-us/" target="_blank"> https://lpdaac.usgs.gov/lpdaac-contact-us/</a>.
+
+**NOTE: For these tutorials, if the A&#961;&#961;EEARS interface is not functioning, I have provided links at the end of each page to any files you would need to complete the lesson.**
 
 <p align="center">
 	<img src="ExploreLST.png" alt="Explore Land Surface Temperature" width = 800>
 </p>
 
-12. Before we download the files we should take a look at what we have using the built in AρρEEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under *Layer Stats* you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). See image below for what you can learn from a boxplot. Next, hover over the boxplots in the timeseries to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.
+12. Before we download the files we should take a look at what we have using the built in A&#961;&#961;EEARS visualizations. First make sure the Land Surface Temperature (LST) layer is selected. Under *Layer Stats* you will see a boxplot timeseries of the temperature data across the range of dates (x-axis) and observed temperature that the satellite recorded for each date (y-axis). See image below for what you can learn from a boxplot. Next, hover over the boxplots in the timeseries to see all sorts of useful information, including the date and time of day of the satellite pass. While 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why is that? Have we discovered some new physical property of the desert? Well no, the satellite pass was simply at 9:49 am, not exactly the hottest part of the day.
+
+**Note: ECOSTRESS makes temperature observations in Kelvin, not degrees Fahrenheit or Celsius.** 
+
+&nbsp;
 
 <p align="center">
   <img src="HowToBoxplot.png" width = 500 />
 </p>
-
-**Note: ECOSTRESS makes temperature observations in Kelvin, not degrees Fahrenheit or Celsius.** 
 
 You are likely noticing that the distribution of temperatures for a given pass from the satellite is quite variable. Some instances, like on Tuesday 7/11/2023, the range is tightly confined around the median, while others like Monday 7/31/2023 show considerable variance. If this was a different locale, it could mean that there is a lot of variation in surface temperatures across the geographic range we selected with the shapefile. However, in this case we know death valley is consistently hot desert, so it is more likely there is another culprit, clouds.
 
@@ -129,7 +135,7 @@ You are likely noticing that the distribution of temperatures for a given pass f
   <img src="Clouds.png" width = 250 />
 </p>
 
-Satellite observations have many advantages over other types of measurements. They have continuity through space and time, but they can not accurately measure through clouds. To handle this, NASA has built cloud detection algorithms and included that data in AρρEEARS.
+Satellite observations have many advantages over other types of measurements. They have continuity through space and time, but they can not accurately measure through clouds. To handle this, NASA has built cloud detection algorithms and included that data in A&#961;&#961;EEARS.
 
 <p align="center">
 	<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 800>
@@ -221,7 +227,7 @@ In the last tutorial we added in a simple basemap through a service included in 
 
 24. Export your map. From the *Project* menu navigate to *Import/Export* and select *Export Map To Image*. Just as before I recommend upping the resolution to 200 dpi. You will submit this map too, so save it somewhere you can remember. 
 
-Congratulations! You have learned how to download ECOSTRESS satellite data from AρρEEARS and make a basic map in QGIS.
+Congratulations! You have learned how to download ECOSTRESS satellite data from A&#961;&#961;EEARS and make a basic map in QGIS.
 
 ---
 
@@ -230,5 +236,10 @@ Congratulations! You have learned how to download ECOSTRESS satellite data from 
 1. Watch the Youtube Video: "Why All Maps Are Wrong" at https://youtu.be/kIID5FDi2JQ
 2. Give the Article <a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank"> Lying With Maps</a> from the University of Minnesota a read. 
 3. Submit Your Timezone Map and Land Surface Temperature Map
+---
+## Data
+In case you encountered any issues with the A&#961;&#961;EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 
