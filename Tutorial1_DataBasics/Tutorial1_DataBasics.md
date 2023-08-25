@@ -240,6 +240,6 @@ Congratulations! You have learned how to download ECOSTRESS satellite data from 
 ## Data
 In case you encountered any issues with the A&#961;&#961;EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
 * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
-<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 
