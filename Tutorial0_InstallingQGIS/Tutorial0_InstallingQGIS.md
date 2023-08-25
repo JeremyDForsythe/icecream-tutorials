@@ -13,7 +13,7 @@ Chapman University
 
 1. Recognize geospatial data as information connected to a location.
 2. Install the geographic information system software QGIS. 
-3. Consider Maps To Communicate Effectively
+3. Consider the elements of effective maps. 
 
 ---
 <p align="center">
