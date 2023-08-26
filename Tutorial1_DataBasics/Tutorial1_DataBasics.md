@@ -1,13 +1,13 @@
 ---
 # Tutorial #1: Data Basics
 
-*Observing Earth from Above (Env 329) - Fall 2023*
-*Schmid College of Science and Technology*
-*Chapman University*
+Observing Earth from Above (Env 329) - Fall 2023
+Schmid College of Science and Technology
+Chapman University
 
 ---
 
-## Learning Objectives (Total Estimated Time: 50 minutes): 
+## Learning Objectives (Total Estimated Time - 50 minutes): 
 
 1. Access and pratice using the A&#961;&#961;EEARS Interface.
 2. Familiarize yourself with QGIS's toolbars, buttons, & layout.
@@ -98,7 +98,7 @@ If you want to learn more about the types and formats of the ECOSTRESS Mission d
 
 Since we need to wait for A&#961;&#961;EEARS to process your request, it is a good time to get you acquainted with how we will use QGIS to run our analyses and visualize our data.
 
-<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Tutorial_GettingToKnowQGIS.html" target="_blank"> Follow this link to complete the next step of the tutorial, "Getting to Know QGIS".</a>.
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Tutorial_GettingToKnowQGIS.html" target="_blank"> Follow this link to complete the next step of the tutorial, "Getting to Know QGIS."</a>
 
 After you finish, there will be a link back here to continue to work with our data request.
 
@@ -237,7 +237,7 @@ Congratulations! You have learned how to download ECOSTRESS instrument data from
 
 ## Map of The Week Assignments
 
-1. Watch the YouTube Video: "Why All Maps Are Wrong" at https://youtu.be/kIID5FDi2JQ
+1. Watch the YouTube Video: ["Why All Maps Are Wrong"](https://youtu.be/kIID5FDi2JQ)
 2. Read the article <a href="https://open.lib.umn.edu/mapping/chapter/7-lying-with-maps/" target="_blank"> Lying With Maps</a> from the University of Minnesota. 
 3. Submit your timezone map and land surface temperature map from this tutorial.
 ---
