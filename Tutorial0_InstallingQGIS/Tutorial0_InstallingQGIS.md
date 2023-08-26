@@ -1,4 +1,3 @@
----
 # Tutorial #0: Installing QGIS
 
 Observing Earth from Above (Env 329) - Fall 2023

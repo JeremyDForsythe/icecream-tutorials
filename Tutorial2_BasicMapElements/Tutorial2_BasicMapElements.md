@@ -1,4 +1,3 @@
----
 # Tutorial #2: Basic Map Elements
 
 *Chapman University. Earth from Above: Env 329  - Fall 2023*

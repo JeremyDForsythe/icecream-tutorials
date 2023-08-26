@@ -1,4 +1,3 @@
----
 # Tutorial #1B: Getting To Know QGIS
 
 *Chapman University. Earth from Above: Env 329  - Fall 2023*

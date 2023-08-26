@@ -15,7 +15,7 @@
 
 ## Getting To Know QGIS
 
-While you wait for AρρEEARS to crunch the numbers and retrieve your data from the depths of its database, let's get you an introduction to QGIS, the software you downloaded in the previous tutorial. 
+While you wait for A&#961;&#961;EEARS to crunch the numbers and retrieve your data from the depths of its database, let's get you an introduction to QGIS, the software you downloaded in the previous tutorial. 
 
 On Windows, open QGIS Desktop from the start menu or desktop icon. 
 

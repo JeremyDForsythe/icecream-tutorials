@@ -1,4 +1,3 @@
----
 # Tutorial #1: Data Basics
 
 *Observing Earth from Above (Env 329) - Fall 2023*

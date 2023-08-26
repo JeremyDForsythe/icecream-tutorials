@@ -1,4 +1,3 @@
----
 # Tutorial #2: Basic Map Elements
 
 *Chapman University. Earth from Above: Env 329  - Fall 2023*
@@ -267,7 +266,7 @@ The real power of the ECOSTRESS satellite comes in its geographic and temporal c
 ---
 
 ## Data
-In case you encountered any issues with the AρρEEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
+In case you encountered any issues with the A&#961;&#961;EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
 * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
 * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
 
