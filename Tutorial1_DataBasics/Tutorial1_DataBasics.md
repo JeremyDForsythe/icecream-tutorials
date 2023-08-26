@@ -1,9 +1,9 @@
 ---
 # Tutorial #1: Data Basics
 
-Observing Earth from Above (Env 329) - Fall 2023
-Schmid College of Science and Technology
-Chapman University
+Observing Earth from Above (Env 329) - Fall 2023*
+Schmid College of Science and Technology*
+Chapman University*
 
 ---
 
