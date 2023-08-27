@@ -1,6 +1,10 @@
-# Tutorial #2: Basic Map Elements
+# Tutorial #4: Adding Elements To Maps
 
-*Chapman University. Earth from Above: Env 329  - Fall 2023*
+Observing Earth from Above (Env 329) - Fall 2023
+
+Schmid College of Science and Technology
+
+Chapman University
 
 ---
 
@@ -15,7 +19,7 @@
 ## Motivation For Today's Tutorial : NASA Press Releases
 
 <p align="center">
-	<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 1000>
+	<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 800>
 </p>
 
 The idea of this course is to change the way we approach climate disaster analyses and immerse you in the process of science communication. Today we are going to create a publish worthy map of the Death Valley National Park surface temperature experiment we ran in last class. Today's tutorial will provide you with the basic working knowledge to create beautiful and informative maps. Later in the course you will use these skills to analyze current climate disasters and publish your maps through NASA's Jet Propulsion Lab.
@@ -25,7 +29,7 @@ The idea of this course is to change the way we approach climate disaster analys
 ## Create A Base Map
 
 <p align="center">
-	<img src="BaseMap.png" alt="Add Basemap" width = 1000>
+	<img src="BaseMap.png" alt="Add Basemap" width = 800>
 </p>
 
 1. Create a new project (*Project* &rarr; *New*)
@@ -37,7 +41,7 @@ The idea of this course is to change the way we approach climate disaster analys
 5. Now select the menu *Add Item*, then *Add Map*. Start at one corner of the white rectangle window and drag to the opposite diagonal corner to set the map space. You will see that the rectangle window will be rendered with the map from the main QGIS canvas.
 
 <p align="center">
-	<img src="InsetItem.png" alt="Item Properties" width = 1000>
+	<img src="InsetItem.png" alt="Item Properties" width = 800>
 </p>
 
 6. Click on the *Item Properties* tab.
@@ -65,7 +69,7 @@ The idea of this course is to change the way we approach climate disaster analys
 15. Zoom in so that the outline of Death Valley National Park fits nicely in the window, it should look like this:
 
 <p align="center">
-	<img src="DV_LST.png" alt="Death Valley LST Redo" width = 1000>
+	<img src="DV_LST.png" alt="Death Valley LST Redo" width = 800>
 </p>
 
 ### Adding in our Land Surface Temperature Map as an Inset
@@ -73,13 +77,13 @@ The idea of this course is to change the way we approach climate disaster analys
 16. Now that we have the map how we like it the main window, switch back to the Print Layout window. Select the menu *Add Item*, then *Add Map*. Click and create an inset of the land surface temperature to the East of California.
 
 <p align="center">
-	<img src="AddInset.png" alt="Add Inset" width = 1000>
+	<img src="AddInset.png" alt="Add Inset" width = 800>
 </p>
 
 17. Under the *Item Properties* for the inset map (typically numbered *Map 2* in the *Items* window), change the scale to 1300000.
 
 <p align="center">
-	<img src="RegionShade.png" alt="Add Inset" width = 1000>
+	<img src="RegionShade.png" alt="Add Inset" width = 800>
 </p>
 
 18. QGIS has an excellent tool for automatically highlighting the area on the main map that is represented in an inset. First, select *Map 1* (or whatever your main map number is) in the *Items* window. 
@@ -87,7 +91,7 @@ The idea of this course is to change the way we approach climate disaster analys
 20. Under map frame select *Map 2* (or whatever you have named your inset map). The area from the inset should now be highlighted on the main map. Adjust the highlight color to match your mood.
 
 <p align="center">
-	<img src="TempLegend1.png" alt="Add Temperature Legend" width = 1000>
+	<img src="TempLegend1.png" alt="Add Temperature Legend" width = 800>
 </p>
 
 ---
@@ -110,7 +114,7 @@ The SI unit of temperature set for the International System of Units is Kelvin (
 	* F = (K − 273.15) × 9/5 + 32
 
 <p align="center">
-	<img src="TempScale1.png" alt="Legend Scale" width = 1000>
+	<img src="TempScale1.png" alt="Legend Scale" width = 800>
 </p>
 
 27. To change the scale of the legend bar, double click on the scale in the *Legend Items* property window.
@@ -130,7 +134,7 @@ The SI unit of temperature set for the International System of Units is Kelvin (
 ### Adding Gridlines
 
 <p align="center">
-	<img src="AddGrid.png" alt="Add Gridlines" width = 1000>
+	<img src="AddGrid.png" alt="Add Gridlines" width = 800>
 </p>
 
 30. Let's add gridlines to our inset map so readers can tell where the GPS coordinates of our analyses are at a quick glance. Select the inset map in the *Items* browser, it is likely named "Map 2".
@@ -161,7 +165,7 @@ By default, the grid lines use the same units and projections as the currently s
 Your map should now resemble:
 
 <p align="center">
-	<img src="DVwGrids.png" alt="GPS Coordinates" width = 1000>
+	<img src="DVwGrids.png" alt="GPS Coordinates" width = 800>
 </p>
 
 **NOTE: This same procedure could have been done for the main map instead of the inlet map, if that suits your vision.**
@@ -173,7 +177,7 @@ Let's add a couple more small details to bring this map to the next level.
 Will we now have coordinates for the inset map, it can be critical for the reader to know the scale of the maps they are looking at. This is achieved with a scalebar, which QGIS can automatically render for you.
 
 <p align="center">
-	<img src="Scalebar.png" alt="Add Scalebar" width = 1000>
+	<img src="Scalebar.png" alt="Add Scalebar" width = 800>
 </p>
 
 34. With the main map (likely "Map 1") highlighted in the *Items* browser,  click the *Add Item* menu at the top of the screen and select *Add Scalebar*.
@@ -186,7 +190,7 @@ Will we now have coordinates for the inset map, it can be critical for the reade
 It is customary to indicate which direction is North on a map with a symbol of an arrow pointed North. This is a simple add in QGIS. 
 
 <p align="center">
-	<img src="NorthArrow1.png" alt="Adding North Arrow" width = 1000>
+	<img src="NorthArrow1.png" alt="Adding North Arrow" width = 800>
 </p>
 
 37. Click the *Add Item* menu at the top of the screen and select *Add North Arrow*.
@@ -195,7 +199,7 @@ It is customary to indicate which direction is North on a map with a symbol of a
 **NOTE: *SVG Images* tend to look cleaner and sharper compared to the *Raster Image* options.**
 
 <p align="center">
-	<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 1000>
+	<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 800>
 </p>
 
 39.  To adjust the properties of the North arrow, scroll down on the *Item Properties* window to find such useful features as changing color or size.
@@ -203,7 +207,7 @@ It is customary to indicate which direction is North on a map with a symbol of a
 ### Adding a Title
 
 <p align="center">
-	<img src="TextBox.png" alt="Adding a Title" width = 1000>
+	<img src="TextBox.png" alt="Adding a Title" width = 800>
 </p>
 
 One last addition, let's add a title to the map. 
@@ -219,7 +223,7 @@ One last addition, let's add a title to the map.
 ### Exporting Your Map
 
 <p align="center">
-	<img src="Export.png" alt="Exporting Your Map" width = 1000>
+	<img src="Export.png" alt="Exporting Your Map" width = 800>
 </p>
 
 Now that our map looks exactly how we want it to look, we want to be able to share it with friends, family, our Instagram followers, and ultimately... NASA. 
@@ -232,7 +236,7 @@ Now that our map looks exactly how we want it to look, we want to be able to sha
 **NOTE: There may be times when you want to export as PDF, particularly when the map needs to be scalable to different sizes.**
 
 <p align="center">
-	<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 1000>
+	<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 800>
 </p>
 
 ---
@@ -255,7 +259,7 @@ The real power of the ECOSTRESS satellite comes in its geographic and temporal c
 
 ## Map of the Week Assignments
 
-1. Read <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_BasicMapElements/s41467-020-19160-7.pdf" target="_blank"> The misuse of colour in science communication by Crameri, F., Shephard, G.E. & Heron, P.J.  Nat Commun 11, 5444 (2020).</a>
+1. Read <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_AddingElementsToMaps/s41467-020-19160-7.pdf" target="_blank"> The misuse of colour in science communication by Crameri, F., Shephard, G.E. & Heron, P.J.  Nat Commun 11, 5444 (2020).</a>
 2. Have fun and make an interesting temperature map designed with your favorite theme in mind and submit it before next class. You could use this map or create a new one. Example themes to get your brain churning:
 	* Wes Anderson
 	* Van Gogh
@@ -267,8 +271,8 @@ The real power of the ECOSTRESS satellite comes in its geographic and temporal c
 
 ## Data
 In case you encountered any issues with the A&#961;&#961;EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
-* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
-* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
 
 ---
 Citation: Forsythe, Goldsmith, Fisher 2023. 

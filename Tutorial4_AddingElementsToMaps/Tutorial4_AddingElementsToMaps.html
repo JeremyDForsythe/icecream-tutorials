@@ -1,6 +1,7 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><hr />
-<h1>Tutorial #2: Basic Map Elements</h1>
-<p><em>Chapman University. Earth from Above: Env 329  - Fall 2023</em></p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><h1>Tutorial #4: Adding Elements To Maps</h1>
+<p>Observing Earth from Above (Env 329) - Fall 2023</p>
+<p>Schmid College of Science and Technology</p>
+<p>Chapman University</p>
 <hr />
 <h2>Objectives :</h2>
 <ol>
@@ -11,13 +12,13 @@
 <hr />
 <h2>Motivation For Today’s Tutorial : NASA Press Releases</h2>
 <p align="center">
-	<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 1000>
+	<img src="ecostress_banner.jpg" alt="ECOSTRESS Banner" width = 800>
 </p>
 <p>The idea of this course is to change the way we approach climate disaster analyses and immerse you in the process of science communication. Today we are going to create a publish worthy map of the Death Valley National Park surface temperature experiment we ran in last class. Today’s tutorial will provide you with the basic working knowledge to create beautiful and informative maps. Later in the course you will use these skills to analyze current climate disasters and publish your maps through NASA’s Jet Propulsion Lab.</p>
 <hr />
 <h2>Create A Base Map</h2>
 <p align="center">
-	<img src="BaseMap.png" alt="Add Basemap" width = 1000>
+	<img src="BaseMap.png" alt="Add Basemap" width = 800>
 </p>
 <ol>
 <li>Create a new project (<em>Project</em> → <em>New</em>)</li>
@@ -32,7 +33,7 @@
 <li>Now select the menu <em>Add Item</em>, then <em>Add Map</em>. Start at one corner of the white rectangle window and drag to the opposite diagonal corner to set the map space. You will see that the rectangle window will be rendered with the map from the main QGIS canvas.</li>
 </ol>
 <p align="center">
-	<img src="InsetItem.png" alt="Item Properties" width = 1000>
+	<img src="InsetItem.png" alt="Item Properties" width = 800>
 </p>
 <ol start="6">
 <li>Click on the <em>Item Properties</em> tab.</li>
@@ -59,20 +60,20 @@
 <li>Zoom in so that the outline of Death Valley National Park fits nicely in the window, it should look like this:</li>
 </ol>
 <p align="center">
-	<img src="DV_LST.png" alt="Death Valley LST Redo" width = 1000>
+	<img src="DV_LST.png" alt="Death Valley LST Redo" width = 800>
 </p>
 <h3>Adding in our Land Surface Temperature Map as an Inset</h3>
 <ol start="16">
 <li>Now that we have the map how we like it the main window, switch back to the Print Layout window. Select the menu <em>Add Item</em>, then <em>Add Map</em>. Click and create an inset of the land surface temperature to the East of California.</li>
 </ol>
 <p align="center">
-	<img src="AddInset.png" alt="Add Inset" width = 1000>
+	<img src="AddInset.png" alt="Add Inset" width = 800>
 </p>
 <ol start="17">
 <li>Under the <em>Item Properties</em> for the inset map (typically numbered <em>Map 2</em> in the <em>Items</em> window), change the scale to 1300000.</li>
 </ol>
 <p align="center">
-	<img src="RegionShade.png" alt="Add Inset" width = 1000>
+	<img src="RegionShade.png" alt="Add Inset" width = 800>
 </p>
 <ol start="18">
 <li>QGIS has an excellent tool for automatically highlighting the area on the main map that is represented in an inset. First, select <em>Map 1</em> (or whatever your main map number is) in the <em>Items</em> window.</li>
@@ -80,7 +81,7 @@
 <li>Under map frame select <em>Map 2</em> (or whatever you have named your inset map). The area from the inset should now be highlighted on the main map. Adjust the highlight color to match your mood.</li>
 </ol>
 <p align="center">
-	<img src="TempLegend1.png" alt="Add Temperature Legend" width = 1000>
+	<img src="TempLegend1.png" alt="Add Temperature Legend" width = 800>
 </p>
 <hr />
 <h2>Basic Map Elements</h2>
@@ -98,7 +99,7 @@
 * C = K - 273.15
 * F = (K − 273.15) × 9/5 + 32</p>
 <p align="center">
-	<img src="TempScale1.png" alt="Legend Scale" width = 1000>
+	<img src="TempScale1.png" alt="Legend Scale" width = 800>
 </p>
 <ol start="27">
 <li>To change the scale of the legend bar, double click on the scale in the <em>Legend Items</em> property window.</li>
@@ -117,7 +118,7 @@
 </ol>
 <h3>Adding Gridlines</h3>
 <p align="center">
-	<img src="AddGrid.png" alt="Add Gridlines" width = 1000>
+	<img src="AddGrid.png" alt="Add Gridlines" width = 800>
 </p>
 <ol start="30">
 <li>Let’s add gridlines to our inset map so readers can tell where the GPS coordinates of our analyses are at a quick glance. Select the inset map in the <em>Items</em> browser, it is likely named “Map 2”.</li>
@@ -147,14 +148,14 @@
 </p>
 <p>Your map should now resemble:</p>
 <p align="center">
-	<img src="DVwGrids.png" alt="GPS Coordinates" width = 1000>
+	<img src="DVwGrids.png" alt="GPS Coordinates" width = 800>
 </p>
 <p><strong>NOTE: This same procedure could have been done for the main map instead of the inlet map, if that suits your vision.</strong></p>
 <p>Let’s add a couple more small details to bring this map to the next level.</p>
 <h3>Adding a Scalebar</h3>
 <p>Will we now have coordinates for the inset map, it can be critical for the reader to know the scale of the maps they are looking at. This is achieved with a scalebar, which QGIS can automatically render for you.</p>
 <p align="center">
-	<img src="Scalebar.png" alt="Add Scalebar" width = 1000>
+	<img src="Scalebar.png" alt="Add Scalebar" width = 800>
 </p>
 <ol start="34">
 <li>With the main map (likely “Map 1”) highlighted in the <em>Items</em> browser,  click the <em>Add Item</em> menu at the top of the screen and select <em>Add Scalebar</em>.</li>
@@ -164,7 +165,7 @@
 <h3>Adding a North Arrow</h3>
 <p>It is customary to indicate which direction is North on a map with a symbol of an arrow pointed North. This is a simple add in QGIS.</p>
 <p align="center">
-	<img src="NorthArrow1.png" alt="Adding North Arrow" width = 1000>
+	<img src="NorthArrow1.png" alt="Adding North Arrow" width = 800>
 </p>
 <ol start="37">
 <li>Click the <em>Add Item</em> menu at the top of the screen and select <em>Add North Arrow</em>.</li>
@@ -172,14 +173,14 @@
 </ol>
 <p><strong>NOTE: <em>SVG Images</em> tend to look cleaner and sharper compared to the <em>Raster Image</em> options.</strong></p>
 <p align="center">
-	<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 1000>
+	<img src="NorthArrow2.png" alt="Styling the North Arrow" width = 800>
 </p>
 <ol start="39">
 <li>To adjust the properties of the North arrow, scroll down on the <em>Item Properties</em> window to find such useful features as changing color or size.</li>
 </ol>
 <h3>Adding a Title</h3>
 <p align="center">
-	<img src="TextBox.png" alt="Adding a Title" width = 1000>
+	<img src="TextBox.png" alt="Adding a Title" width = 800>
 </p>
 <p>One last addition, let’s add a title to the map.</p>
 <ol start="40">
@@ -193,7 +194,7 @@
 </ol>
 <h3>Exporting Your Map</h3>
 <p align="center">
-	<img src="Export.png" alt="Exporting Your Map" width = 1000>
+	<img src="Export.png" alt="Exporting Your Map" width = 800>
 </p>
 <p>Now that our map looks exactly how we want it to look, we want to be able to share it with friends, family, our Instagram followers, and ultimately… NASA.</p>
 <ol start="47">
@@ -203,7 +204,7 @@
 </ol>
 <p><strong>NOTE: There may be times when you want to export as PDF, particularly when the map needs to be scalable to different sizes.</strong></p>
 <p align="center">
-	<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 1000>
+	<img src="DeathValleyLSTfinal.png" alt="Final Death Valley LST Map" width = 800>
 </p>
 <hr />
 <h2>Answering Our Original Question</h2>
@@ -217,7 +218,7 @@
 <hr />
 <h2>Map of the Week Assignments</h2>
 <ol>
-<li>Read <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_BasicMapElements/s41467-020-19160-7.pdf" target="_blank"> The misuse of colour in science communication by Crameri, F., Shephard, G.E. &amp; Heron, P.J.  Nat Commun 11, 5444 (2020).</a></li>
+<li>Read <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_AddingElementsToMaps/s41467-020-19160-7.pdf" target="_blank"> The misuse of colour in science communication by Crameri, F., Shephard, G.E. &amp; Heron, P.J.  Nat Commun 11, 5444 (2020).</a></li>
 <li>Have fun and make an interesting temperature map designed with your favorite theme in mind and submit it before next class. You could use this map or create a new one. Example themes to get your brain churning:
 <ul>
 <li>Wes Anderson</li>
@@ -232,8 +233,8 @@
 <h2>Data</h2>
 <p>In case you encountered any issues with the AρρEEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:</p>
 <ul>
-<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a></li>
-<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a></li>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a></li>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a></li>
 </ul>
 <hr />
 <p>Citation: Forsythe, Goldsmith, Fisher 2023.</p>

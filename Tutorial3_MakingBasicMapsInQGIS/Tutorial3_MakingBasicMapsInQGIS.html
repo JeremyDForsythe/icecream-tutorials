@@ -1,19 +1,24 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><hr />
-<h1>Tutorial #1B: Getting To Know QGIS</h1>
-<p><em>Chapman University. Earth from Above: Env 329  - Fall 2023</em></p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><h1>Tutorial #3: Making Basic Maps In QGIS</h1>
+<p>Observing Earth from Above (Env 329) - Fall 2023</p>
+<p>Schmid College of Science and Technology</p>
+<p>Chapman University</p>
 <hr />
 <h2>Objectives :</h2>
 <ol>
 <li>Get Acquainted With QGIS’s Toolsbars, Buttons, &amp; Layout</li>
 </ol>
 <hr />
-<img src="QgisLogo.png" alt="QGIS Logo" width="300">
+<p align="center">
+	<img src="QgisLogo.png" alt="QGIS Logo" width="300">
+</p>
 <h2>Getting To Know QGIS</h2>
 <p>While you wait for AρρEEARS to crunch the numbers and retrieve your data from the depths of its database, let’s get you an introduction to QGIS, the software you downloaded in the previous tutorial.</p>
 <p>On Windows, open QGIS Desktop from the start menu or desktop icon.</p>
 <p>On Mac, open QGIS by selecting it in Launchpad or use Go → Applications and double click on QGIS.</p>
 <p>Your screen will likely resemble something like this:</p>
-<img src="QGISscreen.png" alt="QGIS Screen Layout" width = 1000>
+<p align="center">
+	<img src="QGISscreen.png" alt="QGIS Screen Layout" width = 800>
+</p>
 <ol>
 <li><strong>Browser Panel &amp; Layers List</strong>
 <ul>
@@ -45,7 +50,9 @@
 <hr />
 <h2>Try It Out! Explore Your First Map…</h2>
 <h3>I. Add a Basemap Layer</h3>
-<img src="QGISbasemap.png" alt="Adding A Basemap" width = 1000> 
+<p align="center">
+	<img src="QGISbasemap.png" alt="Adding A Basemap" width = 800> 
+</p>
 <ol>
 <li>In the browser window expand your options by clicking on the small arrow next to <em>XYZ Tiles</em>.</li>
 <li>Double click on Open Street Map to load in a basic open source map. You will notice that we just added a layer to the layer window below.</li>
@@ -56,35 +63,46 @@
 <ol>
 <li>Download this zipped folder from our website to your local computer. Make sure you save it somewhere you can remember.
 <ul>
-<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Time_Zones.zip" target="_blank"> US Timezones</a></li>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/MakingBasicMapsInQGIS/Time_Zones.zip" target="_blank"> US Timezones</a></li>
 </ul>
 </li>
 </ol>
-<img src="TimeZones.png" alt="Adding Time Zones" width = 1000>
+<p align="center">
+	<img src="TimeZones.png" alt="Adding Time Zones" width = 800>
+</p>
 <ol start="2">
 <li>After you have the file, use the browser window to locate <em>Time_Zones.zip</em> in the folder you saved it to. Use the little arrow to expand the zip file and double click on the <em>Time_Zones.shp</em> shapefile. Just as before we have now added a new layer to our map.</li>
 </ol>
-<img src="TimeZoneSymbol.png" alt="Changing Time Zone Visuals" width = 1000>
+<p align="center">
+	<img src="TimeZoneSymbol.png" alt="Changing Time Zone Visuals" width = 800>
+</p>
 <ol start="3">
 <li>This looks a little clunky, so let’s make it more readable and useful. Right click on Windows/Linux or control click on Mac to open up the properties window. Navigate to the symbology window and select green outline. Click <em>Apply</em> and <em>OK</em>.  Then zoom and pan the map to center on North America, given that these are only US Timezones.</li>
 </ol>
-<img src="TimeZoneLabels.png" alt="Adding Time Zone Labels" width = 1000>
+<p align="center">
+	<img src="TimeZoneLabels.png" alt="Adding Time Zone Labels" width = 800>
+</p>
 <ol start="4">
 <li>Next let’s add labels. Open the Time Zone properties back up and navigate to the <em>Labels</em> window. From the drop down menu at the top select <em>Single Labels</em>. Play around with the options to get the colors how you like them or maybe use one of the included styles, like <em>water bodies</em>. Click <em>Apply</em> and <em>OK</em>.</li>
 </ol>
-<img src="Export.png" alt="Adding Time Zone Labels" width = 1000>
+<p align="center">
+	<img src="Export.png" alt="Adding Time Zone Labels" width = 800>
+</p>
 <ol start="5">
 <li>Lastly, we want to save your map so you can marvel at your work anytime you’d like and share it with friends at parties. From the <em>Project</em> menu navigate to <em>Import/Export</em> and select <em>Export Map To Image</em>. By default it will use the extent that you have in the viewer. I recommend upping the resolution to 200 dpi. You will submit this map later, so save it somewhere you can remember. High-five! You have made a map.</li>
 </ol>
 <h3>Bonus</h3>
 <p>If you still have time and are so inclined you can check out these other interesting shapefiles from the Orange County GIS Database:</p>
 <ul>
-<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Regional_Subbasins_and_Watersheds.zip" target="_blank"> Watersheds of Orange County</a></li>
-<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/OC_Parks_Trails.zip" target="_blank"> Hiking Trails of Orange County</a></li>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/MakingBasicMapsInQGIS/Regional_Subbasins_and_Watersheds.zip" target="_blank"> Watersheds of Orange County</a></li>
+<li><a href="https://jeremydforsythe.github.io/icecream-tutorials/MakingBasicMapsInQGIS/OC_Parks_Trails.zip" target="_blank"> Hiking Trails of Orange County</a></li>
 </ul>
-<img src="OCWatershedAndTrails.png" alt="Watersheds and Trails in OC" width = 1000>
+<p align="center">
+	<img src="OCWatershedAndTrails.png" alt="Watersheds and Trails in OC" width = 800>
+</p>
 <hr />
-<p>Now it is time to check in on the progress of your Ap request. You can head back to the Data Basics tutorial by  <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/Tutorial1_DataBasics.html" target="_blank"> clicking here.</a></p>
+<p>Now it is time to check in on the progress of your Ap request. You can head back to the Data Basics tutorial by  <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.html" target="_blank"> clicking here.</a></p>
 <hr />
-<p>Citation: Forsythe, Goldsmith, Fisher 2023.</p>
+<p>Recommended Citation: Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Tutorial 3: Observing Earth from Above. Chapman University. <a href="https://jeremydforsythe.github.io/icecream-tutorials/">https://jeremydforsythe.github.io/icecream-tutorials/</a></p>
+<p>This work is supported by funding from NASA ECOSTRESS Mission Grant #80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media).</p>
 </body></html>

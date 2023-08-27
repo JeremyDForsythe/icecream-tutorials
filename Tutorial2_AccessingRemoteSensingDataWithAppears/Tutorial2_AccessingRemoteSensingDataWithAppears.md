@@ -1,14 +1,16 @@
-# Tutorial #1: Data Basics
+# Tutorial #2: Accessing Remote Sensing Data With A&#961;&#961;EEARS
 
-*Observing Earth from Above (Env 329) - Fall 2023*
-*Schmid College of Science and Technology*
-*Chapman University*
+Observing Earth from Above (Env 329) - Fall 2023
+
+Schmid College of Science and Technology
+
+Chapman University
 
 ---
 
 ## Learning Objectives (Total Estimated Time - 50 minutes): 
 
-1. Access and pratice using the A&#961;&#961;EEARS Interface.
+1. Access and practice using the A&#961;&#961;EEARS Interface.
 2. Familiarize yourself with QGIS's toolbars, buttons, & layout.
 3. Download & visualize temperature data From ECOSTRESS in QGIS.
 ---
@@ -58,7 +60,7 @@ Now, we need to specify to A&#961;&#961;EEARS your geographic area of interest (
 
 Today, we are going to use a shapefile describing a polygon of the park boundaries that we already drew for you in QGIS. In later tutorials, you will draw your own.
 
-5. Download the <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/DeathValleyNationalPark.zip" target="_blank"> DeathValleyNationalPark.zip</a> shapefile and save it somewhere you can remember. A folder containing all of the files for this tutorial sounds effective and orderly. 
+5. Download the <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/DeathValleyNationalPark.zip" target="_blank"> DeathValleyNationalPark.zip</a> shapefile and save it somewhere you can remember. A folder containing all of the files for this tutorial sounds effective and orderly. 
 
 <p align="center">
 	<img src="ExtractDeathValley.png" alt="Extract Area Sample Settings" width = 800>
@@ -97,7 +99,7 @@ If you want to learn more about the types and formats of the ECOSTRESS Mission d
 
 Since we need to wait for A&#961;&#961;EEARS to process your request, it is a good time to get you acquainted with how we will use QGIS to run our analyses and visualize our data.
 
-<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial_GettingToKnowQGIS/Tutorial_GettingToKnowQGIS.html" target="_blank"> Follow this link to complete the next step of the tutorial, "Getting to Know QGIS."</a>
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Tutorial3_MakingBasicMapsInQGIS.html" target="_blank"> Follow this link to complete Tutorial 3: Making Basic Maps In QGIS, while you wait.</a>
 
 After you finish, there will be a link back here to continue to work with our data request.
 
@@ -174,7 +176,7 @@ In this case, we are primarily concerned with the layer name, which corresponds 
 
 14. Access the download page by scrolling to the top of the page, selecting the *Explore* menu and selecting the middle button next to your request, *Download the contents of the request* <img src="DownloadButton.png" alt="Download Button" width = 25>. Use the Julian Calendar and file naming convention listed above to determine what filename we need to download the land surface temperature data for 7/28/2023. There can be multiple files that match the date and layer you requested, in this case there are two. Download both files into the same folder that you saved the DeathValleyNationalPark.zip shapefile.
 
-**NOTE:** <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/Julian_Calendar.png" target="_blank"> You can access the Julian Calendar table anytime be clicking this link. Watch out for leap years!</a>. 
+**NOTE:** <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Julian_Calendar.png" target="_blank"> You can access the Julian Calendar table anytime be clicking this link. Watch out for leap years!</a>. 
 
 <p align="center">
 	<img src="DownloadInstructions.png" alt="Download Instructions" width = 800>
@@ -242,9 +244,9 @@ Congratulations! You have learned how to download ECOSTRESS instrument data from
 ---
 ## Data
 In case you encountered any issues with the A&#961;&#961;EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
-* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
-* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial1_DataBasics/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif</a> 
+* <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif" target="_blank"> ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif</a> 
 ---
-Recommended Citation: Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Tutorial 1: Observing Earth from Above. Chapman University. https://jeremydforsythe.github.io/icecream-tutorials/
+Recommended Citation: Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Tutorial 2: Observing Earth from Above. Chapman University. https://jeremydforsythe.github.io/icecream-tutorials/
 
 This work is supported by funding from NASA ECOSTRESS Mission Grant #80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media).
