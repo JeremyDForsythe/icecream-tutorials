@@ -99,7 +99,7 @@ If you want to learn more about the types and formats of the ECOSTRESS Mission d
 
 Since we need to wait for A&#961;&#961;EEARS to process your request, it is a good time to get you acquainted with how we will use QGIS to run our analyses and visualize our data.
 
-<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Tutorial3_MakingBasicMapsInQGIS.html" target="_blank"> Follow this link to complete Tutorial 3: Making Basic Maps In QGIS, while you wait.</a>
+<a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Tutorial3_MakingBasicMapsInQGIS.pdf" target="_blank"> Follow this link to complete Tutorial 3: Making Basic Maps In QGIS, while you wait.</a>
 
 After you finish, there will be a link back here to continue to work with our data request.
 
