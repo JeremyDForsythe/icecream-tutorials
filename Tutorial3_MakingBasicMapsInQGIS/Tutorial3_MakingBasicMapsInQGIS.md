@@ -60,7 +60,7 @@ Your screen will likely resemble something like this:
 [Shapefiles](https://en.wikipedia.org/wiki/Shapefile) are a common geospatial file type that stores locations, points, lines, and shapes.
 
 1. Download this zipped folder from our website to your local computer. Make sure you save it to a dedicated project folder.
-   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/MakingBasicMapsInQGIS/Time_Zones.zip" target="_blank"> US Timezones</a>
+   * <a href="https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Time_Zones.zip" target="_blank"> US Timezones</a>
 
 <p align="center">
 	<img src="TimeZones.png" alt="Adding Time Zones" width = 800>
