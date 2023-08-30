@@ -1,0 +1,4 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {4}Tutorial Name}{1}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Section 1}{1}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Figures}{1}{section.4.2}%

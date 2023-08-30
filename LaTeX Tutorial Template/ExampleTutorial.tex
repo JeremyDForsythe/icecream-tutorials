@@ -7,6 +7,10 @@
 \usepackage[hidelinks,colorlinks = true,urlcolor  = blue]{hyperref}
 \usepackage{lipsum}
 \usepackage{listings}
+\usepackage{minitoc}
+\addto{\captionsenglish}{% Making babel aware of special titles
+	\renewcommand{\mtctitle}{Quick Links To Sections}
+}
 
 \title{I.C.E.C.R.E.A.M. Tutorials}
 \subtitle{\small Observing Earth from Above (Env 329) - Fall 2023  \\
@@ -15,10 +19,16 @@
 
 %% DOCUMENT
 \begin{document}
+	
+\dominitoc
 
 \setcounter{chapter}{3} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
 \chapter{Tutorial Name} %Enter Tutorial Name Here
+
+\vspace{-2em}
+
+\minitoc
 
 \section{Section 1}
 
