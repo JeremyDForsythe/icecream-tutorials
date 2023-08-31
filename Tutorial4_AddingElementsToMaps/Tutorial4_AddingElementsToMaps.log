@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  31 AUG 2023 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  31 AUG 2023 14:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1380,11 +1380,11 @@ File: GridProps2.png Graphic file (type png)
 <use GridProps2.png>
 Package pdftex.def Info: GridProps2.png  used on input line 220.
 (pdftex.def)             Requested size: 241.84843pt x 254.87794pt.
-<DVwGrids.png, id=191, 844.95676pt x 597.432pt>
+<DVwGrids.png, id=191, 421.575pt x 298.11375pt>
 File: DVwGrids.png Graphic file (type png)
 <use DVwGrids.png>
 Package pdftex.def Info: DVwGrids.png  used on input line 224.
-(pdftex.def)             Requested size: 483.69687pt x 342.00746pt.
+(pdftex.def)             Requested size: 483.69687pt x 342.0503pt.
 File: ICECREAM_Logo.png Graphic file (type png)
 <use ICECREAM_Logo.png>
 Package pdftex.def Info: ICECREAM_Logo.png  used on input line 224.
@@ -1430,11 +1430,11 @@ File: Export.png Graphic file (type png)
 <use Export.png>
 Package pdftex.def Info: Export.png  used on input line 283.
 (pdftex.def)             Requested size: 483.69687pt x 256.47281pt.
-<DeathValleyLSTfinal.png, id=221, 844.95676pt x 597.432pt>
+<DeathValleyLSTfinal.png, id=221, 421.575pt x 298.11375pt>
 File: DeathValleyLSTfinal.png Graphic file (type png)
 <use DeathValleyLSTfinal.png>
 Package pdftex.def Info: DeathValleyLSTfinal.png  used on input line 295.
-(pdftex.def)             Requested size: 362.77264pt x 256.49876pt.
+(pdftex.def)             Requested size: 362.77264pt x 256.53658pt.
 File: ICECREAM_Logo.png Graphic file (type png)
 <use ICECREAM_Logo.png>
 Package pdftex.def Info: ICECREAM_Logo.png  used on input line 298.
@@ -1504,7 +1504,7 @@ ht/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Tutorial4_AddingElementsToMaps.pdf (15 pages, 486738188 bytes
+Output written on Tutorial4_AddingElementsToMaps.pdf (15 pages, 277682973 bytes
 ).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
