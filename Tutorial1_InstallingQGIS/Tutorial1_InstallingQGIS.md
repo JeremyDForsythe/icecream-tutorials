@@ -29,7 +29,7 @@ Each week, you will use QGIS to complete a new tutorial and submit a "Map-of-the
 
 ## Installing QGIS
 
-Head over to <a href="https://qgis.org/en/site/forusers/download.html]" target="_blank">https://qgis.org/en/site/forusers/download.html</a> and download the stable version of QGIS for your operating system (e.g., Mac, Windows or Linux). 
+Head over to <a href="https://qgis.org/en/site/forusers/download.html]" target="_blank">https://qgis.org/en/site/forusers/download.html</a> and download the stable version of QGIS for your operating system (e.g., Mac, Windows or Linux). You already have another version of QGIS installed, we recommend update to the latest stable version, so that your screen matches the tutorials.
 
 **NOTE: QGIS offers a latest release of its software which is cutting edge and unstable. I suggest downloading the Long Term Release (LTR), which is stable and easier to use. See images below for each operating system:**
 

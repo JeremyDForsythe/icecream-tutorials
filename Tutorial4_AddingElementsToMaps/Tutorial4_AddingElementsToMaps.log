@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  30 AUG 2023 08:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  31 AUG 2023 14:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -808,50 +808,136 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip72
 )
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-01-21 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count331
-\l__pdf_internal_box=\box73
-))
-Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count332
-\l__lipsum_a_int=\count333
-\l__lipsum_b_int=\count334
-
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count335
-\lst@gtempboxa=\box74
+\lst@mode=\count331
+\lst@gtempboxa=\box73
 \lst@token=\toks42
-\lst@length=\count336
+\lst@length=\count332
 \lst@currlwidth=\dimen285
-\lst@column=\count337
-\lst@pos=\count338
+\lst@column=\count333
+\lst@pos=\count334
 \lst@lostspace=\dimen286
 \lst@width=\dimen287
-\lst@newlines=\count339
-\lst@lineno=\count340
+\lst@newlines=\count335
+\lst@lineno=\count336
 \lst@maxwidth=\dimen288
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count341
-\lst@skipnumbers=\count342
-\lst@framebox=\box75
+\c@lstnumber=\count337
+\lst@skipnumbers=\count338
+\lst@framebox=\box74
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks43
+\verbatim@line=\toks44
+\verbatim@in@stream=\read4
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+)
+\tcb@titlebox=\box75
+\tcb@upperbox=\box76
+\tcb@lowerbox=\box77
+\tcb@phantombox=\box78
+\c@tcbbreakpart=\count339
+\c@tcblayer=\count340
+\c@tcolorbox@number=\count341
+\tcb@temp=\box79
+\tcb@temp=\box80
+\tcb@temp=\box81
+\tcb@temp=\box82
+
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '5.0.2'
+\c@tcbrastercolumn=\count342
+\c@tcbrasterrow=\count343
+\c@tcbrasternum=\count344
+\c@tcbraster=\count345
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '5.0.2'
+\tcb@waterbox=\box83
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.0.2'
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '5.0.2'
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfcol.sty
+Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
+)
+Package pdfcol Info: New color stack `tcb@breakable' = 2 on input line 23.
+\tcb@testbox=\box84
+\tcb@totalupperbox=\box85
+\tcb@totallowerbox=\box86
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
+\tcbfitdim=\dimen289
+\tcb@lowerfitdim=\dimen290
+\tcb@upperfitdim=\dimen291
+\tcb@cur@hbadness=\count346
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count347
+\l__pdf_internal_box=\box87
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '5.0.2'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '5.0.2'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '5.0.2'
+)
+\c@tcblisting=\count348
+)) (/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '5.0.2'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '5.0.2'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '5.0.2'
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
+.tex
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '5.0.2'
+)) (/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
 
 (/usr/share/texlive/texmf-dist/tex/latex/minitoc/mtcmess.sty
@@ -868,9 +954,9 @@ Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks43
-\mtc@strutbox=\box76
-\mtc@hstrutbox=\box77
+\mtc@toks=\toks45
+\mtc@strutbox=\box88
+\mtc@hstrutbox=\box89
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout4 = `Tutorial4_AddingElementsToMaps.mtc0'.
@@ -888,10 +974,10 @@ Package minitoc Info: I0031
 
 \openout4 = `Tutorial4_AddingElementsToMaps.mtc0'.
 
-\c@mtc=\count343
-\c@minitocdepth=\count344
-\c@ptc=\count345
-\c@parttocdepth=\count346
+\c@mtc=\count349
+\c@minitocdepth=\count350
+\c@ptc=\count351
+\c@parttocdepth=\count352
 \ptcindent=\skip75
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
@@ -904,49 +990,49 @@ File: english.mld 2006/01/13
 File: english.mld 2006/01/13
 ))
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 2
-1.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 21.
+(Font)              scaled to size 10.40245pt on input line 24.
 
 (./Tutorial4_AddingElementsToMaps.aux)
 \openout1 = `Tutorial4_AddingElementsToMaps.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
-\scratchdimen=\dimen289
-\scratchbox=\box78
-\nofMPsegments=\count348
-\nofMParguments=\count349
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count350
-\MPscratchDim=\dimen290
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count353
+\scratchdimen=\dimen292
+\scratchbox=\box90
+\nofMPsegments=\count354
+\nofMParguments=\count355
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count356
+\MPscratchDim=\dimen293
+\MPnumerator=\count357
+\makeMPintoPDFobject=\count358
+\everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -994,18 +1080,20 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 21.
-Package microtype Info: Applying patch `item' on input line 21.
-Package microtype Info: Applying patch `toc' on input line 21.
-Package microtype Info: Applying patch `eqnum' on input line 21.
-Package microtype Info: Applying patch `footnote' on input line 21.
+LaTeX Info: Redefining \microtypecontext on input line 24.
+Package microtype Info: Applying patch `item' on input line 24.
+Package microtype Info: Applying patch `toc' on input line 24.
+Package microtype Info: Applying patch `eqnum' on input line 24.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 24.
+
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 21.
+LaTeX Info: Redefining \showhyphens on input line 24.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1013,7 +1101,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 24.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1023,17 +1111,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count353
+\c@section@level=\count359
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (./Tutorial4_AddingElementsToMaps.out) (./Tutorial4_AddingElementsToMaps.out)
 \@outlinefile=\write5
 \openout5 = `Tutorial4_AddingElementsToMaps.out'.
 
-\c@lstlisting=\count354
+\c@lstlisting=\count360
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
@@ -1066,26 +1154,26 @@ Package minitoc(hints) Warning: W0023
 
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM Tutorial4_AddingElementsToMaps.to
-c on input line 24.
+c on input line 27.
 Package minitoc Info: I0033
 (minitoc)             Writing Tutorial4_AddingElementsToMaps.mtc1.
 \openout4 = `Tutorial4_AddingElementsToMaps.mtc1'.
 
  4.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 27.
+(Font)              scaled to size 10.40245pt on input line 32.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 18.99994pt on input line 27.
+(Font)              scaled to size 18.99994pt on input line 32.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 56.99982pt on input line 27.
+(Font)              scaled to size 56.99982pt on input line 32.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 28.49991pt on input line 27.
+(Font)              scaled to size 28.49991pt on input line 32.
 \openout4 = `Tutorial4_AddingElementsToMaps.mtc'.
 
 \openout4 = `Tutorial4_AddingElementsToMaps.mtc'.
 
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 32.
+(Font)              scaled to size 9.49997pt on input line 37.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -1095,24 +1183,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
- 32.
+ 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line
- 32.
+ 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cmbright/omscmbrs.fd
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OMX+iwona on input line
- 32.
+ 37.
 
 (/usr/share/texlive/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1121,7 +1209,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1131,76 +1219,241 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 32.
+(Font)              scaled to size 9.49997pt on input line 37.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 32.
+(Font)              scaled to size 6.64998pt on input line 37.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 4.74998pt on input line 32.
+(Font)              scaled to size 4.74998pt on input line 37.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 32.
+(Font)              scaled to size 11.39996pt on input line 37.
 
 (./Tutorial4_AddingElementsToMaps.mtc1)
-LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 44.
-LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 44.
-LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 5.69998pt on input line 44.
-<ecostress_banner.jpg, id=26, 992.70876pt x 156.585pt>
-File: ecostress_banner.jpg Graphic file (type jpg)
-<use ecostress_banner.jpg>
-Package pdftex.def Info: ecostress_banner.jpg  used on input line 54.
-(pdftex.def)             Requested size: 483.69687pt x 76.29724pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 64.
+(Font)              scaled to size 13.67995pt on input line 44.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 64.
-<ICECREAM_Logo.png, id=27, 602.25pt x 524.07796pt>
+(Font)              scaled to size 13.67995pt on input line 44.
+<blueshade.png, id=116, 301.125pt x 301.125pt>
+File: blueshade.png Graphic file (type png)
+<use blueshade.png>
+Package pdftex.def Info: blueshade.png  used on input line 51.
+(pdftex.def)             Requested size: 483.74423pt x 108.38652pt.
+<ICECREAM_Logo.png, id=117, 602.25pt x 524.07796pt>
 File: ICECREAM_Logo.png Graphic file (type png)
 <use ICECREAM_Logo.png>
-Package pdftex.def Info: ICECREAM_Logo.png  used on input line 64.
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 53.
 (pdftex.def)             Requested size: 165.61465pt x 144.11787pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./ICECREAM_Logo.png> <./ecostress_banner.jpg>]
+ <./ICECREAM_Logo.png> </usr/share/texlive/texmf-dist/tex/latex/tcolorbox/blues
+hade.png (PNG copy)>]
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 10.40245pt on input line 63.
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 7.59998pt on input line 63.
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 5.69998pt on input line 63.
+<ecostress_banner.jpg, id=133, 992.70876pt x 156.585pt>
+File: ecostress_banner.jpg Graphic file (type jpg)
+<use ecostress_banner.jpg>
+Package pdftex.def Info: ecostress_banner.jpg  used on input line 69.
+(pdftex.def)             Requested size: 483.69687pt x 76.29724pt.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 68.
+(Font)              scaled to size 16.41594pt on input line 79.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 68.
-<Basemap.png, id=43, 462.528pt x 253.6677pt>
+(Font)              scaled to size 11.39996pt on input line 79.
+<Basemap.png, id=134, 462.528pt x 253.6677pt>
 File: Basemap.png Graphic file (type png)
 <use Basemap.png>
-Package pdftex.def Info: Basemap.png  used on input line 72.
+Package pdftex.def Info: Basemap.png  used on input line 81.
 (pdftex.def)             Requested size: 483.69687pt x 265.29063pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 74.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 83.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 74.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
+(Font)              scaled to size 10.40245pt on input line 83.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 8
 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 78.
+(Font)              scaled to size 10.40245pt on input line 88.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<InsetItem.png, id=44, 462.528pt x 253.9086pt>
+<InsetItem.png, id=135, 462.528pt x 253.9086pt>
 File: InsetItem.png Graphic file (type png)
 <use InsetItem.png>
-Package pdftex.def Info: InsetItem.png  used on input line 88.
+Package pdftex.def Info: InsetItem.png  used on input line 98.
 (pdftex.def)             Requested size: 483.69687pt x 265.54257pt.
 File: ICECREAM_Logo.png Graphic file (type png)
 <use ICECREAM_Logo.png>
-Package pdftex.def Info: ICECREAM_Logo.png  used on input line 90.
-(pdftex.def)             Requested size: 165.61465pt x 144.11787pt.
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 100.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
  [2
 
- <./BaseMap.png> <./InsetItem.png>]
+ <./ecostress_banner.jpg> <./BaseMap.png>]
+<DVlines.png, id=143, 198.2607pt x 207.174pt>
+File: DVlines.png Graphic file (type png)
+<use DVlines.png>
+Package pdftex.def Info: DVlines.png  used on input line 120.
+(pdftex.def)             Requested size: 302.31053pt x 315.91615pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 122.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [3 <./InsetItem.png>]
+<DV_LST.png, id=149, 462.528pt x 252.4632pt>
+File: DV_LST.png Graphic file (type png)
+<use DV_LST.png>
+Package pdftex.def Info: DV_LST.png  used on input line 130.
+(pdftex.def)             Requested size: 483.69687pt x 264.03094pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 135.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [4 <./DVlines.png> <./DV_LST.png>]
+<AddInset.png, id=156, 462.528pt x 253.6677pt>
+File: AddInset.png Graphic file (type png)
+<use AddInset.png>
+Package pdftex.def Info: AddInset.png  used on input line 138.
+(pdftex.def)             Requested size: 483.69687pt x 265.29063pt.
+<RegionShade.png, id=157, 462.528pt x 252.945pt>
+File: RegionShade.png Graphic file (type png)
+<use RegionShade.png>
+Package pdftex.def Info: RegionShade.png  used on input line 144.
+(pdftex.def)             Requested size: 483.69687pt x 264.53482pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 149.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [5 <./AddInset.png> <./RegionShade.png>]
+<TempLegend1.png, id=164, 462.528pt x 252.945pt>
+File: TempLegend1.png Graphic file (type png)
+<use TempLegend1.png>
+Package pdftex.def Info: TempLegend1.png  used on input line 154.
+(pdftex.def)             Requested size: 483.69687pt x 264.53482pt.
+<TempScale1.png, id=165, 462.528pt x 253.1859pt>
+File: TempScale1.png Graphic file (type png)
+<use TempScale1.png>
+Package pdftex.def Info: TempScale1.png  used on input line 178.
+(pdftex.def)             Requested size: 483.69687pt x 264.78676pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 180.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [6 <./TempLegend1.png>]
+<TempScale2.png, id=173, 138.0357pt x 107.6823pt>
+File: TempScale2.png Graphic file (type png)
+<use TempScale2.png>
+Package pdftex.def Info: TempScale2.png  used on input line 184.
+(pdftex.def)             Requested size: 290.22107pt x 226.40894pt.
+<TempLegend2.png, id=174, 462.528pt x 253.6677pt>
+File: TempLegend2.png Graphic file (type png)
+<use TempLegend2.png>
+Package pdftex.def Info: TempLegend2.png  used on input line 190.
+(pdftex.def)             Requested size: 483.69687pt x 265.29063pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 193.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [7 <./TempScale1.png> <./TempScale2.png>]
+<AddGrid.png, id=182, 462.528pt x 253.4268pt>
+File: AddGrid.png Graphic file (type png)
+<use AddGrid.png>
+Package pdftex.def Info: AddGrid.png  used on input line 195.
+(pdftex.def)             Requested size: 483.69687pt x 265.0387pt.
+<GridProps1.png, id=183, 138.7584pt x 147.6717pt>
+File: GridProps1.png Graphic file (type png)
+<use GridProps1.png>
+Package pdftex.def Info: GridProps1.png  used on input line 205.
+(pdftex.def)             Requested size: 241.84843pt x 257.39734pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 208.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [8 <./TempLegend2.png> <./AddGrid.png>]
+<GridProps2.png, id=190, 138.7584pt x 146.2263pt>
+File: GridProps2.png Graphic file (type png)
+<use GridProps2.png>
+Package pdftex.def Info: GridProps2.png  used on input line 220.
+(pdftex.def)             Requested size: 241.84843pt x 254.87794pt.
+<DVwGrids.png, id=191, 844.95676pt x 597.432pt>
+File: DVwGrids.png Graphic file (type png)
+<use DVwGrids.png>
+Package pdftex.def Info: DVwGrids.png  used on input line 224.
+(pdftex.def)             Requested size: 483.69687pt x 342.00746pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 224.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [9 <./GridProps1.png> <./GridProps2.png>]
+<Scalebar.png, id=198, 462.528pt x 252.4632pt>
+File: Scalebar.png Graphic file (type png)
+<use Scalebar.png>
+Package pdftex.def Info: Scalebar.png  used on input line 240.
+(pdftex.def)             Requested size: 483.69687pt x 264.03094pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 243.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [10 <./DVwGrids.png>]
+<NorthArrow1.png, id=205, 462.528pt x 253.9086pt>
+File: NorthArrow1.png Graphic file (type png)
+<use NorthArrow1.png>
+Package pdftex.def Info: NorthArrow1.png  used on input line 249.
+(pdftex.def)             Requested size: 483.69687pt x 265.54257pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 255.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [11 <./Scalebar.png> <./NorthArrow1.png>]
+<NorthArrow2.png, id=212, 462.528pt x 253.4268pt>
+File: NorthArrow2.png Graphic file (type png)
+<use NorthArrow2.png>
+Package pdftex.def Info: NorthArrow2.png  used on input line 257.
+(pdftex.def)             Requested size: 483.69687pt x 265.0387pt.
+<TextBox.png, id=213, 462.528pt x 243.5499pt>
+File: TextBox.png Graphic file (type png)
+<use TextBox.png>
+Package pdftex.def Info: TextBox.png  used on input line 263.
+(pdftex.def)             Requested size: 483.69687pt x 254.70924pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 272.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [12 <./NorthArrow2.png> <./TextBox.png>]
+<Export.png, id=220, 462.528pt x 245.2362pt>
+File: Export.png Graphic file (type png)
+<use Export.png>
+Package pdftex.def Info: Export.png  used on input line 283.
+(pdftex.def)             Requested size: 483.69687pt x 256.47281pt.
+<DeathValleyLSTfinal.png, id=221, 844.95676pt x 597.432pt>
+File: DeathValleyLSTfinal.png Graphic file (type png)
+<use DeathValleyLSTfinal.png>
+Package pdftex.def Info: DeathValleyLSTfinal.png  used on input line 295.
+(pdftex.def)             Requested size: 362.77264pt x 256.49876pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 298.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+ [13 <./Export.png>]
+<DeathValleySign.jpg, id=228, 3276.24pt x 2457.18pt>
+File: DeathValleySign.jpg Graphic file (type jpg)
+<use DeathValleySign.jpg>
+Package pdftex.def Info: DeathValleySign.jpg  used on input line 303.
+(pdftex.def)             Requested size: 362.77264pt x 272.05283pt.
+File: ICECREAM_Logo.png Graphic file (type png)
+<use ICECREAM_Logo.png>
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 309.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+[14 <./DeathValleyLSTfinal.png> <./DeathValleySign.jpg>]
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 326.
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 11.39996pt on input line 341.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1225,36 +1478,37 @@ Package minitoc(hints) Warning: W0024
 
 File: ICECREAM_Logo.png Graphic file (type png)
 <use ICECREAM_Logo.png>
-Package pdftex.def Info: ICECREAM_Logo.png  used on input line 119.
-(pdftex.def)             Requested size: 165.61465pt x 144.11787pt.
-[3
-
-] (./Tutorial4_AddingElementsToMaps.aux)
+Package pdftex.def Info: ICECREAM_Logo.png  used on input line 362.
+(pdftex.def)             Requested size: 75.28105pt x 65.50958pt.
+[15] (./Tutorial4_AddingElementsToMaps.aux)
 Package rerunfilecheck Info: File `Tutorial4_AddingElementsToMaps.out' has not 
 changed.
-(rerunfilecheck)             Checksum: DE63B38BCA8B7975E90A07F09C5B0ABA;868.
+(rerunfilecheck)             Checksum: 6E9B88955ED76DC0E217B5BFE3942A57;2790.
  ) 
 Here is how much of TeX's memory you used:
- 31628 strings out of 478287
- 574792 string characters out of 5849289
- 1015846 words of memory out of 5000000
- 48890 multiletter control sequences out of 15000+600000
- 513708 words of font info for 195 fonts, out of 8000000 for 9000
+ 36616 strings out of 478287
+ 711063 string characters out of 5849289
+ 1099524 words of memory out of 5000000
+ 53641 multiletter control sequences out of 15000+600000
+ 523892 words of font info for 283 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,17n,106p,1027b,826s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 109i,18n,106p,1027b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/hfbright/hfbrsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
-vetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Tutorial4_AddingElementsToMaps.pdf (3 pages, 103413646 bytes)
-.
+type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbrig
+ht/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Tutorial4_AddingElementsToMaps.pdf (15 pages, 486738188 bytes
+).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 73281 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 78221 words of extra memory for PDF output out of 89155 (max. 10000000)
 
