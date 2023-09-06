@@ -101,7 +101,7 @@
 	
 	3. In the next window, make sure \textit{All} is selected in the first window pane and search for \textit{Lat Lon Tools}.
 	
-	4. Click \textit{Install Plugin} and wait for the installation to complete.
+	4. Click \textit{Install Plugin}, wait for the installation to complete, then close the plugin window.
 	
 	\centerline{\includegraphics[width=\textwidth]{LatLonTools.png}}
 	
@@ -159,7 +159,7 @@
 	
 	21. Click \textit{OK}. 
 	
-	22. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to toggle of editing the layer. QGIS will prompt you to confirm saving the layer. Select \textit{Yes}. QGIS has now saved a shapefile with your polygon. 
+	22. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to toggle off editing the layer. QGIS will prompt you to confirm saving the layer. Select \textit{Yes}. QGIS has now saved a shapefile with your polygon. 
 	
 	\vspace{.5em}
 	
@@ -274,7 +274,7 @@
 	
 	25. Click the \textit{Extract} dropdown menu to select Area. Next select Start a New Request.
 	
-	26. Use the screenshot below to set up your request. Name your sample, upload your Vancouver Island \textit{.zip} shapefile, enter \textit{12-24-2022} and \textit{01-01-2023} as start and end dates, and select land surface temperature (\textit{SDS\_LST}), \textit{SDS\_QC}, \textit{Cloud\_final}, and \textit{SDS\_CloudMask} as layers. Keep GeoTiff as the format and select \textit{Native Projection} for the projection. Click \textit{Submit}.
+	26. Use the screenshot below to set up your request. Name your sample, upload your Vancouver Island \textit{.zip} shapefile, enter \textit{12-24-2022} and \textit{01-01-2023} as start and end dates, and select ECOSTRESS land surface temperature (\textit{SDS\_LST}), \textit{SDS\_QC}, \textit{Cloud\_final}, and \textit{SDS\_CloudMask} as layers. Keep GeoTiff as the format and select \textit{Native Projection} for the projection. Click \textit{Submit}.
 	
 	\centerline{\includegraphics[width=.75\textwidth]{ExtractVancouver.png}}
 	
@@ -360,17 +360,19 @@
 		
 		\begin{enumerate}
 			\item Start a new project and create a shapefile for your hometown, favorite place you have lived, or somewhere you wish to move in the future using the steps outlined in this tutorial.
-			\item  Use the same procedure we followed in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS} to create a new request in A$\rho\rho$EEARS, using your hometown shapefile, to access ECOSTRESS land surface temperature data for the entire year of 2022. (This may take several hours).
+			\item  Use the same procedure we followed in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS} to create a new request in A$\rho\rho$EEARS, using your hometown shapefile, to access ECOSTRESS land surface temperature (SDS\_LST) and cloud data (Cloud\_final \& SDS\_CloudMask)  for the entire year of 2022. (This may take several hours).
 			\item On your own time, determine which passes have the hottest and coldest observations of land surface temperature in 2022 and download those GeoTIFF data files somewhere you can access. We will use them in a future tutorial to finish the competition. This is a similar process to our Death Valley temperature in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS}.  
 		\end{enumerate}
 		
-		You can ask your classmates for suggestions if you get stuck, but remember to complete the work on your own. You will need these skills for future projects!
+		\kulbox{\textbf{NOTE:} It is possible that if you selected a very large geographic area for your shapefile that the filesize with exceed the A$\rho\rho$EEARS file size limit. If this is the case, you could consider selecting a smaller area or submitting multiple requests, one for each layer.}
 		
 	\end{tcolorbox} 
 	
 	\begin{tcolorbox}[colback=gray!5!white,colframe=blue!65!green,title=Next Tutorial]
 		Next time you will learn how to make professional maps in QGIS and pull all of your new skills together to make a map with this new data for your hometown that showcases the highest and lowest temperatures for 2022. 
 	\end{tcolorbox}
+
+You can ask your classmates for suggestions if you get stuck, but remember to complete the work on your own. You will need these skills for future projects!
 	
 	\kulbox{\textbf{NOTE:} It is entirely possible for ECOSTRESS to produce bad data with extreme and unrealistic values for land surface temperature. Make sure you are filtering for clouds. Also, keep in mind that the theoretical maximum possible ground surface temperature has been estimated to be 212 degrees Fahrenheit.}
 	
@@ -389,7 +391,7 @@
 			\item Read about how your choice of colors in maps can be very important in the article: \href{https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159}{How rainbow colour maps can distort data and be misleading.}
 			\item Submit the map of your hometown, like the timezone map we made in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Tutorial3_MakingBasicMapsInQGIS.pdf}{Tutorial \#3 Making Basic Maps In QGIS}, with your favorite basemap (Google Satellite, ESRI Imagery, ESRI Delorme, etc,). Make sure it includes an outline of your hometown created with your new shapefile you made today. We'll add the temperature data in the future.  
 			\item Include a few sentences describing how you choose the borders of your shapefile and your design choices of your map. 
-			\item Save GeoTIFF files of the hottest and coldest land surface temperature observations of your hometown for 2022. Bring them for the next tutorial.
+			\item Save GeoTIFF files to your computer of the hottest and coldest land surface temperature observations for your hometown in 2022. Bring them for the next tutorial, you don't need to submit these to Canvas.
 		\end{enumerate}
 		
 		Submit your map via Canvas before Monday's class.
