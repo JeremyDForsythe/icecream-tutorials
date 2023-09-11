@@ -4,15 +4,27 @@
 \usepackage[english]{babel}
 \addto\captionsenglish{\renewcommand{\chaptername}{}}
 \usepackage[accsupp]{axessibility}  % improves PDF readability for those with disabilities.
-\usepackage[hidelinks,colorlinks = true,urlcolor  = blue]{hyperref}
+\usepackage[colorlinks = true,urlcolor  = blue,linkcolor = blue]{hyperref}
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage[most]{tcolorbox}
 \usepackage{minitoc}
+
+
+\renewcommand{\mtifont}{\large\sffamily}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
 \mtcsetpagenumbers{minitoc}{off} % turn off page numbering in minitocs
 \addto{\captionsenglish}{% Making babel aware of special titles
 	\renewcommand{\mtctitle}{Quick Links To Sections}
 }
+\setlength{\fboxrule}{5pt}
+\setlength{\fboxsep}{4pt}
+
+\definecolor{IceCreamLeaf}{rgb}{0.4, 0.639215686274, 0.4}
+\definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
 
 \title{I.C.E.C.R.E.A.M. Tutorials}
 \subtitle{\small Observing Earth from Above (Env 329) - Fall 2023  \\
@@ -48,6 +60,7 @@
 		\item Learn the map making features in QGIS.
 		\item Introduce basic map elements.
 		\item Create a NASA worthy map of surface temperatures from Death Valley National Park.
+		\item Combine all of your skills to make a map for your hometown showcasing the hottest and coldest temperatures for last year. 
 	\end{enumerate}
 \end{tcolorbox}
 
@@ -135,7 +148,7 @@ We want to begin to use satellite remote sensing data to understand environmenta
 16. Now that we have the map how we like it the main window, switch back to the Print Layout window. Select the menu \textit{Add Item}, then \textit{Add Map}. Click and create an inset of the land surface temperature to the East of California.
 
 \begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,
-  colback=blue!5!white,colframe=blue!75!black,title=Inset Maps]
+  colback=yellow!5!white,colframe=IceCreamLeaf,title=Inset Maps]
   An inset map is a smaller map within a larger map and can serve multiple purposes depending on your goals. Some things they can do:
     \begin{itemize}
          \item Provide context by showing the larger geographic region when the main map is zoomed in to a local scale:
@@ -231,8 +244,7 @@ The SI unit of temperature set for the International System of Units is Kelvin (
 
 31. Select the \textit{Item Properties} tab and scroll down until you reach the \textit{Grids} subsection. Click the plus sign to add a set of gridlines. By default, the gridlines use the same units and projections as the currently selected map projections. However, it is more common and useful to display grid lines in degrees of latitude and longitude . 
 
-\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
-  colbacktitle=yellow!75!black,title=Coordinate Reference Systems (CRS)]
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=Coordinate Reference Systems (CRS)]
 \textbf{Map projections} try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen. Essentially, map projections try to transform the earth from its spherical shape (3D) to a planar shape (2D).
 
 A \textbf{coordinate reference system (CRS)} then defines how the two-dimensional, projected map in your GIS relates to real places on the earth. The decision of which map projection and CRS to use depends on the regional extent of the area you want to work in, on the analysis you want to do, and often on the availability of data.
@@ -351,32 +363,32 @@ The highest recorded ground temperature of 201 $^{\circ}$ F was verified on July
 
 The real power of the ECOSTRESS satellite comes in its geographic and temporal continuity. For instance, it is easy to see from our map which parts of Death Valley have the highest surface temperature. We could also track this seasonally, to see how vegetation growth alters temperatures. The possibilities are endless.
 
-\vspace{.25em}
+\section{Hometown Temperature Competition Progress}
 
-\hrule
+In the last tutorial (\href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/Tutorial4_TemperatureCompetition.pdf}{Tutorial \#4: Hometown Temperature Competition}) you learned how to draw a shapefile. Your assignment before today's tutorial was to create a shapefile of your hometown, favorite place you have lived, or somewhere you wish to move in the future and use that file in A$\rho\rho$EEARS to download ECOSTRESS land surface temperature data for last year. Then you were to save GeoTIFF files to your computer of the hottest and coldest land surface temperature observations of that year for your hometown.
 
-\vspace{1 em}
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Temperature Competition Next Steps}]
+	Now that you have that data let's put it all together in a map.
+	\begin{enumerate}
+		\item Start a new project and load the shapefile for your hometown, favorite place you have lived, or somewhere you wish to move in the future.
+		\item Use the same procedure we followed in this tutorial to create a map with two insets, one for the hottest and coldest days from the last full calendar year using the GeoTIFF files you saved from the previous tutorial. I have included an example on the next page that I made for Vancouver Island in 2022 for inspiration. You already have all of the skills to make this map! You don't have to make one that exactly mimics the example, but it needs to include all of the design elements that make an effective map: north arrow(s), scalebar(s), title(s), and legend(s). Be creative and curious by exploring the menu options and design a beautiful map that clearly communicates the hottest and coldest temperatures while showcasing your individual style.
+	\end{enumerate}
+\end{tcolorbox}
 
-\begin{tcolorbox}[colback=yellow!5!white,colframe=red!80!blue,title= \vspace{.2em} \Large Map of the Week Assignments]
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
 	\addcontentsline{toc}{section}{Map of the Week Assignments}
 	\large
 	\begin{enumerate}
-		\item Have fun and make an interesting temperature map for your hometown designed to communicate the hottest and coldest temperatures for 2022 with your favorite theme in mind! Submit it before next class. Example themes to get your brain churning:
-		\begin{itemize}
-			\item Wes Anderson
-			\item Van Gogh
-			\item Antique
-			\item Rick and Morty
-			\item The Best Taylor Swift Album (Obviously Midnights)
-		\end{itemize}
-            \item Provide a one paragraph description of your map and why you selected your design choices. Does your theme help or hinder the intended communication of your map?
+		\item Make a temperature map for your hometown designed to communicate the hottest and coldest temperatures for the last calendar year complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s). 
+        \item Provide a one paragraph description of your map. Think of it as an expanded caption. What do you want the reader to know after they see your map? What are the values for the max and min? Are there hotspots or coldspots, and if so why?
 	\end{enumerate}
 	Submit these assignments via Canvas before Monday's class.
 \end{tcolorbox}
 
-\vspace{2 em}
 
-\begin{tcolorbox}[title= \Large Datafiles]
+\centerline{\includegraphics[width=\textwidth]{Vancouver Island Temperature Competition Example.png}}
+
+\begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
 	\addcontentsline{toc}{section}{Datafiles}
 	\large
 	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
@@ -384,17 +396,23 @@ The real power of the ECOSTRESS satellite comes in its geographic and temporal c
 		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214149\_aid0001.tif}
 		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214057\_aid0001.tif}
 	\end{enumerate}
+	And Vancouver Island:
+	\begin{enumerate}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339225920_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339225920\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339212245_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339212245\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208041543_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208041543\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208010157_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208010157\_aid0001.tif}
+	\end{enumerate}
 \end{tcolorbox}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
-\vfill
+%\vfill
 
 \hrule
 
 \vspace{1em}
 
-\textbf{Recommended Citation:} Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Observing Earth from Above Tutorials. Chapman University. \url{https://jeremydforsythe.github.io/icecream-tutorials/}
+\small \textbf{Recommended Citation:} Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Observing Earth from Above Tutorials. Chapman University. \url{https://jeremydforsythe.github.io/icecream-tutorials/}
 
 \vspace{1em}
 

@@ -4,17 +4,27 @@
 \usepackage[english]{babel}
 \addto\captionsenglish{\renewcommand{\chaptername}{}}
 \usepackage[accsupp]{axessibility}  % improves PDF readability for those with disabilities.
-\usepackage[hidelinks,colorlinks = true,urlcolor  = blue]{hyperref}
+\usepackage[colorlinks = true,urlcolor  = blue,linkcolor = blue]{hyperref}
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage[most]{tcolorbox}
 \usepackage{minitoc}
+
+
+\renewcommand{\mtifont}{\large\sffamily}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
 \mtcsetpagenumbers{minitoc}{off} % turn off page numbering in minitocs
 \addto{\captionsenglish}{% Making babel aware of special titles
 	\renewcommand{\mtctitle}{Quick Links To Sections}
 }
 \setlength{\fboxrule}{5pt}
 \setlength{\fboxsep}{4pt}
+
+\definecolor{IceCreamLeaf}{rgb}{0.4, 0.639215686274, 0.4}
+\definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
 
 \pretolerance=10000
 \tolerance=2000 
@@ -161,43 +171,29 @@
 	
 	22. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to toggle off editing the layer. QGIS will prompt you to confirm saving the layer. Select \textit{Yes}. QGIS has now saved a shapefile with your polygon. 
 	
-	\vspace{.5em}
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{What Are Shapefiles?}]
+		The shapefile format is one of the most commonly used vector file formats for geographic information. A shapefile dataset consists of several files. The following three are required:
+			
+		\begin{itemize}
+			\centering
+			\item[\color{orange} .shp] file containing the feature geometries
+			\item[\color{orange} .dbf] file containing the attributes in \href{https://en.wikipedia.org/wiki/.dbf}{dBase} format
+			\item[\color{orange} .shx] index file
+		\end{itemize}
+			
+		Additionally, they can have: 
+			
+		\begin{itemize}
+			\centering
+			\item[\color{orange} .prj] which contains projection information
+			\item[\color{orange} .cpg] plain text files that describes the encoding applied
+			\item[\color{orange} .qix] spatial index file containing zoom and pan information
+		\end{itemize}			
+	\end{tcolorbox}
 	
-	\noindent\fbox{\begin{minipage}{.9665\textwidth}
-			
-			\vspace{1em}
-			\begin{center}
-				\textbf{\Large \underline{What Are Shapefiles?}}
-			\end{center}
-			
-			\vspace{1 em}
-			
-			The shapefile format is one of the most commonly used vector file formats for geographic information. A shapefile dataset consists of several files. The following three are required:
-			
-			\begin{itemize}
-				\centering
-				\item[\color{orange} .shp] file containing the feature geometries
-				\item[\color{orange} .dbf] file containing the attributes in \href{https://en.wikipedia.org/wiki/.dbf}{dBase} format
-				\item[\color{orange} .shx] index file
-			\end{itemize}
-			
-			Additionally, they can have: 
-			
-			\begin{itemize}
-				\centering
-				\item[\color{orange} .prj] which contains projection information
-				\item[\color{orange} .cpg] plain text files that describes the encoding applied
-				\item[\color{orange} .qix] spatial index file containing zoom and pan information
-			\end{itemize}
-			
-			
-	\end{minipage}}
+	23. As you likely remember from Tutorial 2, the A$\rho\rho$EEARS interface we use to access ECOSTRESS data requires shapefiles to be combined in a \href{https://en.wikipedia.org/wiki/ZIP_(file_format)}{zip file}. Use the following instructions on the next page for your operating system to zip the shapefile data into one zip file.
 	
-	\vspace{.5em}
-	
-	23. As you likely remember from Tutorial 2, the A$\rho\rho$EEARS interface we use to access ECOSTRESS data requires shapefiles to be combined in a \href{https://en.wikipedia.org/wiki/ZIP_(file_format)}{zip file}. Use the following instructions for your operating system to zip the shapefile data into one zip file.
-	
-	\begin{tcolorbox}[colback=blue!5!white,colframe=blue!60!green,title=\flushright{Windows \hspace{.25em} \includegraphics[width=1cm]{WindowsLogo.png}}]
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=blue!60!green,title=\flushright{Windows \hspace{.25em} \includegraphics[width=1cm]{WindowsLogo.png}}]
 		\begin{enumerate}
 			\item Locate the Vancouver Island shapefile layer files that you saved in step 12 using your computer's \textit{File Explorer} application \includegraphics[width=1cm]{Windows_11_Explorer.png} .
 			\item Hold the \textit{ctrl} button down and select the files with the .shp, .dbf, .shx, .prj, and .cpg extensions. 
@@ -207,7 +203,7 @@
 		\end{enumerate}
 	\end{tcolorbox}
 	
-	\begin{tcolorbox}[colback=red!5!white,colframe=red!70!white,title=\flushright{Apple macOS \hspace{.25em} \includegraphics[width=1cm]{AppleLogo.png}}]
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=red!70!white,title=\flushright{Apple macOS \hspace{.25em} \includegraphics[width=1cm]{AppleLogo.png}}]
 		\begin{enumerate}
 			\item Locate the Vancouver Island shapefile layer files that you saved in step 12 using your computer's \textit{Finder} application \includegraphics[width=1cm]{Finder.png} .
 			\item Hold the \textit{command} button down and select the files with the .shp, .dbf, .shx, .prj, and .cpg extensions. 
@@ -221,10 +217,9 @@
 	
 	ECOSTRESS (like nearly all instruments used for remote sensing) cannot see through the clouds and relies on clear skies to provide reliable observations of land surface temperature. The A$\rho\rho$EEARS database has a few layer options to ensure clouds aren't interfering with an analysis, depending on your goals and timeframes. You may remember that we used the \textit{Cloud\_final} layer in  \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial 2's} Death Valley Experiment. This is a newer ``V2'' product that was introduced in late 2022. For data before that, we have to use an alternative metric:
 	
-	\begin{tcbraster}[raster columns=3, sharp corners, 
-		raster equal height, raster column skip=-.5mm]
-		\begin{tcolorbox}[colback=yellow!5!white,colframe=green!20!black,
-			colbacktitle=green!60!black,title=Cloud\_final]
+	\begin{tcbraster}[raster columns=3, raster equal height, raster column skip=-.5mm]
+		\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,
+			colbacktitle=IceCreamLeaf,title=Cloud\_final]
 			\begin{center}
 				\includegraphics[width=\columnwidth]{Cloud_final.png}
 			\end{center}
@@ -237,7 +232,7 @@
 				\item Only available from late 2022 on!
 			\end{itemize}
 		\end{tcolorbox}
-		\begin{tcolorbox}[colback=yellow!5!white,colframe=green!20!black, colbacktitle=green!60!black,title=SDS\_CloudMask]
+		\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf, colbacktitle=IceCreamLeaf,title=SDS\_CloudMask]
 			\begin{center}
 				\includegraphics[width=\columnwidth]{SDS_CloudMask.png}
 			\end{center}
@@ -248,8 +243,8 @@
 				\item Contains cloud information in addition to the tests used to determine cloudiness.
 			\end{itemize}
 		\end{tcolorbox}
-		\begin{tcolorbox}[colback=yellow!5!white,colframe=green!20!black,
-			colbacktitle=green!60!black,title=SDS\_QC]
+		\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,
+			colbacktitle=IceCreamLeaf,title=SDS\_QC]
 			\begin{center}
 				\includegraphics[width=\columnwidth]{SDS_QC.png}
 			\end{center}
@@ -288,31 +283,29 @@
 	
 	29. In the meantime, let's visualize some of the cloud data. I have already accessed the \textit{Cloud\_final} layer for Vancouver Island from 1/1/2023. 
 	
-	\noindent\fbox{\begin{minipage}{.9665\textwidth}
+	\begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Vancouver Island \textit{Cloud\_final} Layer Files}]
 			
-			\textbf{Please download these three GeoTIFF files, saving them somewhere logical and accessible, such as the same folder where you used to save the Vancouver Island shapefile:}
+		\textbf{Please download these three GeoTIFF files, saving them somewhere logical and accessible, such as the same folder you used for the Vancouver Island shapefile:}
 			
-			\vspace{-.5em}
+		\vspace{-1em}
 			
-			\begin{itemize}
-				\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001105856_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001105856\_aid0001.tif}
-				\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001123515_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001123515\_aid0001.tif}
-				\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001141155_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001141155\_aid0001.tif}
-			\end{itemize}
+		\begin{itemize}
+			\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001105856_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001105856\_aid0001.tif}
+			\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001123515_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001123515\_aid0001.tif}
+			\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/ECO_L2_CLOUD.002_Cloud_final_doy2023001141155_aid0001.tif}{ECO\_L2\_CLOUD.002\_Cloud\_final\_doy2023001141155\_aid0001.tif}
+		\end{itemize}
 			
-	\end{minipage}}
-	
-	\vspace{.5em}
+	\end{tcolorbox}
 	
 	30. Switch over to QGIS, where you should still have your shapefile loaded as a layer. Load these three GeoTIFFs into active layers by double clicking on each in the browser window.
 	
-	\centerline{\includegraphics[width=\textwidth]{Cloud_final_AddLayer.png}}
+	\centerline{\includegraphics[width=.875\textwidth]{Cloud_final_AddLayer.png}}
 	
 	31. Right click on one of the layers in the \textit{Layer} browser, and select \textit{Properties}.
 	
 	32. In the panel, make sure \textit{Symbology} is selected.
 	
-	33. Change \textit{Render type} to \textit{Singleband pseudocolor}. Now, we have told QGIS that we want this layer to be in color.
+	33. Change \textit{Render type} to \textit{Singleband pseudocolor}, which tells QGIS that we want this layer to be in color.
 	
 	34. Change \textit{Mode} to \textit{Equal Interval}. Now, we have told QGIS that we want this layer to be to have different colors for each value. 
 	
@@ -353,29 +346,29 @@
 	
 	By the end of the next tutorial, you will have all of the skills to generate a map showcasing the highest and lowest temperatures for your hometown. For now, let's focus on acquiring the data.
 	
-	\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
-		colback=red!5!white,colframe=red!70!blue,colbacktitle=red!70!blue,
-		title=Temperature Competition Instructions,fonttitle=\bfseries,
-		boxed title style={size=small,colframe=red!50!black} ]
-		
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Temperature Competition Instructions}]
 		\begin{enumerate}
 			\item Start a new project and create a shapefile for your hometown, favorite place you have lived, or somewhere you wish to move in the future using the steps outlined in this tutorial.
-			\item  Use the same procedure we followed in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS} to create a new request in A$\rho\rho$EEARS, using your hometown shapefile, to access ECOSTRESS land surface temperature (SDS\_LST) and cloud data (Cloud\_final \& SDS\_CloudMask)  for the entire year of 2022. (This may take several hours).
-			\item On your own time, determine which passes have the hottest and coldest observations of land surface temperature in 2022 and download those GeoTIFF data files somewhere you can access. We will use them in a future tutorial to finish the competition. This is a similar process to our Death Valley temperature in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS}.  
+			\item  Use the same procedure we followed in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS} to create a new request in A$\rho\rho$EEARS, using your hometown shapefile, to access ECOSTRESS land surface temperature (SDS\_LST) and cloud data (Cloud\_final \& SDS\_CloudMask)  for the entire last calendar year. (This may take several hours).
+			\item On your own time, determine which passes have the hottest and coldest observations of land surface temperature during the last calendar year and download those GeoTIFF data files somewhere you can access. We will use them in a future tutorial to finish the competition. This is a similar process to our Death Valley temperature in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/Tutorial2_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#2 Accessing Remote Sensing Data With A$\rho\rho$EEARS}.  
 		\end{enumerate}
 		
 		\kulbox{\textbf{NOTE:} It is possible that if you selected a very large geographic area for your shapefile that the filesize with exceed the A$\rho\rho$EEARS file size limit. If this is the case, you could consider selecting a smaller area or submitting multiple requests, one for each layer.}
 		
 	\end{tcolorbox} 
+
+	You can ask your classmates for suggestions if you get stuck, but remember to complete the work on your own. You will need these skills for future projects!
+
+	\centerline{\includegraphics[width=\textwidth]{AppeearsZoom.png}}
+
+	\kulbox{\textbf{NOTE:} The A$\rho\rho$EEARS graphing interface can be customized with options to zoom in on certain ranges of dates (x-axis) and values (y-axis). For instance, I find that I need to change the defaults in order to see the daily changes in temperatures clearly. You may also need to do this to select which days have the hottest and coldest temperatures. See screen shot above.}
+
+	\kulbox{\textbf{NOTE:} It is entirely possible for ECOSTRESS to produce bad data with extreme and unrealistic values for land surface temperature. Make sure you are filtering for clouds. Also, keep in mind that the typical range for surface temperatures varies between -15 $^\circ$F to 115 $^\circ$F. \href{https://doi.org/10.1029/2018GL078133}{Antartica once witnessed frigid temperatures around -145 $^\circ$F} and the \href{https://jeremydforsythe.github.io/icecream-tutorials-main/Tutorial5_AddingElementsToMaps/Extreme Maximum Land Surface Temperatures.pdf} {theoretical maximum possible ground surface temperature has been estimated to be 212 $^\circ$F.} It is unlikely you will find good quality obversations near those extremes for your hometown.}
 	
-	\begin{tcolorbox}[colback=gray!5!white,colframe=blue!65!green,title=Next Tutorial]
-		Next time you will learn how to make professional maps in QGIS and pull all of your new skills together to make a map with this new data for your hometown that showcases the highest and lowest temperatures for 2022. 
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Next Tutorial}]
+		Next time you will learn how to make professional maps in QGIS and pull all of your new skills together to make a map with this new data for your hometown that showcases the highest and lowest temperatures for the last calendar year. 
 	\end{tcolorbox}
 
-You can ask your classmates for suggestions if you get stuck, but remember to complete the work on your own. You will need these skills for future projects!
-	
-	\kulbox{\textbf{NOTE:} It is entirely possible for ECOSTRESS to produce bad data with extreme and unrealistic values for land surface temperature. Make sure you are filtering for clouds. Also, keep in mind that the theoretical maximum possible ground surface temperature has been estimated to be 212 degrees Fahrenheit.}
-	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin End Matter
 	
 	\vspace{.25em}
@@ -384,14 +377,14 @@ You can ask your classmates for suggestions if you get stuck, but remember to co
 	
 	\vspace{1 em}
 	
-	\begin{tcolorbox}[colback=yellow!5!white,colframe=red!80!blue,title= \vspace{.2em} \Large Map of the Week Assignments]
+	\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
 		\addcontentsline{toc}{section}{Map of the Week Assignments}
 		\large
 		\begin{enumerate}
 			\item Read about how your choice of colors in maps can be very important in the article: \href{https://theconversation.com/how-rainbow-colour-maps-can-distort-data-and-be-misleading-167159}{How rainbow colour maps can distort data and be misleading.}
 			\item Submit the map of your hometown, like the timezone map we made in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_MakingBasicMapsInQGIS/Tutorial3_MakingBasicMapsInQGIS.pdf}{Tutorial \#3 Making Basic Maps In QGIS}, with your favorite basemap (Google Satellite, ESRI Imagery, ESRI Delorme, etc,). Make sure it includes an outline of your hometown created with your new shapefile you made today. We'll add the temperature data in the future.  
 			\item Include a few sentences describing how you choose the borders of your shapefile and your design choices of your map. 
-			\item Save GeoTIFF files to your computer of the hottest and coldest land surface temperature observations for your hometown in 2022. Bring them for the next tutorial, you don't need to submit these to Canvas.
+			\item Save GeoTIFF files to your computer of the hottest and coldest land surface temperature observations for your hometown last calendar year. Bring them for the next tutorial, you don't need to submit these to Canvas.
 		\end{enumerate}
 		
 		Submit your map via Canvas before Monday's class.
