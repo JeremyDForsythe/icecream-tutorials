@@ -1,0 +1,13 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="1">
+  <symbols/>
+  <colorramps>
+    <colorramp name="evapotranspiration" type="gradient">
+      <prop k="color1" v="246,232,195,255"/>
+      <prop k="color2" v="24,57,197,255"/>
+      <prop k="discrete" v="0"/>
+      <prop k="rampType" v="gradient"/>
+      <prop k="stops" v="0.2;216,179,101,255:0.4;153,151,74,255:0.6;83,121,45,255:0.8;107,223,210,255"/>
+    </colorramp>
+  </colorramps>
+</qgis_style>

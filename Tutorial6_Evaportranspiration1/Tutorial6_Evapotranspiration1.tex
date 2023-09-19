@@ -1,0 +1,316 @@
+\documentclass[oneside,a4paper,11pt,explicit]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{icecream}
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\chaptername}{}}
+\usepackage[accsupp]{axessibility}  % improves PDF readability for those with disabilities.
+\usepackage[colorlinks = true,urlcolor  = blue,linkcolor = blue]{hyperref}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{minitoc}
+\usepackage{multicol}
+
+
+\renewcommand{\mtifont}{\large\sffamily}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
+\mtcsetpagenumbers{minitoc}{off} % turn off page numbering in minitocs
+\addto{\captionsenglish}{% Making babel aware of special titles
+	\renewcommand{\mtctitle}{Quick Links To Sections}
+}
+\setlength{\fboxrule}{5pt}
+\setlength{\fboxsep}{4pt}
+
+\definecolor{IceCreamLeaf}{rgb}{0.4, 0.639215686274, 0.4}
+\definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
+
+\title{I.C.E.C.R.E.A.M. Tutorials}
+\subtitle{\small Observing Earth from Above (Env 329) - Fall 2023  \\
+	\small Schmid College of Science and Technology, Chapman University}
+\date{\today}
+
+%% DOCUMENT
+\setstretch{1.25}
+\makeatletter
+\begin{document}
+
+\dominitoc
+
+\tableofcontents
+
+\setcounter{chapter}{5} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
+
+\chapter{ECOSTRESS \& Water Cycling} %Enter Tutorial Name Here
+
+\vspace{-2em}
+
+\minitoc
+
+\hrule
+
+\vspace{1em}
+
+\begin{tcolorbox}[enhanced,frame style image=blueshade.png,
+	opacityback=0.75,opacitybacktitle=0.25,
+	colback=blue!5!white,colframe=blue!75!black,title={\Large \textbf{Objectives:}}]
+	\large
+	\begin{enumerate}
+		\item Learn the difference between two evapotranspiration variables available on A$\rho\rho$EEARS from ECOSTRESS... $ET_{daily}$ vs $ET_{instantaneous}$
+		\item Introduce the benefits and shortcomings of the different methodologies (algorithms) available for estimating evapotranspiration... ``PT-JPL'' vs ``DisALEXI-JPL'' 
+		\item Make a hypothesis connecting land surface temperature and evapotranspiration patterns in the Central Valley of California.
+		\item Create a NASA worthy map illustrating these patterns and answering the question are land surface temperature and evapotranspiration linked?
+	\end{enumerate}
+\end{tcolorbox}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Change Header to Have a Smaller Logo for Remainder of the Document
+\fancyhead{}
+\fancyhead[C]{\begin{tikzpicture}[overlay, remember picture]
+		\fill[Blue2] (current page.north west) rectangle ($(current page.north east)+(0,-1in)$);
+		\node[anchor=north west, text=white, font=\Large, minimum size=1in, inner xsep=5mm, align=left] at (current page.north west) {\bf{\MakeUppercase{\@title}}\\\@subtitle};
+		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.125]{ICECREAM_Logo.png}};\end{tikzpicture}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent\fbox{\begin{minipage}{.9665\textwidth}
+			
+	\vspace{1em}
+	\begin{center}
+		\textbf{\Large \underline{Motivation For Today's Tutorial : The Global Water Crisis}}
+	\end{center}
+	
+	\addcontentsline{toc}{section}{Motivation : The Global Water Crisis}
+
+	\vspace{1 em}
+	
+	\centerline{\includegraphics[width=\textwidth]{ET_Trends.png}}
+	
+	\vspace{1 em}
+	
+	So far we have been using ECOSTRESS to examine land surface temperatures. Today we are going to shift gears and research a new variable that \href{https://www.un.org/en/climatechange/science/climate-issues/water}{the United Nations considers to be at the center of the climate crisis... water.}
+
+	\vspace{.5em}
+
+	ECOSTRESS uses land surface temperatures to estimate an important water variable, evapotranspiration (ET). ET is the sum of all processes by which water moves from the land surface to the atmosphere and is comprised of two components:
+	
+\begin{itemize}
+	\item Transpiration: water movement through plants to the atmosphere. It is a consequence of the plants' life processes; (i.e \href{https://en.wikipedia.org/wiki/Photosynthesis}{photosynthesis}).  
+	\item Evaporation: process by which water is converted from a liquid form on the earth's surface to vapor form in the atmosphere.
+\end{itemize}
+
+	ET is a crucial component of the global terrestrial water cycle, which returns around 65\% of land precipitation to the atmosphere. The figure above, which was adapted from (\href{https://www.sciencedirect.com/science/article/pii/S016819232100349X?ref=pdf_download&fr=RR-2&rr=8052dedb59b02ea9}{Jianyu Liu et al. 2021}), shows that ET has been increasing for at least 80\% of the earth from 1980 to 2017 as a result of increasing temperatures and other impacts of anthropogenic  change impacts. 
+	
+\end{minipage}}
+
+\section{Accessing ECOSTRESS Water Data through A$\rho\rho$EEARS}
+
+\subsection{ECOSTRESS Data Product Levels}
+
+ECOSTRESS has different data product levels based on the amount of processing that is needed to create the data. Land surface temperature (LST) data is the primary observation from ECOSTRESS which forms the basis for the other products, so LST is Level 2 (ECO2) after the calibration data in Level 1 (ECO1). Level 3 (ECO3) data is evapotranspiration, followed by products that are derived from evapotranspiration (ET) like evaporative stress index (ESI) and water use efficiency (WUE). Later tutorials will introduce ESI and WUE, while tutorial 6 and 7 focus on ET. This table gives an overview of the ECOSTRESS data products: 
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.75\textwidth]{ECOSTRESS_DataProducts.png}}
+
+\vspace{.5em}
+
+\subsection{Today's Study Location : California's Central Valley}
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{California's Central Valley}]
+	\begin{multicols}{2}
+
+	\centerline{\includegraphics[width=\columnwidth]{CentralValleyUSGS.png}}
+	\columnbreak
+		\begin{itemize}
+			\item A vast agricultural region covering 20,000 square miles drained by the Sacramento and San Joaquin Rivers.
+			\item Approximately 75\% of the irrigated land in California and 17\% of the national irrigated land is in the Central Valley.
+			\item Using fewer than 1\% of U.S. farmland, the Central Valley produces $\frac{1}{4}$ of the food grown in the United States.
+			\item About 20\% of the Nation's groundwater demand is supplied from pumping Central Valley aquifers, making it the second-most-pumped aquifer system in the U.S.
+			\item As a result of climate change impacts in the central valley, there is a \href{https://www.energy.ca.gov/sites/default/files/2019-12/Water_CCCA4-EXT-2018-001_ada.pdf}{93\% likelihood of diminished groundwater delivery to millions of Californian households, businesses, and farms and a 95 percent likelihood of diminished drought resilience for the crops}. 
+		\end{itemize}
+	\end{multicols}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Hypotheses}]
+	\begin{multicols}{2}
+
+		\vspace*{.25em}
+
+		\begin{itemize}
+			\item Before we access the data, let's make some predictions about evapotranspiration:
+			\item Given this map to the right with land surface temperatures observed by ECOSTRESS over the summer of 2022, where would you expect evapotranspiration to be the highest?
+			\item Will it be where the land surface is the hottest or is there something else going on?
+			\item To find out, we are going to download evapotranspiration data from ECOSTRESS, make a map of evapotranspiration, and compare that map to this land surface temperature map.
+		\end{itemize}
+
+		\columnbreak	
+
+		\centerline{\includegraphics[width=\columnwidth]{CentralValleyLST.png}}
+		
+	\end{multicols}
+\end{tcolorbox}
+
+\subsection{Downloading Evaportanspiration from A$\rho\rho$EEARS}
+
+The procedure for downloading ET data through the A$\rho\rho$EEARS interface is the same as what you accomplished in earlier tutorials for land surface temperature.
+
+1. Since we are focusing on California's central valley today, begin by downloading the file \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial6_Evaportranspiration1/CaliforniaCentralValley.geojson}{CaliforniaCentralValley.geojson} and save it somewhere you can remember. A folder containing all of the files for this tutorial sounds effective and orderly. A .geojson file is an alternative to the shapefiles we have used so far. QGIS can import or export either format. An advantage of GeoJSON is that it is self contained and does not need to be zipped before importing into A$\rho\rho$EEARS.
+
+2. Head over to \href{https://appeears.earthdatacloud.nasa.gov/}{https://appeears.earthdatacloud.nasa.gov/} and login with your credentials. 
+
+3. Use the \textit{Extract} dropdown menu to select \textit{Area}. Next select \textit{Start a New Request}. 
+
+4. Enter a useful name for the request you are going to submit, maybe something like ``ET Central Valley Aug 6''. 
+
+5. Drag and drop (or use the \textit{click here to select the file} link) to upload the GeoJSON file CaliforniaCentralValley.geojson. The map should update with a polygon encompassing California's Central Valley.
+
+6. Update the \textit{Start} and \textit{End} Date Fields for our preselected date of interest: 08/06/2022 to 08/6/2022.
+
+7. Under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``Evapotranspiration''. Then scroll until you can click on \textit{ECOSTRESS Evapotranspiration PT-JPL}. From there, scroll until you see \textit{EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily} and \textit{EVAPOTRANSPIRATION\_PT\_JPL\_ETinst} options. Click on the ``+'' signs to add those layers into your cart. Next, clear the current category selection using the small ``x'' to the right of the \textit{ECOSTRESS Evapotranspiration PT-JPL} box.
+
+\centerline{\includegraphics[width=.6\textwidth]{ETRequest.png}}
+
+\kulbox{\textbf{NOTE:} There are two models that can estimate evapotranspiration from ECOSTRESS's primary measurement, land surface temperature. One model, \href{https://ecostress.jpl.nasa.gov/downloads/atbd/ECOSTRESS_L3_ET_PT-JPL_ATBD_20180509.pdf}{``PT-JPL''} is the most versatile and likely the best choice for most cases, including our experiment here today. The other option \href{https://ecostress.jpl.nasa.gov/downloads/userguides/ECOSTRESS_DisALEXI-JPL_L3_UserGuide_20210520_v2.pdf}{``DisALEXI-JPL''} has a different set of equations associated with it. If you are interested in evapotranspiration in agricultural settings consider DisALEXI, otherwise or if you are unsure, stay with PT-JPL.}
+
+8. Under *Output Options*, we want to use GeoTIFF (Geographic Tagged Image File Format; essentially an image file where the corresponding geographic information is embedded in the file) and *Native Projection* for projection.
+
+9. Click *Submit* to complete the data request. At the top, you should see a green banner:
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=\textwidth]{RequestSuccess.png}}
+
+\vspace{.5em}
+
+10. Use the \textit{Explore} dropdown at the top to monitor the status of your request. It will likely go quickly, given that it is only one day's worth of data.
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.75\textwidth]{ExploreRequest.png}}
+
+\vspace{.5em}
+
+\subsection{Downloading Evaportanspiration Component Data For The Next Tutorial}
+
+11. In the meantime, we are going to create a request for the next tutorial, Tutorial 7, which continues to explore evapotranspiration by looking at the individual components. Setup a new request called ``ET Components'' but this time we are going to select different variables. 
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.6\textwidth]{ETcomponentRequest.png}}
+
+\vspace{.5em}
+
+12. Under the layer category ``\textit{ECOSTRESS Evaportanspiration PT-JPL}'' select ``\textit{EVAPORTRANSPIRATION\_PT\_JPL\_ETcanopy}'', ``\textit{EVAPOTRANSPIRATION\_PT\_JPL\_ETinterception}'', and ``\textit{EVAPOTRANSPIRATION\_PT\_JPL\_ETsoil}''.
+
+13. Submit this request. We will return to it in Tutorial 7.
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.6\textwidth]{ExploreComplete.png}}
+
+\vspace{.5em}
+
+\subsection{Data Check}
+
+14. When your first request (``ET Central Valley Aug 6'') is complete, use the link on the \textit{Explore} page to access the details. Let's check out the data!
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.6\textwidth]{ETinstDataCheck.png}}
+
+\vspace{.5em}
+
+15. Select the \textit{ECOSTRESS Evapotranspiration PT-JPL} layer.
+
+16. Notice there were different passes on the same day with very different values. Any ideas why? Checking the timestamps lets us know what is happening. The first three were at 2 o'clock in the morning when there is no sun and the plants are not performing photosynthesis.
+
+17. To download the data from the daylight hours select the small caret arrow in the gray box above and click on the \textit{Download} button.
+
+
+18. Select the following filenames :
+
+\begin{itemize}
+	\item ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218192026\_aid0001.tif
+	\item ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218191934\_aid0001.tif
+	\item ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETinst\_doy2022218192026\_aid0001.tif
+	\item ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETinst\_doy2022218191934\_aid0001.tif
+\end{itemize}
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.8\textwidth]{ETdownload.png}}
+
+\vspace{.5em}
+
+\kulbox{\textbf{NOTE:} There are two timescales that ECOSTRESS's algorithms have estimated evapotranspiration at. The first \textit{ET\_inst} stands for evapotranspiration instantaneous and is calculated at the moment of the satellite pass. The other \textit{ET\_daily} is an estimation of the total evapotranspiration for the day of the satellite pass. We will examine this further momentarily.}
+
+19. Download the files using the \textit{Download} button that for some reason doesn't look much like a button on the top right corner of the screen. Save the files somewhere you can remember. As always, I suggest creating  a new folder on your computer for each tutorial.
+
+\section{Visualizing ECOSTRESS Evapotranspiration Data in QGIS}
+
+\subsection{Adding a Google Satellite Basemap}
+
+20. Open QGIS and start a new project by selecting the \textit{Project} menu, then \textit{New}.
+
+21. To add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. For today's map, we will use \textit{Google Satellite}. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
+
+\subsection{Add in evapotranspiration layer(s)}
+
+22. Use the \textit{browser} window to find the folder where you saved the two instantaneous evapotranspiration .tif files. Double click each file to add them to your map. Again, notice they are now also listed in the \textit{Layers} window.
+
+23. You now have ECOSTRESS evapotranspiration data on your map. But wait... if you remember from our Death Valley Land Surface Temperature maps, QGIS doesn't know what kind of data this is and has defaulted to displaying the information in grayscale, which isn't that useful to our eyes. For each of the evapotranspiration layers, right click on the layer name in the \textit{Layers} window and select \textit{Layer Properties}. On the menu bar to the left, select \textit{Symbology} and change the \textit{Render type} to Singleband pseudocolor. 
+
+24. Since this is evapotranspiration, let's use a blue color ramp. QGIS has automatically determined the minimum and maximum values from the datafiles; however, we have two files, so we need to make them match. Specify 0 as the minimum and 715 as the maximum for both layers. Click apply.
+
+25. Lastly, add in the border from the CaliforniaCentralValley.geojson by double clicking on it in the \textit{Browser} window. Right click (ctrl-click on Mac) on the layer in the \textit{Layers} window and change the symbology to *outline red*. 
+
+\kulbox{\textbf{NOTE:} There was not full data coverage for the entire central valley available, that is why the Northern and Southern most part of the outline does not have any color overlayed. This happens sometimes due to the orbit of the space station. If we were interested in filling in the gaps we would look for passes plus or minus one week around the same time of day and form a composite.}
+
+\section{Add Map Elements}
+
+26. Following the procedure described in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/Tutorial5_AddingElementsToMaps.pdf}{Tutorial \#5 : Adding Elements To Maps}, make a professional map complete with scalebars, labels, a legend, titles, and a north arrow of the evapotranspiration data. Include a basemap showcasing the study area (California's central valley) and two inset maps. The one that we just created now for the instantaneous evapotranspiration data and one using the daily scale (ETdaily) GeoTIFF files we downloaded. This map will be your map of the week assignment.
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
+	\addcontentsline{toc}{section}{Map of the Week Assignments}
+	\large
+	\begin{enumerate}
+		\item Make an evapotranspiration map for California's central valley with two insets, one for the instantaneous evapotranspiration data and one for the daily evapotranspiration data we downloaded in the tutorial for August 6, 2022 (day of the year 218). The map should be complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s). 
+        \item Provide a two paragraph description of your map that includes your hypotheses about how land surface temperature would influence evapotranspiration. Does your map support your hypotheses? For the second paragraph... How did the instantaneous and daily data differ? How is it possible that daily evapotranspiration is less than the instantaneous?
+	\end{enumerate}
+	Submit these assignments via Canvas before Monday's class.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
+	\addcontentsline{toc}{section}{Datafiles}
+	\large
+	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
+	\begin{enumerate}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214149\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214057\_aid0001.tif}
+	\end{enumerate}
+	And Vancouver Island:
+	\begin{enumerate}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339225920_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339225920\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339212245_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339212245\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208041543_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208041543\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208010157_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208010157\_aid0001.tif}
+	\end{enumerate}
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
+%\vfill
+
+\hrule
+
+\vspace{1em}
+
+\small \textbf{Recommended Citation:} Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Observing Earth from Above Tutorials. Chapman University. \url{https://jeremydforsythe.github.io/icecream-tutorials/}
+
+\vspace{1em}
+
+This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media).
+
+\end{document}

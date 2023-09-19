@@ -140,7 +140,7 @@ You are likely noticing that the distribution of temperatures for a given [orbit
   <img src="Clouds.png" width = 250 />
 </p>
 
-Satellite observations have many advantages, but they can not accurately measure through clouds. To account for this possibility, the ECOTRESS mission (and others) have built cloud detection algorithms and included that data in A&#961;&#961;EEARS. Checking for the effects of cloud cover on the accuracy and precision of the results is an important part of data quality control and assurance. 
+Satellite observations have many advantages, but they can not accurately measure through clouds. To account for this possibility, the ECOSTRESS mission (and others) have built cloud detection algorithms and included that data in A&#961;&#961;EEARS. Checking for the effects of cloud cover on the accuracy and precision of the results is an important part of data quality control and assurance. 
 
 <p align="center">
 	<img src="ExploreClouds.png" alt="Explore Cloudiness" width = 800>
