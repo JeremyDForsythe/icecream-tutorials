@@ -246,7 +246,9 @@ While we wait for the point request, we are also going to create an area request
 
 28. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to toggle off editing the layer. QGIS will prompt you to confirm saving the layer. Select \textit{Yes}.
 
-29. To export your layer as a GeoJSON file: right-click (Windows or Linux) or ctrl-click (Mac) on the layer in your layer browser window. 
+29. To export your layer as a GeoJSON file: right-click (Windows or Linux) or ctrl-click (Mac) on the layer in your layer browser window. Then select \textit{Export}, then \textit{Save Feature As...}. In the next window make sure ``GeoJSON'' is the selected format.
+
+\kulbox{\textbf{NOTE:} Make sure ``GeoJSON'' is the selected format. The default for QGIS is ``GeoPackage'', which isn't a format that A$\rho\rho$EEARS can read as an input. Also, there is a similar filetype ``GeoJSON Newline Delimited'' that A$\rho\rho$EEARS can also not read.}
 
 30. Select the ``...'' option next to the \textit{Filename} input window to choose a logical location to save your GeoJSON file.
 
