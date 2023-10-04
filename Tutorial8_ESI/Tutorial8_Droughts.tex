@@ -40,7 +40,7 @@
 \setcounter{tocdepth}{3}
 \setcounter{minitocdepth}{3}
 \dominitoc
-\tableofcontents
+%\tableofcontents
 
 \setcounter{chapter}{7} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
@@ -59,9 +59,9 @@
 	colback=blue!5!white,colframe=blue!75!black,title={\Large \textbf{Objectives:}}]
 	\large
 	\begin{enumerate}
-		\item Distinguish between the two types of requests in A$\rho\rho$EEARS, point timeseries data versus area geographic data.
-		\item Determine drought status for Mexico City in 2022 and compare to 2021's record breaking drought. 
-		\item Create a map focusing on the social issues surrounding drought and water scarcity. 
+		\item Distinguish between the two types of requests in A$\rho\rho$EEARS: point data versus geographic area data.
+		\item Determine the drought status for Mexico City in 2022 and compare to the record-breaking drought in 2021. 
+		\item Create a map that focuses on the social issues surrounding drought and water scarcity. 
 	\end{enumerate}
 \end{tcolorbox}
 
@@ -88,12 +88,12 @@
 	
 	\centerline{\includegraphics[width=.87\textwidth]{AmericasDrought.png}}
 
-	The figure above was created for the United Nations' ``Drought in Numbers'' report, calling for a top priority global commitment to drought preparedness and resilience across all regions. Drought is a complex crisis with roots not just in climate change but in social justice and public policy.
+	The figure above was created for the United Nations report ``Drought in Numbers,'' calling for a global top priority commitment to drought preparedness and resilience across all regions. Drought is a complex crisis with roots not only in climate change but also in social justice and public policy.
 
 	\begin{itemize}
-		\item More than 10 million people lost their lives due to major drought events in the past century with over 90\% of those deaths occurring in developing countries (Guha-Sapir, D. et al., 2021).
+		\item More than 10 million people lost their lives due to major drought events in the past century, with over 90\% of these deaths occurring in developing countries (Guha-Sapir et al., 2021).
 		\item By 2050, between 4.8 and 5.7 billion people will live in areas that are water-scarce for at least one month each year, up from 3.6 billion today (UN Water, 2021).
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/GenderDrought.pdf}{Droughts can effect women disproportionately.} While women make up the majority of rural farmers across the globe, less than 15\% of agricultural landholders are women, leading to decisions surrounding water scarcity and land use are not often made by the women who are most affected.
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/GenderDrought.pdf}{Droughts can disproportionately affect women.} While the majority of rural farmers around the world are women, $<$15\% are the owners of agricultural lands, which means that the most affected women do not have the ability to make decisions about water scarcity and land use.
 	\end{itemize}
 	
 \end{minipage}}
@@ -108,7 +108,7 @@
 
 \vspace{.5em}
 
-In the last tutorials, we learned that ECOSTRESS uses land surface temperatures to estimate evapotranspiration (ET). A related variable is evaporative stress index (ESI), which is measure of potential drought conditions. It is a Level 4 (ECO4) ECOSTRESS data product that can be accessed through A$\rho\rho$EEARS:
+In the last tutorials, we learned that ECOSTRESS uses land surface temperatures to estimate evapotranspiration (ET). A related variable is the evaporative stress index (ESI), which is a measure of potential drought conditions. It is a Level 4 (ECO4) ECOSTRESS data product that can be accessed through A$\rho\rho$EEARS:
 
 \vspace{.5em}
 
@@ -116,17 +116,17 @@ In the last tutorials, we learned that ECOSTRESS uses land surface temperatures 
 
 \vspace{.5em}
 
-The ECOSTRESS drought stress signal is derived from ratio of actual evapotranspiration (ET) to potential evapotranspiration(PET):
+For ECOSTRESS, the drought stress signal is derived from the ratio of actual evapotranspiration (ET) to potential evapotranspiration (PET):
 
 \[
 	ESI = \frac{ET}{PET}
 \]
 
-PET represents the demand on ET from the environmental or atmospheric conditions (sunlight, temperature, etc) that can be thought of as the maximum amount of water that would be used through evapotranspiration if unlimited water was available. ESI is a unitless metric that ranges from 0 to 1, with 0 indicating maximum water stress (little ET compared to PET) and 1 denoting no water stress (ET and PET are equal). 
+PET represents the theoretical maximum amount of ET that would occur in a location if unlimited water were available. ESI is a unitless metric (the numerator and denominator have the same units and they cancel out) that ranges from 0 to 1, with smaller proportions indicating higher water stress (minimal ET compared to PET) and higher proportions denoting no water stress (ET and PET are equal). 
 
-\kulbox{\textbf{NOTE:} The range for ESI is perhaps confusing, as a large number (nearing 1) indicates the absence of drought conditions, and a small number (nearing 0) suggests drought.}
+\kulbox{\textbf{NOTE:} The range for ESI may be confusing, as a large number (nearing 1) indicates the absence of drought conditions, and a small number (nearing 0) suggests drought.}
 
-\kulbox{\textbf{NOTE:} Confusingly, evaporative stress index can have different definitions and even equations from study to study. For instance, the Mexico City map in the box below has a scale of -2.5 to 2.5, which is a different formula. Keep an eye out for this!}
+\kulbox{\textbf{NOTE:} Confusingly, evaporative stress index can have different definitions from study to study. For example, the Mexico City map in the box below has a scale of -2.5 to 2.5, because it is estimated with a different formula. Keep an eye out for this!}
 
 
 \addcontentsline{toc}{subsection}{Today's Study Location : Mexico City}
@@ -138,29 +138,29 @@ PET represents the demand on ET from the environmental or atmospheric conditions
 
 	\columnbreak
 		\begin{itemize}
-			\item Most populous city in North America with over 9.2 million people in the city center and over 21.8 million people in the greater metropolitan area. 
-			\item Northern Mexico's system of over 60 reservoirs is currently below 25\% capacity, which has lead to water scarcity (the lack of available water for human use) for over 30\% of urban residents who do not have daily access to water.
+			\item Most populous city in North America with $>$ 9.2 million people in the city center and $>$ 21.8 million people in the greater metropolitan area. 
+			\item Northern Mexico's system of $>$ 60 reservoirs is currently $>$ 75\% drained, leading to water scarcity (the lack of available water for human use) for $>$ 30\% urban residents who do not have daily access to water.
 		\end{itemize}
 	\end{multicols}
 
 	\begin{itemize}
-		\item Mexico City at times has too little and other times too much water. In the dry season (October - April) droughts dry the land and deplete the water table, and in the wet season (May - September) floods wash over through its working-class neighborhoods.
-		\item 2021 saw the worse drought conditions in over three decades for Mexico City, and brought predictions that 2022 might be worse. Today we are going to use ECOSTRESS to compare the drought conditions of 2022 to the extreme conditions of 2021.
+		\item Mexico City sometimes has too little and sometimes too much water. In the dry season (October - April), droughts dry the land and deplete the water table. In the wet season (May - September), floods wash through its working-class neighborhoods.
+		\item The year 2021 saw the worst drought conditions in more than three decades for Mexico City and brought predictions that 2022 might be worse. Today, we are using ECOSTRESS to compare the drought conditions of 2022 with the extreme conditions of 2021.
 	\end{itemize}
 
 \end{tcolorbox}
 
 \subsection{Requesting Timeseries Point ESI Data in A$\rho\rho$EEARS}
 
-So far we have been using area data from ECOSTRESS to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also has another type of data output, from a \textit{Point} request. Instead of providing a shapefile or GeoJSON to define a set area, we can give A$\rho\rho$EEARS GPS coordinates (Latitude, Longitude) and it will return a timeseries of our variable of interest (today we are going to look at ESI, but it can return this for any of the ECOSTRESS variables) for the single pixel that encompasses our coordinates.
+So far, we have been using ECOSTRESS area data to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also has another type of data output from a \textit{Point} request. Instead of providing a shapefile or GeoJSON to define a set area, we can provide A$\rho\rho$EEARS GPS coordinates (latitude, longitude), and it will return a timeseries of our variable of interest for the single pixel that encompasses our coordinates. Today, we are going to study ESI, but it can return this for any of the ECOSTRESS variables 
 
 1. To begin, go to \href{https://appeears.earthdatacloud.nasa.gov/}{https://appeears.earthdatacloud.nasa.gov/} and login with your credentials. 
 
-2. Use the \textit{Extract} dropdown menu but this time select \textit{Point}. Next, select \textit{ Start a new request}. 
+2. Use the \textit{Extract} drop-down menu, but this time select \textit{Point}. Next, select \textit{Start a new request}. 
 
 3. Enter a useful name for the request you are going to submit, maybe something like ``Mexico City ESI 2021-2022''. 
 
-4. In the \textit{Uploaded coordinates (ID, Category, Lat, Long):} section enter the GPS coordinates for Mexico City, 19.42847, -99.12766.
+4. In the \textit{Uploaded coordinates (ID, Category, Lat, Long):} section enter the GPS coordinates for Mexico City as 19.42847, -99.12766.
 
 5. Update the \textit{Start} and \textit{End} Date Fields for our dates of interest: 01/01/2021 to 12/31/2022.
 
@@ -168,18 +168,18 @@ So far we have been using area data from ECOSTRESS to create maps that visualize
 
 \vspace{.5em}
 
-6. Under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``ESI'' Select \textit{ECOSTRESS Evaporative Stress Index PT-JPL}. Click on the ``+'' signs to add the following layers to your cart: 
+6. Under \textit{Select the layers to include in the sample}, type the words ``ECOSTRESS'' and ``ESI'' Select \textit{ECOSTRESS Evaporative Stress Index PT-JPL}. Click on the ``+'' signs to add the following layers to your cart: 
 
 \begin{itemize}
-	\item Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg
+	\item Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg
 \end{itemize}
 
 Next, clear the selection of the current category using the small ``x'' to the right of the \textit{ECOSTRESS Evaporative Stress Index PT-JPL} box.
 
-Then, under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``LST'' Select \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)}. Click on the ``+'' signs to add the following layers to your cart: 
+Then, under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``LST,'' select \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)}. Click on the ``+'' signs to add the following layers to your cart: 
 
 \begin{itemize}
-	\item SDS\_LST
+	\item SDS\textunderscore LST
 \end{itemize}
 
 Clear the selection of the current category using the small ``x'' to the right of the \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)} box.
@@ -190,11 +190,11 @@ Clear the selection of the current category using the small ``x'' to the right o
 
 \centerline{\includegraphics[width=\textwidth]{RequestSuccess.png}}
 
-8. Use the \textit{Explore} drop-down at the top to monitor the status of your request. Point requests typcically process quicker than area requests because the system only needs to pull a single pixel from each scene.
+8. Use the \textit{Explore} drop-down at the top to monitor the status of your request. Point requests typically process faster than area requests because the system only needs to pull a single pixel from each scene.
 
 \subsection{Requesting Area ESI Data in A$\rho\rho$EEARS}
 
-While we wait for the point request we are also going to create an area request so we can examine how the drought affects different parts of Mexico City. This procedure for downloading area ESI data through the A$\rho\rho$EEARS interface is the same as in the previous tutorials on land surface temperature, evapotranspiration, and water use efficiency.
+While we wait for the point request, we are also going to create an area request so we can examine how the drought affects different parts of Mexico City. The procedure to download area ESI data through the A$\rho\rho$EEARS interface is the same as in previous tutorials on land surface temperature, evapotranspiration, and water use efficiency.
 
 \subsubsection{Drawing and Exporting A GeoJSON File with QGIS}
 
@@ -208,21 +208,21 @@ While we wait for the point request we are also going to create an area request 
 
 10. Open QGIS and start a new project by selecting the \textit{Project} menu, then \textit{New}.
 
-11. Then to add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. Since we are outlining an urban area, I suggest we use \textit{Google Satellite Hybrid}, which overlays streets and other google maps data on satellite imagery. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
+11. Then to add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. Since we are outlining an urban area, I suggest we use \textit{Google Satellite Hybrid}, which overlays streets and other Google maps data on satellite imagery. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
 
-12. Open up the Lat Lon Tools window by selecting the \textit{Plugins} menu $\rightarrow$ \textit{Lat Lon Tools} $\rightarrow$ \textit{Zoom To Coordinate}.
+12. Open the Lat Lon Tools window by selecting the \textit{Plugins} menu $\rightarrow$ \textit{Lat Lon Tools} $\rightarrow$ \textit{Zoom To Coordinate}.
 	
-13. Enter in the following GPS coordinates of Mexico City (formatted as latitude, longitude) : 19.42847, -99.12766.
+13. Enter in the following GPS coordinates of Mexico City (formatted as latitude, longitude): 19.42847, -99.12766.
 	
-14. The Lat Lon Tools plugin has found the GPS coordinates for Mexico City and marked them with a ``$+$'' on the map. 
+14. The \textit{Lat Lon Tools} plugin has found the GPS coordinates for Mexico City and marked them with a ``$+$'' on the map. 
 
-15. Next, we want to draw a polygon (i.e., a line that forms the perimeter of the area of interest) that encompasses Vancouver Island, so that we can pull the request and download the data from A$\rho\rho$EEARS.
+15. Next, we want to draw a polygon (i.e., a line that forms the perimeter of the area of interest) that encompasses Mexico City, so that we can pull the request and download the data from A$\rho\rho$EEARS.
 	
-16. Zoom in to the GPS coordinates we entered and marked with a ``$+$'' on the basemap using the \textit{zoom in} \includegraphics[height=\fontcharht\font`\B]{mActionZoomIn.png}, \textit{zoom out} \includegraphics[height=\fontcharht\font`\B]{mActionZoomOut.png}, and \textit{pan} \includegraphics[height=\fontcharht\font`\B]{mActionPan.png} buttons in toolbar. If you are on a laptop, you could use the trackpad to do the same.
+16. Zoom in to the GPS coordinates that we entered and marked with a ``$+$'' on the basemap using the \textit{zoom in} \includegraphics[height=\fontcharht\font`\B]{mActionZoomIn.png}, \textit{zoom out} \includegraphics[height=\fontcharht\font`\B]{mActionZoomOut.png}, and \textit{pan} \includegraphics[height=\fontcharht\font`\B]{mActionPan.png} buttons in the toolbar. If you are on a laptop, you could use the trackpad to do the same.
 
-17. Next, we are going to create a new layer in the map by selecting the following menus: \textit{Layer} $\rightarrow$ \textit{Create Layer} $\rightarrow$ \textit{New Shapefile Layer...}
+17. Next, we are going to create a new layer on the map by selecting the following menus: \textit{Layer} $\rightarrow$ \textit{Create Layer} $\rightarrow$ \textit{New Shapefile Layer...}
 
-18. Select the ``...'' option next to the \textit{Filename} input window. Navigate somewhere you can remember saving them somewhere you can remember (as always, we suggest creating a folder for each tutorial) and save it with a worthy filename. ``Mexico City Perimeter'' seems appropriate.
+18. Select the ``...'' option next to the \textit{Filename} input window. Navigate somewhere you can remember (as always, we suggest creating a folder for each tutorial) and save it with a worthy filename. ``Mexico City Perimeter'' would be an appropriate name. 
 
 19. Select \textit{UTF-8} for \textit{File encoding}.
 
@@ -232,13 +232,13 @@ While we wait for the point request we are also going to create an area request 
 
 22. Now, it is time to draw the polygon. First, make sure that your new ``Mexico City Perimeter'' layer is highlighted in the \textit{Layers} window. 
 
-23. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to start editing the layer. 
+23. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button on the toolbar to start editing the layer. 
 
 24. Then select the \textit{Add Polygon Feature} \includegraphics[height=10mm]{addpolygon.png} button to begin drawing. 
 
-25. Draw a polygon that encompasses Mexico City. Don't worry too much about being perfect or strictly aligning to the city's borders, getting the basic shape will do. Right click on Windows or Linux and Ctrl click on Mac to stop drawing when your shape is complete.
+25. Draw a polygon that encompasses Mexico City. Don't worry too much about being perfect or strictly aligning to the city's borders; getting the basic shape is fine. Right-click on Windows or Linux and Ctrl-click on Mac to stop drawing when your shape is complete.
 
-\kulbox{\textbf{NOTE:} Drawing a polygon in QGIS is both straightforward and nuanced. You use successive clicks with your mouse to create your desired shape. Simple forms like squares or rectangles are easy achievable, while more complex designs take some practice to master. It may take you a couple of tries to get the feel of it.}
+\kulbox{\textbf{NOTE:} Drawing a polygon in QGIS is both straightforward and nuanced. You use successive clicks with your mouse to create your desired shape. Simple forms such as squares or rectangles are easily achievable, whereas complex designs take some practice to master. It may take a couple of attempts to get it to look like what you are envisioning. You can always hit the ``ESC'' key to clear the polygon and start over.}
 
 26. After you finish drawing, QGIS will prompt you for a feature ID. This is an arbitrary designation for our purposes today, so simply using the number 1 is my recommendation. 
 
@@ -246,21 +246,21 @@ While we wait for the point request we are also going to create an area request 
 
 28. Select the \textit{Toggle Editing} \includegraphics[height=\fontcharht\font`\B]{mActionToggleEditing.png} button from the toolbar to toggle off editing the layer. QGIS will prompt you to confirm saving the layer. Select \textit{Yes}.
 
-29. To export your layer as a GeoJSON file: right click (Windows or Linux) or ctrl-click (Mac) on the layer in your layer browser window. 
+29. To export your layer as a GeoJSON file: right-click (Windows or Linux) or ctrl-click (Mac) on the layer in your layer browser window. 
 
 30. Select the ``...'' option next to the \textit{Filename} input window to choose a logical location to save your GeoJSON file.
 
-31. Name the file something appropriate, perhaps ``MexicoCity''. 
+31. Name the file something appropriate, perhaps ``MexicoCity-Outline.'' 
 
-32. Uncheck the box labeled ``Add saved file to map''. 
+32. Uncheck the box labeled ``Add saved file to map." 
 
 33. Click ``OK''.
 
 \subsubsection{Creating an Area Request for Mexico City (2022) in A$\rho\rho$EEARS}
 
-Switching back over to A$\rho\rho$EEARS to create a new area request. I have preselected some dates with good data coverage (few to no clouds, orbit path that aligns with a single shot for the area of interest) in 2021 \& 2022. 
+Return to A$\rho\rho$EEARS to create a new area request. We have preselected dates with good data coverage (few-to-no clouds, orbit path that aligns with a single shot for the area of interest) in 2021 \& 2022. 
 
-34. Use the \textit{Extract} dropdown menu to select \textit{Area}. Next, select \textit{ Start a new request}. 
+34. Use the \textit{Extract} dropdown menu to select \textit{Area}. Next, select: \textit{Start a new request}. 
 
 \vspace{.5em}
 
@@ -277,20 +277,20 @@ Switching back over to A$\rho\rho$EEARS to create a new area request. I have pre
 38. Under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``ESI'' Select \textit{ECOSTRESS Evaporative Stress Index PT-JPL}. Click on the ``+'' signs to add the following layers to your cart: 
 
 \begin{itemize}
-	\item Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg
+	\item Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg
 \end{itemize}
 
 Next, clear the selection of the current category using the small ``x'' to the right of the \textit{ECOSTRESS Evaporative Stress Index PT-JPL} box.
 
-Then, under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``LST'' Select \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)}. Click on the ``+'' signs to add the following layers to your cart: 
+Then, under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``LST.'' Select \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)}. Click on the ``+'' signs to add the following layers to your cart: 
 
 \begin{itemize}
-	\item SDS\_LST
+	\item SDS\textunderscore LST
 \end{itemize}
 
 Clear the selection of the current category using the small ``x'' to the right of the \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)} box.
 
-39. Under \textit{Output Options}, we want to use GeoTIFF (Geographic Tagged Image File Format; essentially an image file where the corresponding geographic information is embedded in the file) and \textit{Native Projection} for projection.
+39. Under \textit{Output Options}, we want to use GeoTIFF (Geographic Tagged Image File Format; essentially, an image file where the corresponding geographic information is embedded in the file) and \textit{Native Projection} for projection.
 
 40. Click \textit{Submit} to complete the data request. At the top, you should see a green banner:
 
@@ -300,24 +300,24 @@ Clear the selection of the current category using the small ``x'' to the right o
 
 \subsubsection{Creating an Area Request for Mexico City (2021) in A$\rho\rho$EEARS}
 
-41. Repeat steps 34 - 40 with the same layers and GeoJSON file called ``Mexico City 2021'' for 4/28/2021.
+41. Repeat steps 34 - 40 with the same layers and GeoJSON file. Call the request ``Mexico City 2021'' and change the date to 4/28/2021.
 
 42. Use the \textit{Explore} drop-down at the top to monitor the status of your request. Requests will likely go quickly, given that it is only one day's worth of data.
 
 \section{Visualizing ESI Timeseries Point Data in A$\rho\rho$EEARS}
 
-43. When your first timeseries point data request (``Mexico City ESI 2021-2022'') is complete, use the link on the \textit{Explore} page to access the details. A$\rho\rho$EEARS returns this data in a .CSV spreadsheet that can be opened with free statistical software like \href{https://www.r-project.org/about.html}{R}, the paid program Microsoft Excel, or the cost free alternative \href{https://www.libreoffice.org/}{Libreoffice Calc}. These software options can create graphs and run statistical comparisons. 
+43. When your first timeseries point data request (``Mexico City ESI 2021-2022'') is complete, use the link on the \textit{Explore} page to access the details. A$\rho\rho$EEARS returns this data in a .csv spreadsheet that can be opened with free statistical software such as \href{https://www.r-project.org/about.html}{R}, the paid program Microsoft Excel, or the free alternative \href{https://www.libreoffice.org/}{Libreoffice Calc}. These software options can create graphs and run statistical comparisons. 
 
 44. Additionally, you can use the A$\rho\rho$EEARS interface to do some light visualizations, which will serve our purposes today.
 
-45. Our goal for the ESI timeseries point analysis is not to visualize the data in space, but rather to compare the differences between the two years (the known drought year of 2021 and 2022). The benefit of this point data is that A$\rho\rho$EEARS has conveniently packaged our variable of interest in an easy to manage format to track changes through time. The downside to this type of data retrieval is that it can only do it for a single pixel. 
+45. Our goal for the ESI timeseries point analysis is not to visualize the data in space, but rather to compare the differences between the two years (the known drought year of 2021 and 2022). The benefit of this point data is that A$\rho\rho$EEARS has conveniently packaged our variable of interest in an easy-to-manage format to track changes over time. The disadvantage of this type of data retrieval is that it can only be done for a single pixel per request. 
 
-46. First, select the $Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg$ layer:
+46. First, select the $Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg$ layer:
 
 
-The top panel displays the entire timeseries for the dates we have input. The bottom panel compares across years by plotting different years in our data in different colors. 
+The top panel displays the entire timeseries for the dates we have requested. The bottom panel compares years by plotting different years in our data in different colors. 
 
-Notice that the dry season (October - April) has much more drought stress (low ESI) compared to the wet season (May - September). Our goal was to compare 2022 to the known drought year of 2021. What conclusions can you draw from this data? Include your assessment in the write-up that accompanies your ``Map of the Week''. Be sure to mention any sources of error, specifically mentioning the shortcomings of the point analysis (like using only one pixel).
+Notice that the dry season (October - April) has much more drought stress (low ESI) compared to the wet season (May - September). Our goal was to compare 2022 to the known drought year of 2021. What conclusions can you draw from these data? Include your assessment in the write-up accompanying your ``Map of the Week''. Verify that any sources of errors are mentioned, specifically describing the shortcomings of point analyses (e.g., using only one pixel of data).
 
 \vspace{.5em}
 
@@ -331,7 +331,7 @@ Notice that the dry season (October - April) has much more drought stress (low E
 
 \vspace{.5em}
 
-47. By now your area requests should be complete. From the \textit{Explore} dropdown menu at the type of the A$\rho\rho$EEARS interface, click the download button (middle blue button) for the first area request ``Mexico City 2022''. 
+47. By now, your area requests should be complete. From the \textit{Explore} dropdown menu at the top of the A$\rho\rho$EEARS interface, click the download button (middle blue button) for the first area request ``Mexico City 2022''. 
 
 \vspace{.5em}
 
@@ -341,15 +341,15 @@ Notice that the dry season (October - April) has much more drought stress (low E
 
 48. Select the following filename: 
 
-ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2022095170707\_aid0001.tif. Download the file using the \textit{Download} button, that for some reason does not look much like a button, on the top right corner of the screen. Save the file somewhere you can remember. 
+ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif. Download the file using the \textit{Download} button, which for some reason does not look much like a button, in the upper right corner of the screen. Save the file somewhere you can remember. 
 
-49. Repeat steps 47 - 48 to download the file: from the second request ``Mexico City 2021'' to download the following filename: 
+49. Repeat steps 47 - 48 to download the file from the second request ``Mexico City 2021'' to download the following filename: 
 
-ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\_aid0001.tif 
+ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif 
 
 \subsection{Adding a Google Satellite Basemap}
 
-50. Switch over to QGIS and start a new project by selecting the \textit{Project} menu, then \textit{New}.
+50. Switch to QGIS and start a new project by selecting the \textit{Project} menu, then \textit{New}.
 
 51. To add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. For today's map, we will use \textit{Google Satellite}. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
 
@@ -359,7 +359,7 @@ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\
 
 \subsection{Add in ESI layer}
 
-52. Use the \textit{browser} window to find the folder where you saved the 2022 ESI file: \\ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2022095170707\_aid0001.tif. Double-click it to add it to your map. Again, notice that they are now also listed in the \textit{Layers} window.
+52. Use the \textit{browser} window to find the folder where you saved the 2022 ESI file: \\ ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif. Double-click on it to add it to your map. Again, notice that the layer from this GeoTIFF file is now also listed in the \textit{Layers} window.
 
 \kulbox{\textbf{NOTE:} QGIS can automatically zoom to your layer's area of interest by right clicking (ctrl-click on Mac) on the layer and selecting \textit{Zoom to Layer(s).}}
 
@@ -367,9 +367,9 @@ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\
 
 54. On the menu bar to the left, select \textit{Symbology} and change \textit{Render type} to Singleband pseudocolor. 
 
-55. QGIS has automatically determined the minimum and maximum values from the datafiles; however, we are going to want to compare two different years and need to match them. The range of ESI is 0-1, so specify 0 as the minimum and 1 as the maximum. 
+55. QGIS has automatically determined the minimum and maximum values from the datafiles; however, we are going to want to compare two different years and need to match them. The ESI range is 0-1, so specify 0 as the minimum and 1 as the maximum. 
 
-56. Now we need to change the color ramp to effectively communicate ESI. Let's select ``Reds'' option, but remember that the scale for ESI is inverted (0 indicating drought stress \& 1 indicating non drought conditions). To handle this check the \textit{invert color ramp} checkbox. 
+56. Now, we need to change the color ramp to effectively communicate ESI. Let's select the ``Reds'' option, but remember that the scale for ESI is inverted (0 indicating drought stress \& 1 indicating non drought conditions). To address this, check the \textit{invert color ramp} checkbox. 
 
 57. Click \textit{apply}.
 
@@ -379,7 +379,7 @@ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\
 
 \section{Add Map Elements}
 
-60. Following the procedure described in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/Tutorial5_AddingElementsToMaps.pdf}{Tutorial \#5 : Adding Elements To Maps}, make a professional map complete with scalebars, labels, a legend, titles, and a North arrow. Use a basemap that showcases the study region (Mexico City) with this ESI map from 2022 as an inset. 
+60. Following the procedure described in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/Tutorial5_AddingElementsToMaps.pdf}{Tutorial \#5 : Adding Elements To Maps}, make a professional map complete with scalebars, labels, a legend, titles, and a North arrow. Use a basemap that highlights the study region (Mexico City) with this ESI map from 2022 as an inset. 
 
 61. Repeat steps 52 - 60 for the Mexico City 2021 data and include it as an inset on the same map. This map will be your part of your map of the week assignment.
 
@@ -387,10 +387,10 @@ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\
 	\addcontentsline{toc}{section}{Map of the Week Assignments}
 	\large
 	\begin{enumerate}
-		\item Make a map comparing 2021 and 2022 ESI data for Mexico City. Include a basemap that showcases the region and the ESI data for 2021 and 2022 as insets. The map(s) should be complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s).
-        \item Provide a 1-2 paragraph description of your map and ESI timeseries point data that includes your reflections on which tree on whether 2022 should be considered a drought year, knowing that 2021 was the worst drought in over 30 years. How do the different sources of data (timeseries point vs geographic) contribute to your analysis? Address the limitations of your analysis.
+		\item Make a map comparing 2021 and 2022 ESI data for Mexico City. Include a basemap that presents the region and the ESI data for 2021 and 2022 as insets. The map(s) should be complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s).
+        \item Provide a 1-2 paragraph description of your map and ESI timeseries point data that includes your reflections on whether 2022 should be considered a drought year, knowing that 2021 was the worst drought in more than 30 years. How do the different sources of data (timeseries point vs. geographic area) contribute to your analysis? Address the limitations of your analysis.
 	\end{enumerate}
-	Submit these assignments via Canvas before Monday's class.
+	Submit these assignments via Canvas before the next class.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
@@ -398,11 +398,11 @@ ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\
 	\large
 	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF file for Mexico City ESI 2022:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2022095170707\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif}
 	\end{enumerate}
 	And Mexico City ESI 2021:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials-main/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\_Evaporative\_Stress\_Index\_PT\_JPL\_ESIavg\_doy2021118181114\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif}
 	\end{enumerate}
 \end{tcolorbox}
 
