@@ -40,7 +40,7 @@
 \setcounter{tocdepth}{3}
 \setcounter{minitocdepth}{3}
 \dominitoc
-\tableofcontents
+%\tableofcontents
 
 \setcounter{chapter}{8} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
@@ -95,31 +95,62 @@
 
 	\vspace{.5em}
 
-	\textit{Communicating about science effectively with public audiences, however, turns out to be more difficult than it might at first appear. Complexity stems from the diversity and interconnectedness of many elements, including the goals for communicating, the content being conveyed, the format in which it is presented, and the individuals and organizations involved. People approach science communication from their own starting points; a combination of expectations, knowledge, skills, beliefs, and values that are in turn shaped by broader social, political, and economic influences.}
+	\textit{Communicating about science effectively with public audiences, however, turns out to be more difficult than it might appear at first. Complexity stems from the diversity and interconnectedness of many elements, including the goals for communicating, the content being conveyed, the format in which it is presented, and the individuals and organizations involved. People approach science communication from their own starting points; a combination of expectations, knowledge, skills, beliefs, and values that are in turn shaped by broader social, political, and economic influences.}
 
 	\vspace{.5em}
 
-	\textit{Moreover, the communication landscape is changing dramatically in ways that offer unprecedented opportunities to communicate and connect with others but also pose many challenges.}
+	\textit{Moreover, the communication landscape is changing dramatically in ways that offer unprecedented opportunities to communicate and connect with others, but also pose many challenges.}
 
 	\vspace{.5em}
 
-	In the last class, Dr. Davidoff presented some new ideas about communicating data. Today we are going to incorporate those ideas into our ECOSTRESS workflow.
+	In the last class, Dr. Davidoff presented some new ideas on communicating data. Today, we are going to incorporate those ideas into our ECOSTRESS workflow.
 	
 \end{minipage}}
 
 \section{Using ColorBrewer In QGIS}
 
+Dr. Davidoff introduced ColorBrewer for selecting preset color palettes to make visualizing our data easier. While you can manually edit color ramps in QGIS, many of the ColorBrewer palettes are already available in QGIS through the \textit{Style Manager}. 
+
+1. To access the style manager, open QGIS and select \textit{Settings}, then \textit{Style Manager}.
+
+2. Select \textit{Color Ramps}
+
+3. Use the ``+'' sign to select \textit{Catalog: ColorBrewer}.
+
+\centerline{\includegraphics[width=.87\textwidth]{StyleManager.png}}
+
+\vspace{.5em}
+
+\centerline{\includegraphics[width=.87\textwidth]{QGIScolorBrewer.png}}
+
+\vspace{.5em}
+
+4. From this screen, you can select from preset color schemes and the number of color classes you want.
+
+5. After you click \textit{OK}, QGIS prompts you to name and save your new color ramp. Pick a name that you can remember. If you think that you will use this color ramp often, you can click the ``Add to favorites'' box. 
+
+6. Click \textit{Save}.
+
+7. This color ramp can now be accessed by right clicking on a layer, selecting the \textit{Symbology} tab, then the little down arrow next to the color ramp bar. Under the heading ``All Color Ramps'' you should find your new ramp. See the screenshot below for where to look. NOTE: If you have marked it as a favorite, it shows up in the first list. 
+
+\centerline{\includegraphics[width=.87\textwidth]{UseColorRamp.png}}
+
+\vspace{.5em}
+
 \section{Instructions From Dr. Davidoff}
 
+For the remainder of today's class, we are going to work through an assignment created by Dr. Davidoff.
+
 \begin{enumerate}
-	\item Redesign a previous map, using the principles of graphical communication
+    \item Redesign a previous map, using the principles of graphical communication:
 	\begin{itemize}
 		\item What are the variables your map displays, and what visual dimensions are you using to encode that data? What color palette are you using and why?
 		\item How are you following the principle of data/ink ratio? Do you have any unnecessary lines? Can your line strokes be reduced in weight? What are you using as your base map and why?
-		\item What grid layout are you using? Are the panels the same size? Similarly justified? Do they have titles and captions that explain their contents? Is there a hierarchy of size in the type?
+		\item What \href{https://en.wikipedia.org/wiki/Map_layout}{map layout }are you using? Are the panels the same size? Similarly justified? Do they have titles and captions that explain their contents? Is there a hierarchy of size in the type?
 		\item Are you following the principles of gestalt psychology? Are related items physically proximal? Are unrelated items standalone?
-	\end{itemize}
-	\item Adapt the redesigned map, using a small multiples presentation. Use the comparison to show that there is a relationship between variables over the map.
+        \end{itemize}
+    \item Once you have redesigned your map, trade with one of your classmates and discuss the choices you made in your redesign. Is there anything you wish to further revise? 
+    \item Find an environmental event (e.g., climate disaster) that occurred in the past week. Download relevant ECOSTRESS data (LST, ET, WUE, ESI) for that location. Make a map using best practices for data visualization. Write a 4-6 sentence paragraph (topic sentence, supporting description, relevant conclusion) describing the event to accompany the map.
 \end{enumerate}
 
 \begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
@@ -127,7 +158,7 @@
 	\large
 	\begin{enumerate}
 		\item Submit your redesigned map following the instructions above. 
-		\item Submit your small multiples presentation following the instructions above. 
+		\item Submit your environmental event map following the above instructions. 
 	\end{enumerate}
 	Submit these assignments via Canvas before the next class.
 \end{tcolorbox}
