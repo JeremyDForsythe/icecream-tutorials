@@ -139,7 +139,7 @@ However, if the two rasters have different extents (e.g., one is a map of Nevada
 
 \vspace{.5em}
 
-4. Download these GeoTIFF files that we have pre-selected for you. They are the ECOSTRESS land surface temperatures for Mexico City from April 2022. Save them somewhere that you can remember and then add them as layers in QGIS. 
+4. Download these GeoTIFF files that we have pre-selected. They are the ECOSTRESS land surface temperatures for Mexico City from April 2022. Save them somewhere you can remember and then add them as layers in QGIS. 
 
 \begin{itemize}
     \item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial10_RasterCalculator/ECO2LSTE.001_SDS_LST_doy2022091184334_aid0001.tif}{\small ECO2LSTE.001\_SDS\_LST\_doy2022091184334\_aid0001.tif}
@@ -154,13 +154,13 @@ However, if the two rasters have different extents (e.g., one is a map of Nevada
 
 5. From the QGIS top menu bar select \textit{Processing}, then click \textit{Toolbox}.
 
-6. From there find the folder \textit{Raster Analysis} and double click on \textit{Cell Statistics}.
+6. From the \textit{Toolbox}, find the folder \textit{Raster Analysis} and double click on \textit{Cell Statistics}.
 
 7. Click the ``...'' button next to the \textit{Input Layers} dialog box. 
 
-8. Select the layers you want to do raster math on, in this case the two Mexico City GeoTIFF files we provided.
+8. Select the layers for which you wish to do raster math. In this case, we will use the two Mexico City GeoTIFF files we provided.
 
-9. The \textit{Statistics} box has the options to choose what type of raster math you want to calculate. Today let's use ``Mean'' to take the average temperature of our two GeoTIFFs. 
+9. The \textit{Statistics} box has the options to choose what type of raster math you want to calculate. We will use ``Mean'' to take the average temperature of our two GeoTIFFs. 
 
 10. Click the \textit{Run} button.
 
@@ -172,18 +172,18 @@ However, if the two rasters have different extents (e.g., one is a map of Nevada
 
 11. You now have a new layer that is the mean land surface temperature of the two GeoTIFFs for Mexico City.
 
-12. To visualize this mean, deselect the other two layers. You can now change the color symbology and produce complete maps with this new layer. 
+12. To visualize this mean, deselect the other two layers. You can now change the color symbology and produce a map with this new layer. 
 
-\kulbox{\textbf{NOTE:} This new layer can be exported by right-clicking (ctrl-click on Mac) as a GeoTIFF and clicking \textit{Save as...}. You can even use these output layers to create new layers with the same process. Maybe you want to look at the difference between the mean land surface temperatures of August 2022 and August 2023 for Death Valley. You can string together some raster analysis to acheive this goal!}
+\kulbox{\textbf{NOTE:} This new layer can be exported by right-clicking (ctrl-click on Mac) as a GeoTIFF and clicking \textit{Save as...}. You can even use these output layers to create new layers with the same process. Maybe you want to look at the difference between the mean land surface temperatures of August 2022 and August 2023 for Death Valley. You can string together some raster analysis to achieve this goal!}
 
 \begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
 	\addcontentsline{toc}{section}{Map of the Week Assignments}
 	\large
 	\begin{enumerate}
-		\item Submit a map for Mexico City with the averages of land surface temperature for the two files we provided. 
-		\item Include a one-paragraph interpretation of the process of building your map and the results.  
+		\item Map of the Week, including write-up. Make a new map that is news-relevant (something you found that occurred within the past 2 weeks) or significantly iterate on a current map. Invoke your best data visualization methods. Your write-up should be media-ready.
+		\item The final project will consist of an in-depth exploration of an environmental event using ECOSTRESS and other data sources. It will be presented as a digital poster, with consideration given to both the primary visualization and the communication of the methods, results, and interpretation. The final poster will be presented orally (5-7 minutes per presentation) on the last day of class. The oral presentation must consider the principles of scientific visualization and communication introduced by the guest speakers. 
+            \item The first step is to provide a written description of the plan for your final project. What environmental event will you analyze and why is it important? Who is the primary audience that will benefit from your analysis? What is unknown about the event that your analysis may uncover? What data sets (e.g., ECOSTRESS LST, et al.) will you use for it and why?
 	\end{enumerate}
-	Submit these assignments via Canvas before the next class.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
