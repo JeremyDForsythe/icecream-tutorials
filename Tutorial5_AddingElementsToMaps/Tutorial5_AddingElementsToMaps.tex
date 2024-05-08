@@ -38,7 +38,7 @@
 
 \dominitoc
 
-%\tableofcontents
+%\tableofcontents 
 
 \setcounter{chapter}{4} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
@@ -59,8 +59,7 @@
 	\begin{enumerate}
 		\item Learn the map making features in QGIS.
 		\item Introduce basic map elements.
-		\item Create a NASA worthy map of surface temperatures from Death Valley National Park.
-		\item Combine all of your skills to make a map for your hometown showcasing the hottest and coldest temperatures for last year. 
+		\item Create a professional map of surface temperatures from Death Valley National Park addressing our hypothesis. 
 	\end{enumerate}
 \end{tcolorbox}
 
@@ -74,21 +73,21 @@
 		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.125]{ICECREAM_Logo.png}};\end{tikzpicture}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{\underline{Motivation For Today's Tutorial : NASA Press Releases}}
+\noindent\fbox{\begin{minipage}{.9665\textwidth}
+			
+	\vspace{1em}
+	\begin{center}
+		\textbf{\Large \underline{Motivation For Today's Tutorial : NASA Press Releases}}
+	\end{center}
+	
+	\addcontentsline{toc}{section}{Motivation : NASA Press Releases}
 
-\vspace{1 em}
+	\vspace*{-1 em}
+	
+	\centerline{\includegraphics[width=\textwidth]{ecostress_banner.jpg}}
 
-{\centering
-
-\includegraphics[width=\textwidth]{ecostress_banner.jpg}}
-
-\vspace{1 em}
-
-We want to begin to use satellite remote sensing data to understand environmental events as they happen and communicate them effectively with a broad audience. Today, we are going to create a  map of the Death Valley National Park surface temperatures similar to the last tutorial. However, today's tutorial will provide you with the basic working knowledge to create beautiful and informative maps. Later in the course, you will use these skills to analyze current environmental events and make your maps available to newsmedia and other public-facing outlets. 
-
-\vspace{1 em}
-
-\hrule
+	We want to begin to use satellite remote sensing data to understand environmental events as they happen and communicate them effectively with a broad audience. Today, our assignment is to determine whether or not the Death Valley National Park surface temperature record was broken in July 2023. To do this we are going to create a map of land surface temperatures similar to the previous tutorial. However, today's tutorial will provide you with the basic working knowledge to create beautiful and informative maps. Later in the course, you will use these skills to analyze current environmental events and make your maps available to newsmedia and other public-facing outlets. 
+\end{minipage}}
 
 \section{Create A Base Map}
 
@@ -275,7 +274,7 @@ Your map should now resemble:
 
 \centerline{\includegraphics[width=\textwidth]{DVwGrids.png}}
 
-\kulbox{\textbf{NOTE:} This same procedure could have been done for the main map instead of the inlet map, if that suits your vision.}
+\kulbox{\textbf{NOTE:} This same procedure could have been done for the main map instead of the inset map, if that suits your vision.}
 
 Let's add a couple more small details to bring this map to the next level.
 
@@ -355,53 +354,28 @@ Now that our map looks exactly how we want it to look, we want to be able to sha
 
 \centerline{\includegraphics[width=.75\textwidth]{DeathValleySign.jpg}}
 
-If you recall our motivation for this exercise was to see if an analysis with ECOSTRESS supported that land surface temperatures in Death Valley National Park came close to breaking the surface temperature record. 
-
-The highest recorded ground temperature of 201 $^{\circ}$ F was verified on July 15, 1972. It appears that our analysis does not support exceeding that temperature in July 2023, despite that it was one of the hottest months in recorded history for air temperatures. 
+Our motivation for this exercise was to see if an analysis with ECOSTRESS supported that land surface temperatures in Death Valley National Park came close to breaking the surface temperature record. Given that the highest recorded ground temperature of 201 $^{\circ}$ F was verified on July 15, 1972, does our analysis support that the record was broken in July 2023, given that it was one of the hottest months in recorded history for air temperatures?
 
 \kulbox{\textbf{NOTE:} It is important to remember that the process of science ``supports'' or ``does not support'' hypotheses. It does not ``prove'' or ``disprove'' ideas. There are many factors that prevent our analyses from being entirely conclusive. These include the measurement error of our instruments, the times of day the International Space Station passed over the study site, cloudiness, etc.}
 
 The real power of the ECOSTRESS satellite comes in its geographic and temporal continuity. For instance, it is easy to see from our map which parts of Death Valley have the highest surface temperature. We could also track this seasonally, to see how vegetation growth alters temperatures. The possibilities are endless.
 
-\section{Hometown Temperature Competition Progress}
-
-In the last tutorial (\href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_TemperatureCompetition/Tutorial4_TemperatureCompetition.pdf}{Tutorial \#4: Hometown Temperature Competition}) you learned how to draw a shapefile. Your assignment before today's tutorial was to create a shapefile of your hometown, favorite place you have lived, or somewhere you wish to move in the future and use that file in A$\rho\rho$EEARS to download ECOSTRESS land surface temperature data for last year. Then you were to save GeoTIFF files to your computer of the hottest and coldest land surface temperature observations of that year for your hometown.
-
-\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Temperature Competition Next Steps}]
-	Now that you have that data let's put it all together in a map.
-	\begin{enumerate}
-		\item Start a new project and load the shapefile for your hometown, favorite place you have lived, or somewhere you wish to move in the future.
-		\item Use the same procedure we followed in this tutorial to create a map with two insets, one for the hottest and coldest days from the last full calendar year using the GeoTIFF files you saved from the previous tutorial. I have included an example on the next page that I made for Vancouver Island in 2022 for inspiration. You already have all of the skills to make this map! You don't have to make one that exactly mimics the example, but it needs to include all of the design elements that make an effective map: north arrow(s), scalebar(s), title(s), and legend(s). Be creative and curious by exploring the menu options and design a beautiful map that clearly communicates the hottest and coldest temperatures while showcasing your individual style.
-	\end{enumerate}
-\end{tcolorbox}
-
 \begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
 	\addcontentsline{toc}{section}{Map of the Week Assignments}
 	\large
 	\begin{enumerate}
-		\item Make a temperature map for your hometown designed to communicate the hottest and coldest temperatures for the last calendar year complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s). 
-        \item Provide a one paragraph description of your map. Think of it as an expanded caption. What do you want the reader to know after they see your map? What are the values for the max and min? Are there hotspots or coldspots, and if so why?
+		\item Submit your Death Valley National Park land surface temperature map complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s). 
+        \item Provide a one paragraph description of your map. Think of it as a blurb for a press release. What do you want the reader to know after they see your map? What are the values for the max and min? Are there hotspots or coldspots, and if so why? Was the record broken?
 	\end{enumerate}
-	Submit these assignments via Canvas before Monday's class.
 \end{tcolorbox}
-
-
-\centerline{\includegraphics[width=\textwidth]{Vancouver Island Temperature Competition Example.png}}
 
 \begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
 	\addcontentsline{toc}{section}{Datafiles}
 	\large
 	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF files for Death Valley:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214149\_aid0001.tif}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2023209214057\_aid0001.tif}
-	\end{enumerate}
-	And Vancouver Island:
-	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339225920_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339225920\_aid0001.tif}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022339212245_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022339212245\_aid0001.tif}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208041543_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208041543\_aid0001.tif}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/ECO2LSTE.001_SDS_LST_doy2022208010157_aid0001.tif}{ECO2LSTE.001\_SDS\_LST\_doy2022208010157\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214149_aid0001.tif}{\small ECO2LSTE.001\textunderscore SDS\textunderscore LST\textunderscore doy2023209214149\textunderscore aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_AccessingRemoteSensingDataWithAppears/ECO2LSTE.001_SDS_LST_doy2023209214057_aid0001.tif}{\small ECO2LSTE.001\textunderscore SDS\textunderscore LST\textunderscore doy2023209214057\textunderscore aid0001.tif}
 	\end{enumerate}
 \end{tcolorbox}
 
