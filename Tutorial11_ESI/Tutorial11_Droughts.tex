@@ -28,7 +28,7 @@
 \definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
 
 \title{I.C.E.C.R.E.A.M. Tutorials}
-\subtitle{\small Observing Earth from Above (Env 329) - Fall 2023  \\
+\subtitle{\small Observing Earth from Above (Env 329) v24.06 \\
 	\small Schmid College of Science and Technology, Chapman University}
 \date{\today}
 
@@ -42,7 +42,7 @@
 \dominitoc
 %\tableofcontents
 
-\setcounter{chapter}{7} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
+\setcounter{chapter}{10} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
 \chapter{Detecting Droughts with ECOSTRESS} %Enter Tutorial Name Here
 
@@ -152,7 +152,7 @@ PET represents the theoretical maximum amount of ET that would occur in a locati
 
 \subsection{Requesting Timeseries Point ESI Data in A$\rho\rho$EEARS}
 
-So far, we have been using ECOSTRESS area data to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also has another type of data output from a \textit{Point} request. Instead of providing a shapefile or GeoJSON to define a set area, we can provide A$\rho\rho$EEARS GPS coordinates (latitude, longitude), and it will return a timeseries of our variable of interest for the single pixel that encompasses our coordinates. Today, we are going to study ESI, but it can return this for any of the ECOSTRESS variables 
+So far, we have been using ECOSTRESS area data to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also has another type of data output from a \textit{Point} request. Instead of providing a shapefile or GeoJSON to define a set polygon area, we can provide A$\rho\rho$EEARS GPS coordinates (latitude, longitude), and it will return a timeseries of our variable of interest for the single pixel that encompasses our coordinates. Today, we are going to study ESI, but it can return this for any of the ECOSTRESS variables. 
 
 1. To begin, go to \href{https://appeears.earthdatacloud.nasa.gov/}{https://appeears.earthdatacloud.nasa.gov/} and login with your credentials. 
 
@@ -392,7 +392,6 @@ ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore
 		\item Make a map comparing 2021 and 2022 ESI data for Mexico City. Include a basemap that presents the region and the ESI data for 2021 and 2022 as insets. The map(s) should be complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s).
         \item Provide a 1-2 paragraph description of your map and ESI timeseries point data that includes your reflections on whether 2022 should be considered a drought year, knowing that 2021 was the worst drought in more than 30 years. How do the different sources of data (timeseries point vs. geographic area) contribute to your analysis? Address the limitations of your analysis.
 	\end{enumerate}
-	Submit these assignments via Canvas before the next class.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
@@ -400,11 +399,11 @@ ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore
 	\large
 	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF file for Mexico City ESI 2022:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial11_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif}
 	\end{enumerate}
 	And Mexico City ESI 2021:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial11_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif}
 	\end{enumerate}
 \end{tcolorbox}
 
