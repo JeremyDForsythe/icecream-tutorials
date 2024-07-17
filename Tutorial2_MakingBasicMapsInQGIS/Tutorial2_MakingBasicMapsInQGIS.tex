@@ -24,8 +24,9 @@
 \setlength{\fboxrule}{5pt}
 \setlength{\fboxsep}{4pt}
 
-\definecolor{IceCreamLeaf}{rgb}{0.4, 0.639215686274, 0.4}
-\definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
+\definecolor{IceCreamLeaf}{HTML}{58743b}
+\definecolor{IceCreamOrbit}{HTML}{732e00}
+\definecolor{MACred}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
 
 \title{I.C.E.C.R.E.A.M. Tutorials}
 \subtitle{\small Observing Earth from Above (Env 329) v24.06  \\
@@ -40,7 +41,7 @@
 \setcounter{tocdepth}{3}
 \setcounter{minitocdepth}{3}
 \dominitoc
-%\tableofcontents
+\faketableofcontents
 
 \setcounter{chapter}{1} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
 
@@ -59,7 +60,7 @@
 	colback=blue!5!white,colframe=blue!75!black,title={\Large \textbf{Objectives:}}]
 	\large
 	\begin{enumerate}
-		\item Get Acquainted With QGIS's Toolsbars, Buttons, \& Layout.
+		\item Familiarize yourself with the layout, toolbars, and buttons in QGIS.
 		\item Make your first map!
 	\end{enumerate}
 \end{tcolorbox}
@@ -71,14 +72,14 @@
 \fancyhead[C]{\begin{tikzpicture}[overlay, remember picture]
 		\fill[Blue2] (current page.north west) rectangle ($(current page.north east)+(0,-1in)$);
 		\node[anchor=north west, text=white, font=\Large, minimum size=1in, inner xsep=5mm, align=left] at (current page.north west) {\bf{\MakeUppercase{\@title}}\\\@subtitle};
-		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.125]{ICECREAM_Logo.png}};\end{tikzpicture}}
+		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.03]{ECOSTRESS-BASE.jpg}};\end{tikzpicture}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \centerline{\includegraphics[width=.65\textwidth]{QgisLogo.png}}
 
 \section{Getting To Know QGIS}
 
-Let's have an introduction to QGIS, the software you downloaded in the previous tutorial. 
+NEW First, you are going to familiarize yourself with QGIS, the software you downloaded in the previous tutorial:
 
 On Windows, open QGIS Desktop from the start menu or desktop icon. 
 
@@ -92,7 +93,7 @@ Your screen will likely resemble something like this:
 	\item \textbf{Browser Panel \& Layers List}
 	\begin{itemize}
 		\item The browser panel lets you easily navigate files and databases. We will use it to import map layers and satellite data.
-		\item In the layers list, you will see all the map layers we have imported for the given project we are working on. Layer examples include a base map (like Google maps), satellite \href{https://en.wikipedia.org/wiki/Raster_graphics}{raster} data (pixels each with a given value...like temperature), and \href{https://en.wikipedia.org/wiki/Vector_graphics}{vector} data (points, lines, shapes...like roads).
+		\item In the layers list, you will see all the map layers we have imported for the given project we are working on. Layer examples include a base map (e.g., a Google map), satellite \href{https://en.wikipedia.org/wiki/Raster_graphics}{raster} data (e.g., pixels of temperature data from ECOSTRESS), and \href{https://en.wikipedia.org/wiki/Vector_graphics}{vector} data (e.g., points, lines, or shapes indicating points of interest, roads or buildings).
 	\end{itemize}
 	\item \textbf{Toolbars}
 	\begin{itemize}
@@ -100,19 +101,19 @@ Your screen will likely resemble something like this:
 	\end{itemize}
 	\item \textbf{Main Work Area / Map Canvas}
 	\begin{itemize}
-		\item This is where the map itself is displayed. In the map canvas, you can interact with the visible layers: zoom in/out, move the map, select features and many other operations.
+		\item The main work area is where the map itself is displayed. In the map canvas, you can interact with the visible layers: zoom in/out, move the map, select features, and complete many other operations.
 	\end{itemize}
 	\item \textbf{Status Bar}
 	\begin{itemize}
-		\item Shows you information about the current map. Also allows you to adjust the map scale, the map rotation, and see the mouse cursor's coordinates on the map.
+		\item The status bar shows you information about the current map. Also allows you to adjust the map scale, the map rotation, and see the mouse cursor's coordinates on the map.
 	\end{itemize}
 	\item \textbf{Locator Bar}
 	\begin{itemize}
-		\item Within this bar, you can quickly access almost all of the objects and functions of QGIS: layers, layer features, algorithms, spatial bookmarks, etc, by typing in the search bar.
+		\item The locator bar allows you to quickly access almost all of the objects and functions of QGIS (e.g., layers, layer features, algorithms, spatial bookmarks, etc.) by typing in the search bar.
 	\end{itemize}
 \end{enumerate}
 
-\section{Try It Out! Explore Your First Map...}
+\section{Try It Out! Create Your First Map...}
 
 \subsection{Add a Basemap Layer}
 
@@ -122,17 +123,17 @@ Your screen will likely resemble something like this:
 
 2. Double-click on \textit{Open Street Map} to load in a basic open-source map. You will notice that we just added a layer to the layer window below.
 
-3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand is the pan map function, which allows you to move the map around when you are zoomed in. Try finding your home or a favorite place in the world. To reset to the default view, you can use the zoom full function (magnifying glass with the arrows in all directions).
+3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand icon is the pan map function, which allows you to move the map around when you are zoomed in. Try finding your home or a favorite place in the world. To reset to the default view, you can use the icon of the magnifying glass with the arrows in all directions. 
 
 \subsection{Add in an Interesting Layer via Shapefiles}
 
 \href{https://en.wikipedia.org/wiki/Shapefile}{Shapefiles} are a common geospatial file type that stores locations, points, lines, and shapes.
 
-1. Download this zipped folder from our website to your local computer. Make sure you save it to a dedicated project folder: \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/Time_Zones.zip}{US Timezones}
+1. Download this zipped folder from our website to your local computer:  \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/Time_Zones.zip}{US Timezones}. Make sure you save it to a dedicated project folder.
 
 \centerline{\includegraphics[width=\textwidth]{TimeZones.png}}
 
-2. After you have downloaded the file, use the browser window to locate \textit{Time\textunderscore Zones.zip} in the folder in which you saved it. Use the little arrow to expand the zip file and double-click on the \textit{Time\textunderscore Zones.shp} shapefile. Just as before, we have now added a new layer to our map.
+2. After you have downloaded the file, use the browser window to locate \textit{Time\textunderscore Zones.zip} in the folder in which you saved it. Use the little arrow to expand the zip file and double-click on the \textit{Time\textunderscore Zones.shp} shapefile. Similar to adding a base map, we have now added a new layer to our map.
 
 \centerline{\includegraphics[width=\textwidth]{TimeZoneSymbol.png}}
 
@@ -140,33 +141,14 @@ Your screen will likely resemble something like this:
 
 \centerline{\includegraphics[width=\textwidth]{TimeZoneLabels.png}}
 
-4. Next let's add labels. Open the Time Zone properties back up and navigate to the \textit{Labels} window. From the dropdown menu at the top select \textit{Single Labels}. Play around with the options to adjust the colors to your preferences, or maybe use one of the included styles (e.g., \textit{water bodies}). Click \textit{Apply} and \textit{OK}. 
+4. Next let's add labels. Re-open the properties window for Time Zones (i.e., right click) and navigate to the \textit{Labels} window. From the dropdown menu at the top select \textit{Single Labels}. Play around with the options to adjust the colors to your preferences, or maybe use one of the included styles (e.g., \textit{water bodies}). Click \textit{Apply} and \textit{OK}. 
 
 \subsection{Exporting \& Sharing Your Map}
 
 \centerline{\includegraphics[width=\textwidth]{Export.png}}
 
-5. Lastly, we want to save your map so you can marvel at your work anytime you'd like and share it with friends at parties. From the \textit{Project} menu navigate to \textit{Import/Export} and select \textit{Export Map To Image}. By default, it will use the \href{https://en.wikipedia.org/wiki/Map_extent}{extent} that you have in the viewer. I recommend increasing the resolution to 200 DPI. You will submit this map later, so save it somewhere you can remember. High-five! You have made a map. 
+5. Lastly, we want to save your map so you can marvel at your work anytime you'd like and share it with friends at parties. From the \textit{Project} menu, navigate to \textit{Import/Export} and select \textit{Export Map To Image}. By default, it will use the \href{https://en.wikipedia.org/wiki/Map_extent}{extent} that you have in the viewer. I recommend increasing the resolution to 200 DPI. You will submit this map later, so save it somewhere to your dedicated project folder. High-five! You have made a map. 
 
-\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
-	\addcontentsline{toc}{section}{Map of the Week Assignments}
-	
-	Check out these other interesting shapefiles from the Orange County GIS Database:
-
-	\begin{itemize}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/Regional_Subbasins_and_Watersheds.zip}{Watersheds of Orange County}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/OC_Parks_Trails.zip}{Hiking Trails of Orange County}
-	\end{itemize}
-
-	and try to make a map that closely resembles the one below following a similar procedure as the timezone map: 
-
-	\centerline{\includegraphics[width=.75\textwidth]{OCWatershedAndTrails.png}}
-
-	\large
-	\begin{enumerate}
-		\item Submit your timezone map and watersheds/hiking trails of OC California. Include a 1-2 paragraph description of your maps and any challenges you had recreating them.
-    \end{enumerate}
-\end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
 %\vfill
@@ -179,6 +161,6 @@ Your screen will likely resemble something like this:
 
 \vspace{1em}
 
-This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media).
+This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media) and is openly licensed via \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC BY-NC}.
 
 \end{document}
