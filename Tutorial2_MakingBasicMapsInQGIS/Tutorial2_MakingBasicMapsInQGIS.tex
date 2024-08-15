@@ -75,7 +75,7 @@
 		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.03]{ECOSTRESS-BASE.jpg}};\end{tikzpicture}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\centerline{\includegraphics[width=.65\textwidth]{QgisLogo.png}}
+\centerline{\includegraphics[width=.75\textwidth]{QgisLogo.png}}
 
 \section{Getting To Know QGIS}
 
@@ -113,6 +113,12 @@ Your screen will likely resemble something like this:
 	\end{itemize}
 \end{enumerate}
 
+\centerline{\includegraphics[width=\textwidth]{LostPanels.png}}
+
+\vspace{.5em}
+
+It is easy to accidentally close one of the panels (small windows within QGIS such as the Browser Panel or Layers List). To get them back, click \textit{View} $\rightarrow$ \textit{Panels} and then select the panels you accidentally closed.
+
 \section{Try It Out! Create Your First Map...}
 
 \subsection{Add a Basemap Layer}
@@ -121,37 +127,39 @@ Your screen will likely resemble something like this:
 
 1. In the browser window, expand your options by clicking on the small arrow next to \textit{XYZ Tiles}.
 
-2. Double-click on \textit{Open Street Map} to load in a basic open-source map. You will notice that we just added a layer to the layer window below.
+2. Double-click on \textit{Open Street Map} to load a basic open source map. You will notice that we just added a layer to the layer window below.
 
-3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand icon is the pan map function, which allows you to move the map around when you are zoomed in. Try finding your home or a favorite place in the world. To reset to the default view, you can use the icon of the magnifying glass with the arrows in all directions. 
+3. You can zoom in and out with the magnifying glass icons in the toolbar. The little hand icon is the pan map function, which allows you to move the map around when you are zoomed in. Try finding your home or a favorite place in the world. To reset to the default view, you can use the magnifying glass icon with the arrows in all directions. 
 
 \subsection{Add in an Interesting Layer via Shapefiles}
 
 \href{https://en.wikipedia.org/wiki/Shapefile}{Shapefiles} are a common geospatial file type that stores locations, points, lines, and shapes.
 
-1. Download this zipped folder from our website to your local computer:  \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/Time_Zones.zip}{US Timezones}. Make sure you save it to a dedicated project folder.
+1. Download this zipped folder from our website to your local computer:  \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial2_MakingBasicMapsInQGIS/Time_Zones.zip}{US Timezones}. Make sure to save it to a dedicated project folder.
 
 \centerline{\includegraphics[width=\textwidth]{TimeZones.png}}
 
-2. After you have downloaded the file, use the browser window to locate \textit{Time\textunderscore Zones.zip} in the folder in which you saved it. Use the little arrow to expand the zip file and double-click on the \textit{Time\textunderscore Zones.shp} shapefile. Similar to adding a base map, we have now added a new layer to our map.
+2. After downloading the file, use the browser window to locate \textit{Time\textunderscore Zones.zip} in the folder in which you saved it. Use the little arrow to expand the zip file and double-click on the \textit{Time\textunderscore Zones.shp} shapefile. Similarly to adding a base map, we have now added a new layer to our map.
 
 \centerline{\includegraphics[width=\textwidth]{TimeZoneSymbol.png}}
 
-3. This looks a little clunky, so let's make it more readable and useful. Right click on Windows/Linux, or control click on Mac, to open up the properties window. Navigate to the symbology window and select green outline. Click \textit{Apply} and \textit{OK}.  Then zoom and pan the map to center on North America, given that these are only US Timezones.
+3. This looks a little clunky, so let's make it more readable and useful. Right-click on Windows/Linux, or control-click (hold the control key while clicking; 2-finger click on the touchpad; or click the right mouse button) on Mac, to open up the properties window. Navigate to the symbology window and select the green outline. Click \textit{Apply} and \textit{OK}.  Then zoom and pan the map to center on North America, given that these are only US Timezones.
 
 \centerline{\includegraphics[width=\textwidth]{TimeZoneLabels.png}}
 
-4. Next let's add labels. Re-open the properties window for Time Zones (i.e., right click) and navigate to the \textit{Labels} window. From the dropdown menu at the top select \textit{Single Labels}. Play around with the options to adjust the colors to your preferences, or maybe use one of the included styles (e.g., \textit{water bodies}). Click \textit{Apply} and \textit{OK}. 
+4. Next let's add labels. Re-open the properties window for Time Zones (i.e., right-click) and navigate to the \textit{Labels} window. From the drop-down menu at the top select \textit{Single Labels}. Play around with the options to adjust the colors to your preferences, or maybe use one of the included styles (e.g., \textit{water bodies}). Click \textit{Apply} and \textit{OK}. 
 
 \subsection{Exporting \& Sharing Your Map}
 
 \centerline{\includegraphics[width=\textwidth]{Export.png}}
 
-5. Lastly, we want to save your map so you can marvel at your work anytime you'd like and share it with friends at parties. From the \textit{Project} menu, navigate to \textit{Import/Export} and select \textit{Export Map To Image}. By default, it will use the \href{https://en.wikipedia.org/wiki/Map_extent}{extent} that you have in the viewer. I recommend increasing the resolution to 200 DPI. You will submit this map later, so save it somewhere to your dedicated project folder. High-five! You have made a map. 
+\clearpage
+
+5. Lastly, we want to save your map so you can marvel at your work anytime you would like and share it with friends at parties. From the \textit{Project} menu, navigate to \textit{Import/Export} and select \textit{Export Map To Image}. By default, it will use the \href{https://en.wikipedia.org/wiki/Map_extent}{extent} that you have in the viewer. I recommend increasing the resolution to 200 DPI. You will submit this map later, so save it somewhere in your dedicated project folder. High-five! You have made a map. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
-%\vfill
+\vfill
 
 \hrule
 
