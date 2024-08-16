@@ -79,7 +79,7 @@
 			
 	\vspace{1em}
 	\begin{center}
-		\textbf{\Large \underline{Motivation For Today's Tutorial : Heat in Death Valley}}
+		\textbf{\Large \underline{Motivation For Today's Tutorial: Heat in Death Valley}}
 	\end{center}
 	
 	\addcontentsline{toc}{section}{Motivation : Death Valley}
@@ -96,7 +96,7 @@
 
 \section{Basemaps \& Plugins}
 
-In Tutorial 2, we used a simple basemap through a service included in the base QGIS installation. Today, we are going to expand QGIS's functionality by using another available plugin: HCMGIS. HCMGIS allows us to easily import basemaps from other services, such as ESRI, Bing, and Google.
+In Tutorial 2, we used a simple basemap through a service included in the base QGIS installation. Today, we are going to expand QGIS's functionality by using another available \href{https://docs.qgis.org/3.28/en/docs/training_manual/qgis_plugins/fetching_plugins.html}{plugin}: HCMGIS. HCMGIS allows us to easily import basemaps from other services, such as ESRI, Bing, and Google.
 
 \centerline{\includegraphics[width=\textwidth]{QGIS_Plugins.png}}
 
@@ -126,12 +126,12 @@ In Tutorial 2, we used a simple basemap through a service included in the base Q
 
 6. Congrats! You now have ECOSTRESS data on a map. But wait...let's make it look just a little better before you celebrate your win. QGIS doesn't know what kind of data this is and has defaulted to displaying the information in grayscale, which isn't that useful to our eyes. For each land surface temperature layer, right click on the layer name in the \textit{Layers} window and select \textit{Layer Properties}. On the menu bar to the left, select \textit{Symbology} and change the \textit{Render type} to Singleband pseudocolor. Since this is temperature, it is common to use a red color ramp. QGIS has automatically determined the minimum and maximum values from the datafiles; however, we have two files, so we need to match them. Specify 306.82 as the minimum and 347 as the maximum for both layers. Click \textit{apply}.
 
-7. Finally, add the border from the DeathValleyNationalPark.zip shapefile. In the \textit{Browser} window, expand the zip file using the small arrow next to the filename. Double click on \textit{Death Valley National Park.shp} to add the layer. 
+7. Finally, add the border from the DeathValleyNationalPark.zip shapefile. In the \textit{Browser} window, expand the zip file using the small arrow next to the filename. Double click on \textit{Death Valley National Park.shp} to add the layer. Right-click on the layer in the \textit{Layers} window and change the symbology to \textit{Outline
+blue}. 
+
 
 \kulbox{\textbf{NOTE:} You can also drag and drop the entire shapefile as a .zip into the \textit{Layers} window from an external file manager like \textit{Finder} on Mac or \textit{File Explorer} on Windows. This is sometimes useful when you have difficulty locating a file you have previously saved because you can use the search feature built into the file manager.}
 
-Right-click on the layer in the \textit{Layers} window and change the symbology to \textit{Outline
-blue}. 
 
 \vspace{1em}
 
@@ -153,7 +153,7 @@ blue}.
 
 9. Save your QGIS Project to the folder with all of the other files from this tutorial by going to the \textit{Project} menu bar at the top and selecting \textit{Save As...}. Maintain the file format as .QGZ.
 
-10. Finally, export your map. From the \textit{Project} menu, navigate to \textit{Import/Export} and select \textit{Export Map To Image}. Increase the resolution to 200 dots per inch (DPI). You will submit this map, so save it in the same folder. 
+10. Finally, export your map. From the \textit{Project} menu, navigate to \textit{Import/Export} and select \textit{Export Map To Image}. Increase the resolution to 200 dots per inch (DPI). 
 
 \vspace{1em}
 
@@ -163,11 +163,21 @@ blue}.
 
 High Five! You have learned to download ECOSTRESS instrument data from A$\rho\rho$EEARS and make a basic map in QGIS.
 
-\begin{tcolorbox}[colback=yellow!5!white,colframe=MACred,title= \vspace{.2em} \Large Map of the Week Assignments]
+\begin{tcolorbox}[colback=yellow!5!white,colframe=MACred,title= \vspace{.2em} \Large Make a Map Assignments]
 	\addcontentsline{toc}{section}{Map of the Week Assignments}
 	\large
 	\begin{enumerate}
-  \item Use the polygon you developed for your hometown or favorite place you have lived to download ECOSTRESS land surface temperature for this past winter (e.g., January) or summer (e.g., August). Then, build a map of your hometown temperature on an appropriate baselayer with the outline of your polygon. Submit your land surface temperature map, along with a short description of your map. In particular, your description might address any interesting observations about the temperature and address any limitations of your analysis.
+  \item Watch the YouTube Videos:
+\href{https://youtu.be/N-3zF10LbHg?si=HLST3CbIbDo_JuIR}{Vector vs. Raster Data}
+and \href{https://youtu.be/N-3zF10LbHg?si=HLST3CbIbDo_JuIR}{What is a Basemap}
+  
+  \item  Use the polygon you developed for your hometown to download ECOSTRESS land surface temperature for the year 2023. It is possible that if you selected a very large geographic area for your polygon that the file size will exceed the AppEEARS file size limit. If this is the case, you could consider selecting a smaller area or submitting multiple requests.
+
+  \item Once the data are available, determine the day with the hottest median temperature and the day with the coldest median temperature. 
+
+  \item Download the geotifs with the data for the day with the hottest median temperature and the day with the coldest median temperature and save them somewhere appropriate. You will need the data to make your maps!
+
+  \item Submit a screenshot of the boxplot of data you viewed on AppEEARS.  
 	\end{enumerate}
 \end{tcolorbox}
 
@@ -182,7 +192,7 @@ High Five! You have learned to download ECOSTRESS instrument data from A$\rho\rh
 \end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
-%\vfill
+\vfill
 
 \hrule
 
