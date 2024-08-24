@@ -86,7 +86,7 @@
 	
 	\centerline{\includegraphics[width=\textwidth]{ecostress_banner.jpg}}
 
-	We want to begin to use satellite remote sensing data to understand environmental events as they occur and use maps to effectively communicate those events to a broad audience. In \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_AccessingRemoteSensingDataWithAppears/Tutorial4_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#4: Accessing Remote Sensing Data With A$\rho\rho$EEARS} \& \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_VisualizingDataWithQGIS/Tutorial5_VisualizingDataWithQGIS.pdf}{Tutorial \#5: Visualizing Data with QGIS} we started to examine whether Death Valley broke its record of land surface temperature in July 2023. Today, our assignment is to create a map that will effectively communicate the answer. After you complete today's tutorial you will have a basic working knowledge to create beautiful and informative maps. Later in the course, we will refine these skills to analyze current environmental events and make your maps available to newsmedia and other public-facing outlets. 
+	We want to begin to use satellite remote sensing data to understand environmental events as they occur and use maps to effectively communicate those events to a broad audience. In \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial4_AccessingRemoteSensingDataWithAppears/Tutorial4_AccessingRemoteSensingDataWithAppears.pdf}{Tutorial \#4: Accessing Remote Sensing Data With A$\rho\rho$EEARS} \& \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_VisualizingDataWithQGIS/Tutorial5_VisualizingDataWithQGIS.pdf}{Tutorial \#5: Visualizing Data with QGIS}, we started to examine whether Death Valley broke its record of land surface temperature in July 2023. Today, our assignment is to create a map that will effectively communicate the answer. After you complete today's tutorial, you will have a basic working knowledge to create beautiful and informative maps. Later in the course, we will refine these skills to analyze current environmental events and make your maps available to newsmedia and other public-facing outlets. 
 \end{minipage}}
 
 \section{Data Wrangling}
@@ -148,7 +148,7 @@ You could export it as an image file as we did in \href{https://jeremydforsythe.
 
 3. Now, select the menu \textit{Add Item}, then \textit{Add Map}. Start at one corner of the white rectangle window and drag it to the opposite diagonal corner to set the map space. You will see that the rectangle window will be rendered with the map from the QGIS panel in the main window.
 
-\kulbox{\textbf{NOTE:} You now have two windows of QGIS open, what I am referring to here as the main one is the QGIS window that you have been working with so far. It has the panel that displays your basemap and any data layers you have loaded in, it has the browser panel and the layers panel. The second window is the \textit{Print Layout} window that we are making our map in. The two windows communicate with each other. For instance, if you were to scroll and zoom around in the main panel of the QGIS window the map we just rendered in the \textit{Print Layout} window would update to that view, unless we lock it in the Item window. More on this ahead...}
+\kulbox{\textbf{NOTE:} You now have two QGIS windows open, what we refer to here as the main one is the QGIS window that you have been working with so far. It has the panel that displays your basemap, any data layers you have loaded in, the browser panel and the layers panel. The second window is the \textit{Print Layout} window that we are making our map in. The two windows communicate with each other. For instance, if you were to scroll and zoom around in the main panel of the QGIS window the map we just rendered in the \textit{Print Layout} window would update to that view, unless we lock it in the Item window. More on this ahead...}
 
 4. Click on the \textit{Item Properties} tab.
 
@@ -157,9 +157,7 @@ You could export it as an image file as we did in \href{https://jeremydforsythe.
 \centerline{\includegraphics[width=\textwidth]{AddMapToPrintLayout.png}}
 
 
-5. Adjust the \textit{Scale}, which is the zoom level, to 1200000 and press Enter.
-
-\kulbox{\textbf{NOTE:} I have pre-selected this number for you based on my own trial and error and found that 1200000 framed the map nicely. If you disagree, feel free to play around with this setting and find one that suits your personal style. At the end of the day these maps are a representation of you and we want them to reflect that. However, they also need to effectively communicate the data to your audience so make sure you are able to explain how your design choices do that!} 
+5. Adjust the \textit{Scale}, which is the zoom level, to 1200000 and press Enter. Determining a zoom level is a matter of trial and error based on what features of the map you wish to represent. 
 
 6. Check the \textit{Lock layers} box, \textit{Lock layer styles} box, and lock icon box next to the layer of our map. As mentioned in the earlier note box, this will ensure that if we turn off some layers, pan or zoom, or change the symbology of any of the layers in the main QGIS window, our view here in the \textit{Print Layout} will not change.
 
@@ -175,7 +173,7 @@ A legend's function is to describe the visual information contained in a map by 
 
 7. Select \textit{Map 1} from the \textit{Items} window.
 
-8. From the \textit{Add Item} menu bar at the top, select \textit{Legend}. Draw the legend by clicking and dragging a box in a suitable place on the map. I selected the bottom-left corner. We can adjust its size and position later, so don't worry too much about how it looks right now.
+8. From the \textit{Add Item} menu bar at the top, select \textit{Legend}. Draw the legend by clicking and dragging a box in a suitable place on the map. We selected the bottom-left corner. We can adjust its size and position later, so don't worry too much about how it looks right now.
 
 9. Under \textit{Item Properties} enter ``Land surface temperature ($^{\circ}$ F)'' as a title.
 
@@ -184,6 +182,8 @@ A legend's function is to describe the visual information contained in a map by 
 11. Deselect the check box next to \textit{Auto update} to allow us to further customize what is displayed in the legend. Otherwise, QGIS would automatically update the legend with all the data layers we have loaded back on the other main window, including the basemap.
 
 12. We matched the temperature ranges for both layers, so only one legend entry is necessary. Remove all legend entries, except one of our ECOSTRESS surface temperature layers, by selecting the ones you want to remove and using the minus button. 
+
+\vspace{.5em}
 
 The SI unit of temperature set for the International System of Units is Kelvin (K), which is how the land surface temperature observations made by ECOSTRESS are reported. You can use the formulas below to convert K into Celsius or Fahrenheit, which are generally more widely known by your target audiences. 
 \begin{itemize}
@@ -197,7 +197,7 @@ The SI unit of temperature set for the International System of Units is Kelvin (
 
 \centerline{\includegraphics[width=.5\textwidth]{tempscale.png}}
 
-14. After converting to $^{\circ}$F our land surface temperature yields a range of 92.6 to 164.9. Enter these values in place of the default minimum and maximum values. Let's also adjust the width of the legend to 12 mm and the height to 60 mm because I like how those look. Feel free to find your own sweet spot. When you have finished adjusting, use the back arrow to return to \textit{Legend Item Properties}.
+14. After converting to $^{\circ}$F, our land surface temperature yields a range of 92.6 to 164.9 $^{\circ}$F. Enter these values in place of the default minimum and maximum values. Let's also adjust the width of the legend to 12 mm and the height to 60 mm, or to your preferred size to ensure that you can see the color bar. When you have finished adjusting, use the back arrow to return to \textit{Legend Item Properties}.
 
 15. Our legend labels are a little haphazard, since QGIS automatically creates them from the filenames we import. To adjust, double click on the ECO2LSTE.001SDSLSTdoy... label in the \textit{Legend Items} list. Instead, enter some useful information, perhaps the month ``July 2023''. 
 
@@ -217,25 +217,25 @@ Let's add a couple more small details to bring this map to the next level.
 
 \subsection{Adding a Scalebar}
 
-It is important for the reader to know the scale of the maps, particularly when we are zoomed in this far. This is achieved with scalebars that QGIS can automatically draw for you.
+It is important for the reader to know the scale of the maps, particularly when we are zoomed in this far. This is achieved with scalebars that can automatically be drawn by QGIS. 
 
 \centerline{\includegraphics[width=\textwidth]{AddScalebar.png}}
 
 18. With the map (likely named ``Map 1'' unless you changed it) highlighted in the \textit{Items} browser, click the \textit{Add Item} menu at the top of the screen and select \textit{Add Scalebar}.
 
-19. Draw the scalebar on the main map in a logical place. Look for a place where you will not obscure any of the key information conveyed by the map. I picked the bottom right corner.
+19. Draw the scalebar on the main map in a logical place. Look for a place where you will not obscure any of the key information conveyed by the map. We picked the bottom right corner.
 
-20. Under \textit{Item Properties}, you could adjust the style or units to your liking. I am going to leave it in km, but since the text is a little hard to read, so let's add a buffer. In the \textit{Scalebar Item Properties} scroll down until you see the ``Display'' section. Expand it using the arrow on its left and click inside the ``Font'' box:
+20. Under \textit{Item Properties}, you could adjust the style or units to your liking. We will leave it in km, but since the text is a little hard to read we will add a buffer. In the \textit{Scalebar Item Properties} scroll down until you see the ``Display'' section. Expand it using the arrow on its left and click inside the ``Font'' box:
 
 \vspace{.25em}
 
 \centerline{\includegraphics[width=.24\textwidth]{AdjustScalebar.png}}
 
-Click on the highlighted text button and select the box that states ``Draw Text Buffer''. Adjust the size, color, and opacity as you see fit. I kept the defaults. 
+Click on the highlighted text button and select the box that states ``Draw Text Buffer''. Adjust the size, color, and opacity as you see fit. We kept the defaults. 
 
 \subsection{Adding a North Arrow}
 
-On maps, it is also customary to use an arrow to indicate which direction is North. This is particularly useful again when zoomed in this closely, and the reader is unable to make out discernible land marks like state/country borders, the Great Lakes, or oceans/coastlines. 
+On maps, it is also customary to use an arrow to indicate which direction is North. This is particularly useful again when zoomed in this closely, and the reader is unable to make out discernible land marks like state/country borders, large lakes/rivers, or oceans/coastlines. 
 
 \vspace{.25em}
 
@@ -243,9 +243,9 @@ On maps, it is also customary to use an arrow to indicate which direction is Nor
 
 21. Click the \textit{Add Item} menu at the top of the screen and select \textit{Add North Arrow}.
 
-22. Select your preferred North arrow symbol. Draw the North arrow in an appropriate place; they are typically placed near the scalebar. I'm selecting the SVG north arrow that looks like a compass, but keeping it small and out of the way of the map.
+22. Select your preferred North arrow symbol. Draw the North arrow in an appropriate place; they are typically placed near the scalebar. We will use the SVG north arrow that looks like a compass, but keep it small and out of the way of the map.
 
-\kulbox{\textbf{NOTE:} When adding images to your map, \textit{SVG Images} tend to look cleaner and sharper compared to the \textit{Raster Image} options because of the way they store information. Just as we talked about in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_DrawingAreaOfInterest/Tutorial3_DrawingAreaOfInterest.pdf}{Tutorial \#3 : Drawing An Area of Interest} for raster vs vector GIS data, raster images are built from pixels - tiny color squares that, in great quantity, can form highly detailed images such as photographs. The more pixels an image has, the higher quality it will be, and vice versa. Vector files use mathematical equations, lines, and curves with fixed points on a grid to produce an image. There are no pixels in a vector file. A vector file’s mathematical formulas capture shape, border, and fill color to build an image. Because the mathematical formula recalibrates to any size, you can scale a vector image up or down without impacting its quality which is why they tend to look cleaner and more professional.}
+\kulbox{\textbf{NOTE:} When adding images to your map, \textit{SVG Images} tend to look cleaner and sharper compared to the \textit{Raster Image} options because of the way they store information. Just as we talked about in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial3_DrawingAreaOfInterest/Tutorial3_DrawingAreaOfInterest.pdf}{Tutorial \#3 : Drawing An Area of Interest} for raster vs vector GIS data, raster images are built from pixels - tiny color squares that, in great quantity, can form highly detailed images such as photographs. The more pixels an image has, the higher quality it will be, and vice versa. Vector files use mathematical equations, lines, and curves with fixed points on a grid to produce an image. There are no pixels in a vector file. A vector file’s mathematical formulas capture shape, border, and fill color to build an image. Because the mathematical formula recalibrates to any size, you can scale a vector image up or down without impacting its quality, which is why they tend to look cleaner and more professional.}
 
 23. To adjust the properties of the North arrow to make it your own, scroll down in the \textit{Item Properties} window to find useful features, such as changing color or size. 
 
@@ -263,9 +263,9 @@ One last addition, let's add a title to the map to better orient the reader to t
 
 27. You may want to change the spacing to make it look clean and professional. By clicking inside the \textit{Appearance} dropdown box, you can change the font size, text, color, backgrounds, etc. You can also adjust the alignment. For example, you could set it to \textit{Center} horizontal alignment and \textit{Middle} vertical.
 
-28. To change the font options select the ABC tab, to change the background click the highway sign looking tab. For further direction, see the screenshot on the next page.
+28. To change the font options select the ABC tab, to change the background click the tab that looks like a highway sign. For further direction, see the screenshot on the next page.
 
-29.  I have chosen to use the font ``Rockwell'' in size 30 white, with a red opaque ellipse background. I needed to adjust the Size Y to 3 millimeters to fully surround the text. You could copy my choices (see screenshot on the next page) to replicate my map, but I encourage you to play around with these settings to make the map your own. Keep in mind the map making principles that we are discussing in class. It might also be a good idea to look at a \href{https://science.nasa.gov/earth/multimedia/}{gallery of NASA maps} or \href{https://mapgallery.esri.com/}{award winning maps from the ESRI Map Gallery} for inspiration. 
+29.  We chose the font ``Rockwell'' in size 30 white, with a red opaque ellipse background. We adjusted the Size Y to 3 millimeters to fully surround the text. You could copy these choices (see screenshot on the next page), but we encourage you to play around with these settings to make the map your own. Keep in mind the map making principles that we are discussing in class. It might also be a good idea to look at a \href{https://science.nasa.gov/earth/multimedia/}{gallery of NASA maps} or \href{https://mapgallery.esri.com/}{award winning maps from the ESRI Map Gallery} for inspiration. 
 
 \centerline{\includegraphics[width=.75\textwidth]{AdjustTitle.png}}
 
@@ -283,7 +283,7 @@ Now that our map looks exactly how we want it to look, we want to be able to sha
 
 \kulbox{\textbf{NOTE:} There may be times when you want to export as PDF, particularly when the map needs to be scalable to different sizes.}
 
-Here is my final map for reference: 
+Here is our final map for reference: 
 
 \centerline{\includegraphics[width=.75\textwidth]{DeathValleyFinalMap.png}}
 
