@@ -24,8 +24,9 @@
 \setlength{\fboxrule}{5pt}
 \setlength{\fboxsep}{4pt}
 
-\definecolor{IceCreamLeaf}{rgb}{0.4, 0.639215686274, 0.4}
-\definecolor{IceCreamOrbit}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
+\definecolor{IceCreamLeaf}{HTML}{58743b}
+\definecolor{IceCreamOrbit}{HTML}{732e00}
+\definecolor{MACred}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
 
 \title{I.C.E.C.R.E.A.M. Tutorials}
 \subtitle{\small Observing Earth from Above (Env 329) v24.06 \\
@@ -40,11 +41,12 @@
 \setcounter{tocdepth}{3}
 \setcounter{minitocdepth}{3}
 \dominitoc
-%\tableofcontents
 
-\setcounter{chapter}{10} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
+\faketableofcontents
 
-\chapter{Detecting Droughts with ECOSTRESS} %Enter Tutorial Name Here
+\setcounter{chapter}{9} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
+
+\chapter{Evaporative Stress Index with ECOSTRESS} %Enter Tutorial Name Here
 
 \vspace{-2em}
 
@@ -59,9 +61,9 @@
 	colback=blue!5!white,colframe=blue!75!black,title={\Large \textbf{Objectives:}}]
 	\large
 	\begin{enumerate}
-		\item Distinguish between the two types of requests in A$\rho\rho$EEARS: point data versus geographic area data.
-		\item Determine the drought status for Mexico City in 2022 and compare to the record-breaking drought in 2021. 
-		\item Create a map that focuses on the social issues surrounding drought and water scarcity. 
+		\item Distinguish between the two types of requests in A$\rho\rho$EEARS: point vs area.
+		\item Familiarize yourself with the basics of Evaporative Stress Index (ESI) data derived from land surface temperatures. Practice interpreting large and small values and recognize that there are different algorithms. 
+		\item Practice visualizing and interpreting both temporal (point) and area-based ESI data.  
 	\end{enumerate}
 \end{tcolorbox}
 
@@ -72,14 +74,14 @@
 \fancyhead[C]{\begin{tikzpicture}[overlay, remember picture]
 		\fill[Blue2] (current page.north west) rectangle ($(current page.north east)+(0,-1in)$);
 		\node[anchor=north west, text=white, font=\Large, minimum size=1in, inner xsep=5mm, align=left] at (current page.north west) {\bf{\MakeUppercase{\@title}}\\\@subtitle};
-		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.125]{ICECREAM_Logo.png}};\end{tikzpicture}}
+		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.03]{ECOSTRESS-BASE.jpg}};\end{tikzpicture}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent\fbox{\begin{minipage}{.9665\textwidth}
 			
 	\vspace{1em}
 	\begin{center}
-		\textbf{\Large \underline{Motivation For Today's Tutorial : Drought \& Water Scarcity}}
+		\textbf{\Large \underline{Motivation For Today's Tutorial: Drought \& Water Scarcity}}
 	\end{center}
 	
 	\addcontentsline{toc}{section}{Motivation : Drought \& Water Scarcity}
@@ -88,7 +90,7 @@
 	
 	\centerline{\includegraphics[width=.87\textwidth]{AmericasDrought.png}}
 
-	The figure above was created for the United Nations report ``Drought in Numbers,'' calling for a global top priority commitment to drought preparedness and resilience across all regions. Drought is a complex crisis with roots not only in climate change but also in social justice and public policy.
+	The figure above was created for the United Nations report ``Drought in Numbers,'' calling for a global top priority commitment to drought preparedness and resilience across all regions. Drought is a complex crisis with roots not only in climate change, but also in social justice and public policy.
 
 	\begin{itemize}
 		\item More than 10 million people lost their lives due to major drought events in the past century, with over 90\% of these deaths occurring in developing countries (Guha-Sapir et al., 2021).
@@ -108,7 +110,7 @@
 
 \vspace{.5em}
 
-In the last tutorials, we learned that ECOSTRESS uses land surface temperatures to estimate evapotranspiration (ET). A related variable is the evaporative stress index (ESI), which is a measure of potential drought conditions. It is a Level 4 (ECO4) ECOSTRESS data product that can be accessed through A$\rho\rho$EEARS:
+In the previous tutorials, we learned that ECOSTRESS uses land surface temperatures to estimate evapotranspiration (ET). A related variable is the Evaporative Stress Index (ESI), which is a measure of potential drought conditions. It is a Level 4 (ECO4) ECOSTRESS data product that can be accessed through A$\rho\rho$EEARS:
 
 \vspace{.5em}
 
@@ -116,10 +118,10 @@ In the last tutorials, we learned that ECOSTRESS uses land surface temperatures 
 
 \vspace{.5em}
 
-For ECOSTRESS, the drought stress signal is derived from the ratio of actual evapotranspiration (ET) to potential evapotranspiration (PET):
+For ECOSTRESS, the drought stress signal is derived from the ratio of actual evapotranspiration (AET) to potential evapotranspiration (PET):
 
 \[
-	ESI = \frac{ET}{PET}
+	ESI = \frac{AET}{PET}
 \]
 
 PET represents the theoretical maximum amount of ET that would occur in a location if unlimited water were available. ESI is a unitless metric (the numerator and denominator have the same units and they cancel out) that ranges from 0 to 1, with smaller proportions indicating higher water stress (minimal ET compared to PET) and higher proportions denoting no water stress (ET and PET are equal). 
@@ -128,10 +130,7 @@ PET represents the theoretical maximum amount of ET that would occur in a locati
 
 \kulbox{\textbf{NOTE:} Confusingly, evaporative stress index can have different definitions from study to study. For example, the Mexico City map in the box below has a scale of -2.5 to 2.5, because it is estimated with a different formula. Keep an eye out for this!}
 
-
-\addcontentsline{toc}{subsection}{Today's Study Location : Mexico City}
-
-\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Mexico City}]
+\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamLeaf,title=\textbf{Today's Study Location : Mexico City}]
 	\begin{multicols}{2}
 
 	\centerline{\includegraphics[width=\columnwidth]{mexico_esi_2021.png}}
@@ -152,7 +151,7 @@ PET represents the theoretical maximum amount of ET that would occur in a locati
 
 \subsection{Requesting Timeseries Point ESI Data in A$\rho\rho$EEARS}
 
-So far, we have been using ECOSTRESS area data to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also has another type of data output from a \textit{Point} request. Instead of providing a shapefile or GeoJSON to define a set polygon area, we can provide A$\rho\rho$EEARS GPS coordinates (latitude, longitude), and it will return a timeseries of our variable of interest for the single pixel that encompasses our coordinates. Today, we are going to study ESI, but it can return this for any of the ECOSTRESS variables. 
+So far, we have been using ECOSTRESS \textit{"Area"} data to create maps that visualize our variable of interest, but A$\rho\rho$EEARS also allows you to submit a \textit{"Point"} request. Instead of providing a shapefile or GeoJSON to define a set polygon area, we can provide GPS coordinates (latitude, longitude) to A$\rho\rho$EEARS, and it will return a timeseries of our variable of interest for the single pixel that encompasses our coordinates. Today, we are going to study ESI, but you can return this for any of the ECOSTRESS variables. 
 
 1. To begin, go to \href{https://appeears.earthdatacloud.nasa.gov/}{https://appeears.earthdatacloud.nasa.gov/} and login with your credentials. 
 
@@ -175,6 +174,8 @@ So far, we have been using ECOSTRESS area data to create maps that visualize our
 \end{itemize}
 
 Next, clear the selection of the current category using the small ``x'' to the right of the \textit{ECOSTRESS Evaporative Stress Index PT-JPL} box.
+
+\vspace{.5em}
 
 Then, under \textit{Select the layers to include in the sample} type the words ``ECOSTRESS'' and ``LST,'' select \textit{ECOSTRESS Land Surface Temperature \& Emissivity (LST\&E)}. Click on the ``+'' signs to add the following layers to your cart: 
 
@@ -208,7 +209,7 @@ While we wait for the point request, we are also going to create an area request
 
 10. Open QGIS and start a new project by selecting the \textit{Project} menu, then \textit{New}.
 
-11. Then to add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. Since we are outlining an urban area, I suggest we use \textit{Google Satellite Hybrid}, which overlays streets and other Google maps data on satellite imagery. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
+11. Then to add a basemap, find the \textit{HCMGIS} menu bar, select \textit{Basemap}, then pick your preferred map. Since we are outlining an urban area, we recommend using \textit{Google Satellite Hybrid}, which overlays streets and other Google maps data on satellite imagery. Note that clicking on a basemap type automatically adds a new layer to your map, as seen in the layer browser window.
 
 12. Open the Lat Lon Tools window by selecting the \textit{Plugins} menu $\rightarrow$ \textit{Lat Lon Tools} $\rightarrow$ \textit{Zoom To Coordinate}.
 	
@@ -258,9 +259,9 @@ While we wait for the point request, we are also going to create an area request
 
 33. Click ``OK''.
 
-\subsubsection{Creating an Area Request for Mexico City (2022) in A$\rho\rho$EEARS}
+\subsubsection{Creating an Area Request for Mexico City in A$\rho\rho$EEARS}
 
-Return to A$\rho\rho$EEARS to create a new area request. We have preselected dates with good data coverage (few-to-no clouds, orbit path that aligns with a single shot for the area of interest) in 2021 \& 2022. 
+Return to A$\rho\rho$EEARS to create a new area request. We have preselected dates with good data coverage (few-to-no clouds, orbit  that aligns with a single image for the area of interest) in 2021 \& 2022. 
 
 34. Use the \textit{Extract} dropdown menu to select \textit{Area}. Next, select: \textit{Start a new request}. 
 
@@ -300,9 +301,9 @@ Clear the selection of the current category using the small ``x'' to the right o
 
 \centerline{\includegraphics[width=\textwidth]{RequestSuccess.png}}
 
-\subsubsection{Creating an Area Request for Mexico City (2021) in A$\rho\rho$EEARS}
+\centerline{\includegraphics[width=\textwidth]{RepeatRequest.png}}
 
-41. Repeat steps 34 - 40 with the same layers and GeoJSON file. Call the request ``Mexico City 2021'' and change the date to 4/28/2021.
+41. Repeat steps 34 - 40 with the same layers and GeoJSON file. Call the request ``Mexico City 2021'' and change the date to 4/28/2021. Or to be even more efficient from the \textit{Extract} page find your ``Mexico City 2022'' request in the ``Copy a previous request'' section and change the date to 4/28/2021.
 
 42. Use the \textit{Explore} drop-down at the top to monitor the status of your request. Requests will likely go quickly, given that it is only one day's worth of data.
 
@@ -314,12 +315,14 @@ Clear the selection of the current category using the small ``x'' to the right o
 
 45. Our goal for the ESI timeseries point analysis is not to visualize the data in space, but rather to compare the differences between the two years (the known drought year of 2021 and 2022). The benefit of this point data is that A$\rho\rho$EEARS has conveniently packaged our variable of interest in an easy-to-manage format to track changes over time. The disadvantage of this type of data retrieval is that it can only be done for a single pixel per request. 
 
-46. First, select the $Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg$ layer:
+46. First, select the $Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg$ layer.
 
 
 The top panel displays the entire timeseries for the dates we have requested. The bottom panel compares years by plotting different years in our data in different colors. 
 
-Notice that the dry season (October - April) has much more drought stress (low ESI) compared to the wet season (May - September). Our goal was to compare 2022 to the known drought year of 2021. What conclusions can you draw from these data? Include your assessment in the write-up accompanying your ``Map of the Week''. Verify that any sources of errors are mentioned, specifically describing the shortcomings of point analyses (e.g., using only one pixel of data).
+\vspace{.5em}
+
+Notice that the dry season (October - April) has much higher drought stress (low ESI) compared to the wet season (May - September). Our goal was to compare 2022 to the known drought year of 2021. What conclusions can you draw from these data? 
 
 \vspace{.5em}
 
@@ -379,36 +382,30 @@ ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore
 
 59. Finally, add the polygon border from your Mexico City GeoJSON file by double clicking on it in the \textit{Browser} window. Right-click (ctrl-click on Mac) on the layer in the \textit{Layers} window and change the symbology to \textit{outline blue}. 
 
-\section{Add Map Elements}
+60. Repeat steps 52 - 59 for the Mexico City 2021 data to create two separate maps comparing. How does 2022 compare to the 2021 year of extreme drought in Mexico City? What conclusions can you draw from the ECOSTRESS observations of ESI?
 
-60. Following the procedure described in \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial5_AddingElementsToMaps/Tutorial5_AddingElementsToMaps.pdf}{Tutorial \#5 : Adding Elements To Maps}, make a professional map complete with scalebars, labels, a legend, titles, and a North arrow. Use a basemap that highlights the study region (Mexico City) with this ESI map from 2022 as an inset. 
-
-61. Repeat steps 52 - 60 for the Mexico City 2021 data and include it as an inset on the same map. This map will be your part of your map of the week assignment.
-
-\begin{tcolorbox}[colback=yellow!5!white,colframe=IceCreamOrbit,title= \vspace{.2em} \Large Map of the Week Assignments]
-	\addcontentsline{toc}{section}{Map of the Week Assignments}
+\begin{tcolorbox}[colback=yellow!5!white,colframe=MACred,title= \vspace{.2em} \Large Make a Map Assignments]
+	\addcontentsline{toc}{section}{Make a Map Assignments}
 	\large
 	\begin{enumerate}
-		\item Make a map comparing 2021 and 2022 ESI data for Mexico City. Include a basemap that presents the region and the ESI data for 2021 and 2022 as insets. The map(s) should be complete with scalebars(s), north arrow(s), legend(s), title(s), and label(s).
-        \item Provide a 1-2 paragraph description of your map and ESI timeseries point data that includes your reflections on whether 2022 should be considered a drought year, knowing that 2021 was the worst drought in more than 30 years. How do the different sources of data (timeseries point vs. geographic area) contribute to your analysis? Address the limitations of your analysis.
+		\item Make a map of evaporative stress index for an area of interest. Try to identify an interesting comparison or contrast based on some aspect of climate, edaphic (soil) conditions, plant community composition or structure, land use, or some disturbance. If you complete your map and do not find strong differences, don’t worry! The most important part of this exercise is to practice asking a question, collecting the data to answer your question, and thinking about what you found. 
+        \item Find a classmate and compare maps. Is your classmate doing anything differently that can help improve your map? If so, revise accordingly! 
+        \item Submit your evaporative stress index map, along with a short description. In particular, your description might address any interesting observations and address any limitations of your analysis.
 	\end{enumerate}
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=yellow!5!white,title=\textbf{Datafiles}]
 	\addcontentsline{toc}{section}{Datafiles}
 	\large
-	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF file for Mexico City ESI 2022:
-	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial11_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif}
-	\end{enumerate}
-	And Mexico City ESI 2021:
-	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial11_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif}
-	\end{enumerate}
+	In case you encountered any issues with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF file for Mexico City ESI:
+	\begin{itemize}
+		\item 2022: \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial10_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2022095170707_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2022095170707\textunderscore aid0001.tif}
+            \item 2021: \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial10_ESI/ECO4ESIPTJPL.001_Evaporative_Stress_Index_PT_JPL_ESIavg_doy2021118181114_aid0001.tif}{\small ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore Index\textunderscore PT\textunderscore JPL\textunderscore ESIavg\textunderscore doy2021118181114\textunderscore aid0001.tif}
+	\end{itemize}
 \end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
-%\vfill
+\vfill
 
 \hrule
 
@@ -418,6 +415,6 @@ ECO4ESIPTJPL.001\textunderscore Evaporative\textunderscore Stress\textunderscore
 
 \vspace{1em}
 
-This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media).
+This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media) and is openly licensed via \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC BY-NC}.
 
 \end{document}
