@@ -1,0 +1,121 @@
+\documentclass[oneside,a4paper,11pt,explicit]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{icecream}
+\usepackage[english]{babel}
+\addto\captionsenglish{\renewcommand{\chaptername}{}}
+\usepackage[accsupp]{axessibility}  % improves PDF readability for those with disabilities.
+\usepackage[colorlinks = true,urlcolor  = blue,linkcolor = blue]{hyperref}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{minitoc}
+\usepackage{multicol}
+
+
+\renewcommand{\mtifont}{\large\sffamily}
+\renewcommand{\mtcfont}{\small\sffamily}
+\renewcommand{\mtcSfont}{\small\sffamily}
+\renewcommand{\mtcSSfont}{\small\sffamily}
+\renewcommand{\mtcSSSfont}{\small\sffamily}
+\mtcsetpagenumbers{minitoc}{off} % turn off page numbering in minitocs
+\addto{\captionsenglish}{% Making babel aware of special titles
+	\renewcommand{\mtctitle}{Quick Links To Sections}
+}
+\setlength{\fboxrule}{5pt}
+\setlength{\fboxsep}{4pt}
+
+\definecolor{IceCreamLeaf}{HTML}{58743b}
+\definecolor{IceCreamOrbit}{HTML}{732e00}
+\definecolor{MACred}{rgb}{0.803921568627451, 0.3607843137254902, 0.3607843137254902}
+
+\title{I.C.E.C.R.E.A.M. Tutorials}
+\subtitle{\small Observing Earth from Above (Env 329) v24.06 \\
+	\small Schmid College of Science and Technology, Chapman University}
+\date{\today}
+
+%% DOCUMENT
+\setstretch{1.25}
+\makeatletter
+\begin{document}
+
+\setcounter{tocdepth}{3}
+\setcounter{minitocdepth}{3}
+\dominitoc
+\faketableofcontents
+
+\setcounter{chapter}{12} %Insert (Tutorial Number-1) Here; example for tutorial 4, enter 3
+
+\chapter{Pitching The Press} %Enter Tutorial Name Here
+
+\vspace{-2em}
+
+\minitoc
+
+\hrule
+
+\vspace{1em}
+
+\begin{tcolorbox}[enhanced,frame style image=blueshade.png,
+	opacityback=0.75,opacitybacktitle=0.25,
+	colback=blue!5!white,colframe=blue!75!black,title={\Large \textbf{Objectives:}}]
+	\large
+	\begin{enumerate}
+		\item Objective 1
+	\end{enumerate}
+\end{tcolorbox}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Change Header to Have a Smaller Logo for Remainder of the Document
+\fancyhead{}
+\fancyhead[C]{\begin{tikzpicture}[overlay, remember picture]
+		\fill[Blue2] (current page.north west) rectangle ($(current page.north east)+(0,-1in)$);
+		\node[anchor=north west, text=white, font=\Large, minimum size=1in, inner xsep=5mm, align=left] at (current page.north west) {\bf{\MakeUppercase{\@title}}\\\@subtitle};
+		\node[anchor=north east, minimum size=1in, inner xsep=5mm] at (current page.north east) {\includegraphics[scale=.03]{ECOSTRESS-BASE.jpg}};\end{tikzpicture}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent\fbox{\begin{minipage}{.9665\textwidth}
+			
+	\vspace{1em}
+	\begin{center}
+		\textbf{\Large \underline{Motivation For Today's Tutorial: }}
+	\end{center}
+	
+	\addcontentsline{toc}{section}{Motivation : }
+
+	\vspace*{-1 em}
+	
+	\centerline{\includegraphics[width=\textwidth]{ICECREAM_Logo.png}}
+	
+\end{minipage}}
+
+\section{Section 1}
+
+\centerline{\includegraphics[width=\textwidth]{ICECREAM_Logo.png}}
+
+\vspace{.5em}
+
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=MACred,title= \vspace{.2em} \Large Make a Map Assignments]
+	\addcontentsline{toc}{section}{Make a Map Assignments}
+	\large
+	\begin{enumerate}
+		\item Assignment 1
+	\end{enumerate}
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Document
+\vfill
+
+\hrule
+
+\vspace{1em}
+
+\small \textbf{Recommended Citation:} Forsythe, J.D., G.R. Goldsmith, and J.B. Fisher. 2023. Observing Earth from Above Tutorials. Chapman University. \url{https://jeremydforsythe.github.io/icecream-tutorials/}
+
+\vspace{1em}
+
+This work is supported by funding from NASA ECOSTRESS Mission Grant \#80NSSC23K0309 (I.C.E. C.R.E.A.M.: Integrating Communication of ECOSTRESS Into Community Research, Education, Applications, and Media) and is openly licensed via \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC BY-NC}.
+
+\end{document}
