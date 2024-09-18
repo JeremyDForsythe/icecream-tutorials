@@ -158,7 +158,7 @@ Based on the amount of processing that is needed to create the data, ECOSTRESS h
 
 The procedure for downloading ET data through the A$\rho\rho$EEARS interface is the same as the previous tutorials on land surface temperature.
 
-1. Since we are focusing on California's Central Valley, begin by downloading the file \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evaportranspiration/CaliforniaCentralValley.geojson}{CaliforniaCentralValley.geojson} and saving it somewhere you can remember. I recommend a folder containing all the files for this tutorial. Depending on your web browser, you may need to right-click and select \textit{Save as}. Some web browsers may even display the contents of the GeoJSON file instead of prompting you to save it. If this happens, you can select the \textit{File} dropdown menu and click on \textit{Save as}. 
+1. Since we are focusing on California's Central Valley, begin by downloading the file \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evapotranspiration/CaliforniaCentralValley.geojson}{CaliforniaCentralValley.geojson} and saving it somewhere you can remember. I recommend a folder containing all the files for this tutorial. Depending on your web browser, you may need to right-click and select \textit{Save as}. Some web browsers may even display the contents of the GeoJSON file instead of prompting you to save it. If this happens, you can select the \textit{File} dropdown menu and click on \textit{Save as}. 
 
 \kulbox{\textbf{NOTE:} A .geojson file is an alternative to the shapefiles we have used to date. QGIS can import or export either format. An advantage of GeoJSON is that it is self-contained and does not need to be zipped before importing into A$\rho\rho$EEARS.}
 
@@ -214,7 +214,7 @@ The procedure for downloading ET data through the A$\rho\rho$EEARS interface is 
 
 12. Select the \textit{ECOSTRESS Evapotranspiration PT-JPL} layer.
 
-13. Notice that there were different overpasses by ECOSTRESS on the same day with very different values. Any ideas why? Checking the timestamps reveals the answer. The first three overpasses were at 02:00 in the morning when there is no sun and the plants are not transpiring.
+13. Notice that there were different overpasses by ECOSTRESS on the same day with very different values. Any ideas why? Checking the timestamps reveals the answer. The first three overpasses were at 2:38 AM UTC (7:38 PM local daylight time) when there is little to no sunlight and the plants are not transpiring.
 
 14. To download the data from the daylight hours, select the small caret arrow in the gray box above and click on the \textit{Download} button.
 
@@ -249,7 +249,7 @@ NASA has specifically designed a color palette to use with ECOSTRESS evapotransp
 
 \vspace{.5em}
 
-19. Download the color ramp file here: \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evaportranspiration/evapotranspirationJPLcolorramp.xml}{evapotranspirationJPLcolorramp.xml} and save it somewhere you can remember. Depending on your PDF viewer, you may have to right-click and then hit \textit{Save As}.
+19. Download the color ramp file here: \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evapotranspiration/evapotranspirationJPLcolorramp.xml}{evapotranspirationJPLcolorramp.xml} and save it somewhere you can remember. Depending on your PDF viewer, you may have to right-click and then hit \textit{Save As}.
 
 20. From the \textit{Settings} top menu, select \textit{Style Manager}.
 
@@ -316,8 +316,8 @@ Double-click each file to add them to your map. Again, notice that they are now 
 	\large
 	In case you encountered any problems with the A$\rho\rho$EEARS database, here are copies of the ECOSTRESS GeoTIFF files for the Central Valley of California. $ET_{daily}$:
 	\begin{enumerate}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evaportranspiration/ECO3ETPTJPL.001_EVAPOTRANSPIRATION_PT_JPL_ETdaily_doy2022218192026_aid0001.tif}{\small ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218192026\_aid0001.tif}
-		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evaportranspiration/ECO3ETPTJPL.001_EVAPOTRANSPIRATION_PT_JPL_ETdaily_doy2022218191934_aid0001.tif}{\small ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218191934\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evapotranspiration/ECO3ETPTJPL.001_EVAPOTRANSPIRATION_PT_JPL_ETdaily_doy2022218192026_aid0001.tif}{\small ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218192026\_aid0001.tif}
+		\item \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial8_Evapotranspiration/ECO3ETPTJPL.001_EVAPOTRANSPIRATION_PT_JPL_ETdaily_doy2022218191934_aid0001.tif}{\small ECO3ETPTJPL.001\_EVAPOTRANSPIRATION\_PT\_JPL\_ETdaily\_doy2022218191934\_aid0001.tif}
 	\end{enumerate}
 \end{tcolorbox}
 
