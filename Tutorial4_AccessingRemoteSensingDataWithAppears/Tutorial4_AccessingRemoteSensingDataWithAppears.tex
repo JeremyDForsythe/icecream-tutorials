@@ -158,9 +158,13 @@ Today, we are going to use a shapefile with a polygon (that is, an outline) of t
 
 \section{Always Check Your Data} 
 
-12. Before we download the files, we should preview the data using the built-in A$\rho\rho$EEARS visualizations. First, make sure that the Land Surface Temperature (LST) layer is selected. Under \textit{Layer Stats}, you will see a box plot time series of the temperature data on the x-axis of the range of dates and the temperature observed by the instrument for each date (y-axis). For a reminder about what information is encompassed in a boxplot, see the image below. Next, hover over the boxplots in the time series to see all sorts of useful information, including the date and time of day that ECOSTRESS passed overhead collected the data. Although 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why? Have we discovered some new physical property of the desert? Well, no, the ECOSTRESS overpass was simply at 9:49 AM, which was not exactly the hottest part of the day.
+12. Before we download the files, we should preview the data using the built-in A$\rho\rho$EEARS visualizations. First, make sure that the Land Surface Temperature (LST) layer is selected. Under \textit{Layer Stats}, you will see a box plot time series of the temperature data on the x-axis of the range of dates and the temperature observed by the instrument for each date (y-axis). For a reminder about what information is encompassed in a boxplot, see the image below. Next, hover over the boxplots in the time series to see all sorts of useful information, including the date and time of day that ECOSTRESS passed overhead collected the data. 
 
-\kulbox{\textbf{NOTE:}  ECOSTRESS makes temperature observations on the Kelvin scale and must be converted to Fahrenheit or Celsius.}
+\kulbox{\textbf{NOTE:} ECOSTRESS makes temperature observations on the Kelvin scale and must be converted to Fahrenheit or Celsius.}
+
+Although 7/26/2023 had the hottest air temperature of the month, our observations of surface temperature are among the lowest! Why? Have we discovered some new physical property of the desert? Well, no, the ECOSTRESS overpass was simply at 9:49 AM Coordinated Universal Time (UTC). California's Pacific time is 8 hours behind UTC. This means that the satellite pass was at 1:49 AM local California time, which was not exactly the hottest part of the day.
+
+\kulbox{\textbf{NOTE:} ECOSTRESS reports times in Coordinated Universal Time (UTC). To convert to the local standard time of your location refer to \href{https://jeremydforsythe.github.io/icecream-tutorials/Tutorial11_RasterCalculator/World_Time_Zones_Map.png}{this World Time Zone Map}}.
 
 \centerline{\includegraphics[width=.5\textwidth]{HowToBoxplot.png}}
 
